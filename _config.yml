@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title:            Site Title
+title:            phyletica
 locale:           en_US
-url:              
+url:              //joaks1.github.io
 
 
 # Jekyll configuration
@@ -26,10 +26,10 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email: 
+  name: Jamie Oaks
+  avatar: gravatar.jpg
+  bio: "Evolutionary biologist."
+  email: joaks1@uw.edu
   disqus-shortname: 
   twitter: #username
   facebook: #username
@@ -40,7 +40,7 @@ owner:
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: #username
+  github: joaks1
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   xing: #username
