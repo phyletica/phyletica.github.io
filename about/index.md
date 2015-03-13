@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home
 title: About
 tags: [about, phyletica, Oaks]
 image:
