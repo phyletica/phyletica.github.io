@@ -2,8 +2,6 @@
 layout: page
 title: About
 tags: [about, phyletica, Oaks]
-modified: 2014-08-08T20:53:07.573882-04:00
-comments: true
 image:
   feature: header-koh-rong-lone-boat.jpg
   credit: Jamie Oaks
