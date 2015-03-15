@@ -1,16 +1,16 @@
 # Site navigation links
 
 - title: Home
-  url: /
+  url: /phyletica/
 
 - title: Posts
-  url: /posts/
+  url: /phyletica/posts/
 
 - title: Research
-  url: /research/
+  url: /phyletica/research/
 
 - title: Theme Setup
-  url: /theme-setup/
+  url: /phyletica/theme-setup/
 
 - title: Phyletica
   url: http://phyletica.com
