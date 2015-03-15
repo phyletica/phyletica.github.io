@@ -3,14 +3,20 @@
 - title: Home
   url: /phyletica/
 
-- title: Posts
-  url: /phyletica/posts/
+- title: Publications
+  url: /phyletica/Publications
 
 - title: Research
   url: /phyletica/research/
 
-- title: Theme Setup
-  url: /phyletica/theme-setup/
+- title: Teaching
+  url: /phyletica/teaching/
+
+- title: Software
+  url: /phyletica/software/
+
+- title: Posts
+  url: /phyletica/posts/
 
 - title: Phyletica
   url: http://phyletica.com
