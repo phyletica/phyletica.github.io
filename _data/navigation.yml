@@ -1,22 +1,22 @@
 # Site navigation links
 
 - title: Home
-  url: /phyletica/
+  url: /
 
 - title: Publications
-  url: /phyletica/publications/
+  url: /publications/
 
 - title: Research
-  url: /phyletica/research/
+  url: /research/
 
 - title: Teaching
-  url: /phyletica/teaching/
+  url: /teaching/
 
 - title: Software
-  url: /phyletica/software/
+  url: /software/
 
 - title: Posts
-  url: /phyletica/posts/
+  url: /posts/
 
 - title: Phyletica
   url: http://phyletica.com
