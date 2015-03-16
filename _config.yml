@@ -2,8 +2,8 @@
 
 title:            phyletica
 locale:           en_US
-url:              //joaks1.github.io/phyletica
-# url:              //localhost:4000
+# url:              //joaks1.github.io/phyletica
+url:              //localhost:4000
 baseurl:          ""
 
 
@@ -17,6 +17,7 @@ sass:
   style: compressed
 gems:
   - jekyll-sitemap
+  - jekyll/scholar
 
 kramdown:
   auto_ids: true
@@ -25,6 +26,21 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
+scholar:
+  # style: https://github.com/citation-style-language/styles/blob/master/evolution.csl
+  style: peerj
+  locale: en
+  sort_by: year
+  order: descending
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: bib-link
+  replace_strings: true
+  join_strings:    true
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+  query: "@*"
 
 # Site owner
 owner:

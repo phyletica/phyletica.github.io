@@ -9,3 +9,6 @@ image:
 ---
 
 Info.
+
+{% bibliography --file jro %}
+
