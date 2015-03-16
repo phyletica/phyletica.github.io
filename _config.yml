@@ -2,7 +2,8 @@
 
 title:            phyletica
 locale:           en_US
-url:              //joaks1.github.io/phyletica
+# url:              //joaks1.github.io/phyletica
+url:              //localhost:4000
 baseurl:          ""
 
 
@@ -31,11 +32,11 @@ owner:
   avatar: gravatar.jpg
   bio: "Evolutionary biologist."
   email: joaks1@uw.edu
-  disqus-shortname: 
-  twitter: #username
+  disqus-shortname: joaks1
+  twitter: jamoaks
   facebook: #username
   google:
-    plus: #username
+    plus: JamieOaks
     analytics: 
     verify: 
     ad-client: 
