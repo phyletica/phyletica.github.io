@@ -2,9 +2,8 @@
 
 title:            phyletica
 locale:           en_US
-url:              //joaks1.github.io/phyletica
-# url:              //localhost:4000
-baseurl:          ""
+# url:              //joaks1.github.io/phyletica
+baseurl:          "/phyletica"
 
 
 # Jekyll configuration
@@ -27,7 +26,6 @@ kramdown:
   use_coderay: false
 
 scholar:
-  # style: https://github.com/citation-style-language/styles/blob/master/evolution.csl
   style: peerj
   locale: en
   sort_by: year
