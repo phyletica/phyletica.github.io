@@ -3,7 +3,7 @@
 title:            phyletica
 locale:           en_US
 url:              http://phyletica.github.io
-baseurl:          "/"
+baseurl:          ""
 
 
 # Jekyll configuration
