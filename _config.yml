@@ -2,8 +2,8 @@
 
 title:            phyletica
 locale:           en_US
-url:              http://joaks1.github.io/phyletica
-baseurl:          "/phyletica"
+url:              http://phyletica.github.io
+baseurl:          "/"
 
 
 # Jekyll configuration
