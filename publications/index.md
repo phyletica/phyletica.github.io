@@ -8,7 +8,5 @@ image:
   creditlink: http://www.phyletica.com
 ---
 
-Info.
-
 {% bibliography --file jro %}
 
