@@ -1,6 +1,7 @@
 ---
 layout: home-content
 title: About
+author: phyletica 
 tags: [about, phyletica, Oaks]
 share: true
 comments: false

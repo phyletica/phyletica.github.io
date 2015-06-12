@@ -3,18 +3,19 @@
 jamie_oaks:
   name: Jamie Oaks
   web: http://www.phyletica.com
-  email: joaks1@gmail.com
+  email: joaks1@uw.edu
   bio: "Evolutionary biologist."
-  avatar: bio-photo-2.jpg
-  twitter: 
+  avatar: gravatar.jpg
+  twitter: jamoaks
+  github: joaks1
   google:
-    plus: 
+    plus: JamieOaks
 
 cornelius_fiddlebone:
-  name: Cornelius Fiddlebone
-  email: cornelius@thewhip.com
-  bio: "I ordered what?"
-  avatar: bio-photo.jpg
-  twitter: rhymeswithsackit
+  name: Phyletica 
+  email: joaks1@uw.edu
+  bio: "Exploring biodiversification."
+  avatar: phyletica-avatar.png
+  twitter: jamoaks
   google:
-    plus: CorneliusFiddlebone
+    plus: JamieOaks
