@@ -1,24 +1,33 @@
 # Authors
 
-jamie_oaks:
-  name: Jamie Oaks
-  web: http://www.phyletica.com
-  email: joaks1@uw.edu
-  bio: "Evolutionary biologist."
-  avatar: gravatar.jpg
-  twitter: jamoaks
-  github: joaks1
-  google:
-    plus: JamieOaks
-  github: joaks1
+default: &DEFAULT
+    web: http://www.phyletica.com
+    email: joaks1@uw.edu
 
-phyletica:
-  name: Phyletica 
-  web: http://www.phyletica.com
-  email: joaks1@uw.edu
-  bio: "Exploring biodiversification."
-  avatar: phyletica-avatar.png
-  twitter: jamoaks
-  google:
-    plus: JamieOaks
-  github: phyletica
+phyletica: &PHYLETICA
+    <<: *DEFAULT
+    name: Phyletica 
+    bio: "Exploring biodiversification."
+    avatar: phyletica-avatar.png
+    twitter: jamoaks
+    google:
+        plus: JamieOaks
+    github: phyletica
+
+jamie_oaks:
+    <<: *DEFAULT
+    name: Jamie Oaks
+    bio: "Evolutionary biologist."
+    avatar: gravatar.jpg
+    twitter: jamoaks
+    google:
+        plus: JamieOaks
+    github: joaks1
+
+auburn_phylo_orange:
+    <<: *PHYLETICA
+    avatar: auburn-phylo-mtan-2014-orange-256-square.png
+
+auburn_phylo_blue:
+    <<: *PHYLETICA
+    avatar: auburn-phylo-mtan-2014-blue-256-square.png

@@ -1,7 +1,7 @@
 ---
 layout: home-content
 title: About
-author: phyletica 
+author: auburn_phylo_blue
 tags: [about, phyletica, Oaks]
 share: true
 comments: false
