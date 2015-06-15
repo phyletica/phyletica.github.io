@@ -6,7 +6,9 @@ pis:
     web: http://www.phyletica.com
     email: joaks1@uw.edu
     bio: >
-        "Evolutionary biologist. Blah, blah blah ..."
+        Interested in developing phylgenetic methods and applying them to data
+        from natural populations to test hypotheses about processes of
+        diversification.
     avatar: gravatar.jpg
     twitter: jamoaks
     google:
@@ -29,12 +31,11 @@ other:
   - name: Amalie Eden
     role: Boss
     bio: >
-        "Blah, blah, blah..."
+        The real mastermind behind the whole operation. She is militant about
+        enforcing the most important rule in the lab: Have fun!!
     avatar: aeo-avatar.jpg
 
   - name: Luna
-    role: Mascot
-    bio: >
-        "Blah, blah, blah..."
+    role: Lab canid
     avatar: luna-avatar.jpg
 
