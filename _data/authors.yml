@@ -3,6 +3,7 @@
 default: &DEFAULT
     web: http://www.phyletica.com
     email: joaks1@uw.edu
+    avatar: bio-photo.jpg
 
 phyletica: &PHYLETICA
     <<: *DEFAULT
