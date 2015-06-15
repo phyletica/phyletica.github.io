@@ -1,0 +1,40 @@
+# Authors
+
+pis:
+  - name: Jamie Oaks
+    role: Principal Investigator
+    web: http://www.phyletica.com
+    email: joaks1@uw.edu
+    bio: >
+        "Evolutionary biologist. Blah, blah blah ..."
+    avatar: gravatar.jpg
+    twitter: jamoaks
+    google:
+        plus: JamieOaks
+    github: joaks1
+
+postdocs:
+  - name: You?
+    role: Postdoctoral Researcher
+
+grad_students:
+  - name: You?
+    role: Graduate Student
+
+undergrad_students:
+  - name: You?
+    role: Undergraduate Researcher
+
+other:
+  - name: Amalie Eden
+    role: Boss
+    bio: >
+        "Blah, blah, blah..."
+    avatar: aeo-avatar.jpg
+
+  - name: Luna
+    role: Mascot
+    bio: >
+        "Blah, blah, blah..."
+    avatar: luna-avatar.jpg
+
