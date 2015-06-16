@@ -1,15 +1,26 @@
 <div class="lab-members">
 
-{% for member in site.data.lab-members %}
+<h1>Lab members:</h1>
+{% for stage in site.data.lab-members %}
+    {% if stage.title %}
+    <hr>
+    <h2 itemprop="title">{{ stage.title }}</h2>
+    {% endif %}
+{% for member in stage.members %}
     <div class="member-wrap">
     {% if member.avatar contains 'http' %}
 	    <img src="{{ member.avatar }}" class="bio-photo" alt="{{ member.name }} bio photo">
     {% else %}
 	    <img src="{{ site.baseurl }}/images/{{ member.avatar }}" class="bio-photo" alt="{{ member.name }} bio photo">
     {% endif %}
-        <h3 itemprop="name">{{ member.name }}</h3>
-        {% if member.role %}<h4 itemprop="role">{{ member.role }}</h4>{% endif %}
-        {% if member.bio %}<p>{{ member.bio }}</p>{% endif %}
+        <h3 itemprop="name">{{ member.name }}{% if member.role %} &#8212; {{ member.role }}{% endif %}</h3>
+        {% if member.bio %}
+        <p class="member-bio-box">
+            <span class="center-if-single-line">
+                {{ member.bio }}
+            </span>
+        </p>
+        {% endif %}
         {% if member.email %}<a href="mailto:{{ member.email }}" class="member-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>{% endif %}
         {% if member.twitter %}<a href="http://twitter.com/{{ member.twitter }}" class="member-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>{% endif %}
         {% if member.facebook %}<a href="http://facebook.com/{{ member.facebook }}" class="member-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>{% endif %}
@@ -31,6 +42,7 @@
         {% if member.flickr %}<a href="http://www.flickr.com/{{ member.flickr }}" class="member-social" target="_blank"><i class="fa fa-fw fa-flickr"></i> Flickr</a>{% endif %}
         {% if member.web %}<a href="{{ member.web }}" class="member-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>{% endif %}
     </div>
+{% endfor %}
 {% endfor %}
 </div>
 
