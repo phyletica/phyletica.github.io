@@ -20,19 +20,19 @@
   members:
   - name: You?
     role: Postdoctoral Researcher
-    avatar: bio-photo.jpg
+    avatar: avatar-gecko.jpg
 
 - title: Graduate Students
   members:
   - name: You?
     role: Graduate Student
-    avatar: bio-photo.jpg
+    avatar: avatar-cyrt.jpg
 
 - title: Undergraduate Researchers
   members:
   - name: You?
     role: Undergraduate Researcher
-    avatar: bio-photo.jpg
+    avatar: avatar-croc.jpg
 
 - title: Honorary Members
   members:
