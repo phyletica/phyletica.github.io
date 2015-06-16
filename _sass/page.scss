@@ -435,19 +435,24 @@ $button-size: 1.5rem;
 
 /* Author module - mobile only */
 .article-author-bottom {
-	margin-bottom: 1em;
+    text-align: center;
+	margin-bottom: 4em;
 	@media #{$small} {
 		display: none;
 	}
 	.bio-photo {
-		float: left;
-		margin-right: 25px;
+		// float: center;
+		// margin-right: 25px;
 		max-width: 100px;
 		@include rounded(150px);
 	}
 	.author-social {
 		display: inline-block;
 		margin-right: 10px;
+	}
+	h3 {
+		margin-top: 4px;
+		margin-bottom: 4px;
 	}
 	@media #{$large} {
 		h3,
