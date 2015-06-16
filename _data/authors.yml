@@ -14,6 +14,12 @@ phyletica: &PHYLETICA
     google:
         plus: JamieOaks
     github: phyletica
+    institution-url: http://www.auburn.edu 
+    institution: Auburn
+    department-url: http://www.auburn.edu/biology
+    department: AU Biology
+    museum-url: http://www.aumnh.org
+    museum: AU Museum
 
 jamie_oaks:
     <<: *DEFAULT

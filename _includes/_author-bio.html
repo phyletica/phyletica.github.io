@@ -32,4 +32,7 @@
   {% if author.weibo %}<a href="http://www.weibo.com/{{ author.weibo }}" class="author-social" target="_blank"><i class="fa fa-fw fa-weibo"></i> Weibo</a>{% endif %}
   {% if author.flickr %}<a href="http://www.flickr.com/{{ author.flickr }}" class="author-social" target="_blank"><i class="fa fa-fw fa-flickr"></i> Flickr</a>{% endif %}
   {% if author.web %}<a href="{{ author.web }}" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>{% endif %}
+  {% if author.institution-url %}<a href="{{ author.institution-url }}" class="author-social" target="_blank"><i class="fa fa-fw fa-paw"></i> {% if author.institution %}{{ author.institution }}{% else %}Institution{% endif %}</a>{% endif %}
+  {% if author.department-url %}<a href="{{ author.department-url }}" class="author-social" target="_blank"><i class="fa fa-fw fa-university"></i> {% if author.department %}{{ author.department }}{% else %}Department{% endif %}</a>{% endif %}
+  {% if author.museum-url %}<a href="{{ author.museum-url }}" class="author-social" target="_blank"><i class="fa fa-fw fa-leaf"></i> {% if author.museum %}{{ author.museum }}{% else %}Museum{% endif %}</a>{% endif %}
 </div>
