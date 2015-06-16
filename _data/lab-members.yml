@@ -1,5 +1,7 @@
 # Authors
 
+- title:
+  members:
   - name: Jamie Oaks
     role: Principal Investigator
     web: http://www.phyletica.com
@@ -14,26 +16,35 @@
         plus: JamieOaks
     github: joaks1
 
+- title: Postdocs
+  members:
   - name: You?
     role: Postdoctoral Researcher
     avatar: bio-photo.jpg
 
+- title: Graduate Students
+  members:
   - name: You?
     role: Graduate Student
     avatar: bio-photo.jpg
 
+- title: Undergraduate Researchers
+  members:
   - name: You?
     role: Undergraduate Researcher
     avatar: bio-photo.jpg
 
+- title: Honorary Members
+  members:
   - name: Amalie Eden
     role: Boss
     bio: >
         The real mastermind behind the whole operation. She is militant about
         enforcing the most important rule in the lab: Have fun!!
-    avatar: bio-photo.jpg
-
+    avatar: aeo-avatar.jpg
   - name: Luna
     role: Lab canid
-    avatar: aeo-avatar.jpg
+    bio: >
+        Short bio.
+    avatar: luna2-avatar.jpg
 
