@@ -1,6 +1,5 @@
 # Authors
 
-pis:
   - name: Jamie Oaks
     role: Principal Investigator
     web: http://www.phyletica.com
@@ -15,22 +14,18 @@ pis:
         plus: JamieOaks
     github: joaks1
 
-postdocs:
   - name: You?
     role: Postdoctoral Researcher
     avatar: bio-photo.jpg
 
-grad_students:
   - name: You?
     role: Graduate Student
     avatar: bio-photo.jpg
 
-undergrad_students:
   - name: You?
     role: Undergraduate Researcher
     avatar: bio-photo.jpg
 
-other:
   - name: Amalie Eden
     role: Boss
     bio: >

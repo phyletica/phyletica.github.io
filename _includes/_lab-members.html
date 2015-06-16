@@ -1,7 +1,7 @@
 <div class="lab-members">
 
 {% for member in site.data.lab-members %}
-    <div class="member">
+    <div class="member-wrap">
     {% if member.avatar contains 'http' %}
 	    <img src="{{ member.avatar }}" class="bio-photo" alt="{{ member.name }} bio photo">
     {% else %}
@@ -31,5 +31,6 @@
         {% if member.flickr %}<a href="http://www.flickr.com/{{ member.flickr }}" class="member-social" target="_blank"><i class="fa fa-fw fa-flickr"></i> Flickr</a>{% endif %}
         {% if member.web %}<a href="{{ member.web }}" class="member-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>{% endif %}
     </div>
+{% endfor %}
 </div>
 

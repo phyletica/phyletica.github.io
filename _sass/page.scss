@@ -337,6 +337,8 @@ $button-size: 1.5rem;
 	clear: both;
 	font-size: 80%;
 }
+.member-wrap,
+.article-author-side-invisible,
 .article-author-side,
 .article-author-bottom {
 	h3 {
@@ -351,7 +353,45 @@ $button-size: 1.5rem;
 	}
 }
 
+/* Lab member */
+.member-wrap {
+	p {
+		font-size: 100%;
+	}
+	margin-top: 20px;
+	margin-bottom: 20px;
+	.bio-photo {
+		max-width: 110px;
+		@include rounded(150px);
+	}
+	@media #{$small} {
+		display: block;
+		h3,
+		p {
+			display: block;
+		}
+		h3 {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		p {
+			margin-bottom: 20px;
+		}
+		.member-social {
+			margin-bottom: 5px;
+		}
+	}
+	@media #{$large} {
+		.bio-photo {
+			max-width: 150px;
+		}
+	}
+	@media #{$x-large} {
+	}
+}
+
 /* Default social media links in author sidebar */
+.member-social,
 .author-social {
   display: block;
   margin-bottom: 5px;
@@ -371,7 +411,17 @@ $button-size: 1.5rem;
 	}
 }
 
+.member-social {
+  display: inline-block;
+  .fa {
+		margin-right: 2px;
+		margin-left: 10px;
+	}
+}
+
+
 /* Author sidebar */
+.article-author-side-invisible,
 .article-author-side {
 	display: none;
 	.bio-photo {
@@ -412,6 +462,10 @@ $button-size: 1.5rem;
 		@include grid(12,1.5);
 		@include prefix(12,2);
 	}
+}
+
+.article-author-side-invisible {
+    visibility: hidden;
 }
 
 /* Author module - mobile only */
