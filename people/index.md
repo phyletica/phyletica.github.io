@@ -1,6 +1,5 @@
 ---
 layout: people-page
-title: Phyletica Lab Members (Phyleticians)
 excerpt: "Some research details."
 author: phyletica 
 image:
@@ -11,6 +10,6 @@ image:
 
 {% include _toc.html %}
 
-## A Subtitle?
+# Interested in joining the lab?
 
 Info.
