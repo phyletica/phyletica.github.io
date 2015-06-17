@@ -9,16 +9,16 @@ image:
   creditlink: http://www.phyletica.com
 ---
 
-### Lecture
+## Lecture
 
 *   [Lecture slides][1]
 
-### Lab
+## Lab
 
 *   [Lab tutorial][2]
 *   [Archive of data and auxiliary files][3] needed for tutorial
 
-### Acknowledgements
+## Acknowledgements
 
 The divergence-time lecture uses content from a great [lecture][4] by [Tracy Heath][5]. Also, many of the ideas for the divergence-time lab came from a great [tutorial][6] by [Tracy Heath][5]. Thanks, Tracy!
 

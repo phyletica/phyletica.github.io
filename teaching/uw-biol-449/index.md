@@ -11,7 +11,7 @@ image:
 
 For [Adam Leaché's][1] Applied Phylogenetics course at the University of Washington, I developed a learning-assessment survey for the class and a guest lecture and lab on divergence-time estimation. All of the LaTeX source files for these materials is available via [GitHub][2].
 
-### Course Materials
+## Course Materials
 
 *   [Learning-assessment survey][3]
 *   [Divergence-time estimation lecture and lab][4]

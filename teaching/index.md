@@ -9,7 +9,7 @@ image:
   creditlink: http://www.phyletica.com
 ---
 
-### Courses
+## Courses
 
 *   [Applied Phylogenetics][1]
 *   [Biogeography][2]
