@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Applied Phylogenetics---Learning-assessment survey
+title: Applied Phylogenetics &mdash; Learning-assessment survey
 excerpt: "Applied Phylogenetics---Learning-assessment survey."
 author: phyletica
 image:
@@ -16,9 +16,8 @@ students are acquiring knowledge of fundamental concepts in phylogenetics, and,
 over time, will allow for comparing the effectiveness of different teaching
 strategies and course exercises.
 
-You can download the survey [here][1].
-
-Check out the [results for 2014][2].
+*   You can download the survey [here][1].
+*   Check out the [results for 2014][2].
 
  [1]: {{ site.baseurl }}/teaching/uw-biol-449/class-survey/class-survey.pdf
  [2]: {{ site.baseurl }}/teaching/uw-biol-449/class-survey/slides

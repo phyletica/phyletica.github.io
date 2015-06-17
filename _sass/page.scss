@@ -332,6 +332,31 @@ $button-size: 1.5rem;
 	}
 }
 
+.footer-image {
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+	max-height: 40px;
+	@media #{$small} {
+	}
+	@media #{$medium} {
+		max-height: 50px;
+        margin-left: 3em;
+        margin-right: 3em;
+	}
+	@media #{$large} {
+		max-height: 60px;
+        margin-left: 5em;
+        margin-right: 5em;
+    }
+}
+
+.center-footer-images {
+    text-align: center;
+}
+
 /* Post byline */
 .byline {
 	clear: both;

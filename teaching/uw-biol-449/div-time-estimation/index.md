@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Applied Phylogenetics---Divergence-time estimation
+title: Applied Phylogenetics &mdash; Divergence-time estimation
 excerpt: "Applied Phylogenetics---Divergence-time estimation."
 author: phyletica
 image:
