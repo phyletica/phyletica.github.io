@@ -6,7 +6,7 @@ author: phyletica
 image:
   feature: header-misty-mangroves.jpg
   credit: Jamie Oaks
-  creditlink: http://www.phyletica.com
+  creditlink: http://phyletica.github.io
 ---
 
 For [Adam Leaché's][1] Applied Phylogenetics course at the University of Washington, I developed a learning-assessment survey for the class and a guest lecture and lab on divergence-time estimation. All of the LaTeX source files for these materials is available via [GitHub][2].

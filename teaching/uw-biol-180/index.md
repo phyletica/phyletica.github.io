@@ -6,7 +6,7 @@ author: phyletica
 image:
   feature: header-misty-mangroves.jpg
   credit: Jamie Oaks
-  creditlink: http://www.phyletica.com
+  creditlink: http://phyletica.github.io
 ---
 
 The course website for Introductory Biology (BIOL 180) at the University of

@@ -6,7 +6,7 @@ author: phyletica
 image:
   feature: header-misty-mangroves.jpg
   credit: Jamie Oaks
-  creditlink: http://www.phyletica.com
+  creditlink: http://phyletica.github.io
 ---
 
 Most of my packages, scripts, and other projects are freely available on [GitHub][1]. Below are descriptions of a few.

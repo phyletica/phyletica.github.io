@@ -8,7 +8,7 @@ comments: false
 image:
   feature: header-koh-rong-lone-boat.jpg
   credit: Jamie Oaks
-  creditlink: http://www.phyletica.com
+  creditlink: http://phyletica.github.io
 ---
 
 Welcome. My name is [Jamie Oaks][1]. I am an evolutionary biologist and [NSF
@@ -31,7 +31,7 @@ On this site, you can find more information about my ongoing [research][9],
 where I post along the way. You can also find my CV [here][13]. Thanks for
 visiting. This site is still under construction, so come back soon!
 
- [1]: http://www.phyletica.com
+ [1]: {{ site.baseurl }}/
  [2]: http://www.nsf.gov/awardsearch/showAward?AWD_ID=1308885&HistoricalAwards=false
  [3]: http://faculty.washington.edu/leache/wordpress/
  [4]: https://www.stat.washington.edu/~vminin/
@@ -43,5 +43,5 @@ visiting. This site is still under construction, so come back soon!
  [10]: index.php?page_id=219
  [11]: index.php?page_id=249
  [12]: index.php?page_id=31
- [13]: http://www.phyletica.com/wordpress/wp-content/uploads/cv-jro.pdf
+ [13]: {{ site.baseurl }}/people/cv-joaks.pdf
 

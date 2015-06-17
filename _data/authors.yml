@@ -1,7 +1,7 @@
 # Authors
 
 default: &DEFAULT
-    web: http://www.phyletica.com
+    web: http://phyletica.github.io
     email: joaks1@uw.edu
     avatar: bio-photo.jpg
 

@@ -6,7 +6,7 @@ author: phyletica
 image:
   feature: header-misty-mangroves.jpg
   credit: Jamie Oaks
-  creditlink: http://www.phyletica.com
+  creditlink: http://phyletica.github.io
 ---
 
 For [John Klicka's][1] Biogeography course (BIO 470) at the University of Washington, I presented a guest lecture on Chapter 11 of {% cite Lomolino2010 %}. The course website can be found [here][2]. All of the LaTeX source files for the lecture are available via [GitHub][3].

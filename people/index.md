@@ -5,7 +5,7 @@ author: phyletica
 image:
   feature: header-misty-mangroves.jpg
   credit: Jamie Oaks
-  creditlink: http://www.phyletica.com
+  creditlink: http://phyletica.github.io
 ---
 
 {% include _toc.html %}
