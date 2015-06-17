@@ -19,5 +19,5 @@ For [Adam Leaché's][1] Applied Phylogenetics course at the University of Washin
 
  [1]: http://faculty.washington.edu/leache/wordpress/
  [2]: https://github.com/joaks1/applied-phylogenetics
- [3]: {{ site.baseurl }}/teaching/uw-biol-449/learning-survey/
+ [3]: {{ site.baseurl }}/teaching/uw-biol-449/class-survey/
  [4]: {{ site.baseurl }}/teaching/uw-biol-449/div-time-estimation/
