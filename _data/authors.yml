@@ -2,7 +2,7 @@
 
 default: &DEFAULT
     web: http://phyletica.github.io
-    email: joaks1@uw.edu
+    email: phyletica@auburn.edu
     avatar: bio-photo.jpg
 
 phyletica: &PHYLETICA
@@ -26,6 +26,7 @@ jamie_oaks:
     name: Jamie Oaks
     bio: "Evolutionary biologist."
     avatar: gravatar.jpg
+    email: joaks@auburn.edu
     twitter: jamoaks
     google:
         plus: JamieOaks
