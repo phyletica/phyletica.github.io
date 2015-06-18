@@ -1,5 +1,5 @@
 ---
-layout: people-page
+layout: page
 excerpt: "Some research details."
 author: phyletica 
 image:
@@ -13,3 +13,7 @@ image:
 # Interested in joining the lab?
 
 Info.
+
+# Lab members:
+{% include _lab-members.html %}
+
