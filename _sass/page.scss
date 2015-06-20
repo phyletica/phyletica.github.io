@@ -462,7 +462,7 @@ $button-size: 1.5rem;
 .article-author-bottom {
     text-align: center;
 	margin-top: 2em;
-	margin-bottom: 1em;
+	margin-bottom: 0;
 	@media #{$small} {
 		display: none;
 	}
