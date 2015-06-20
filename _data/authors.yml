@@ -31,6 +31,7 @@ jamie_oaks:
     google:
         plus: JamieOaks
     github: joaks1
+    cv: cv-joaks.pdf
 
 auburn_phylo_orange:
     <<: *PHYLETICA

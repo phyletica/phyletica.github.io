@@ -35,4 +35,5 @@
   {% if author.institution-url %}<a href="{{ author.institution-url }}" class="author-social" target="_blank"><i class="fa fa-fw fa-paw"></i> {% if author.institution %}{{ author.institution }}{% else %}Institution{% endif %}</a>{% endif %}
   {% if author.department-url %}<a href="{{ author.department-url }}" class="author-social" target="_blank"><i class="fa fa-fw fa-university"></i> {% if author.department %}{{ author.department }}{% else %}Department{% endif %}</a>{% endif %}
   {% if author.museum-url %}<a href="{{ author.museum-url }}" class="author-social" target="_blank"><i class="fa fa-fw fa-leaf"></i> {% if author.museum %}{{ author.museum }}{% else %}Museum{% endif %}</a>{% endif %}
+  {% if author.cv %}<a href="{{ site.baseurl }}/people/{{ author.cv }}" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>{% endif %}
 </div>
