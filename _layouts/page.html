@@ -41,13 +41,13 @@
         {% include _social-share.html %}
       {% endif %}
     </div><!-- /.article-wrap -->
+    <div class="article-author-bottom">
+      {% include _author-bio.html %}
+    </div>
     {% if site.owner.disqus-shortname and page.comments == true %}
       <section id="disqus_thread"></section><!-- /#disqus_thread -->
     {% endif %}
   </article>
-  <div class="article-author-bottom">
-    {% include _author-bio.html %}
-  </div>
 </div><!-- /#index -->
 
 <div class="footer-wrap">

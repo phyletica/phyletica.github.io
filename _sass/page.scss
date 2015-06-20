@@ -461,7 +461,8 @@ $button-size: 1.5rem;
 /* Author module - mobile only */
 .article-author-bottom {
     text-align: center;
-	margin-bottom: 2em;
+	margin-top: 2em;
+	margin-bottom: 1em;
 	@media #{$small} {
 		display: none;
 	}
