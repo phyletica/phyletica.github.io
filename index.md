@@ -11,25 +11,45 @@ image:
   creditlink: http://phyletica.github.io
 ---
 
-Welcome. My name is [Jamie Oaks][1]. I am an evolutionary biologist and [NSF
-Postdoctoral Research Fellow][2] working with [Adam Leaché][3] and [Vladimir
-Minin][4] at the [University of Washington][5]. I recently received my Ph.D.
+<figure class="tmp-center">
+    <a href="/images/auburn-phylo-mtan-2014-orange-1024.png"><img width="60%" style="display: block; margin-left: auto; margin-right: auto;" src="/images/auburn-phylo-mtan-2014-orange-1024.png"></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+Welcome to the phyletica lab, which is setting up shop next fall in the
+[Department of Biological Sciences](http://www.auburn.edu/biology) and [Musuem
+of Natural History](http://www.aumnh.org) at [Auburn
+University](http://www.auburn.edu).
+My name is [Jamie Oaks][1], and I start as an Assistant Professor at Auburn in
+August 2016. Currently, I am an [NSF Postdoctoral Research Fellow][2] working
+with [Adam Leaché][3] and [Vladimir Minin][4] at the [University of
+Washington][5].
+<!---
+I recently received my Ph.D.
 from the [University of Kansas][6] working with [Rafe Brown][7] and [Mark
 Holder][8].
+-->
 
-I am broadly interested in better understanding the evolutionary processes
-underlying the generation, maintanence, and assembly of biodiversity. To
-approach this problem, I explore DNA sequence variation within and among
-populations of organisms in a statistical framework to test for patterns
-predicted by ecological factors and historical events, such as climate change
-and sea-level fluctuations. This entails developing and implementing
-evolutionary models and ultimately applying them to molecular data collected
-from natural populations, usually in a phylogenetic and comparative framework.
+The phyletica lab is broadly interested in understanding how and why there are
+so many species on our planet.
+To approach this question, we explore patterns of variation within and among
+populations of organisms to infer evolutionary history and test models of
+diversification.
+This entails developing phylogenetic models, implementing them as computational
+methods, and ultimately applying these methods to molecular data collected from
+natural populations.
+The focus of our empirical work is reptiles and amphibians, however, we also
+work with systems ranging from from viruses to plants.
 
-On this site, you can find more information about my ongoing [research][9],
-[teaching][10], and [software development][11], as well as read my [blog][12]
-where I post along the way. You can also find my CV [here][13]. Thanks for
-visiting. This site is still under construction, so come back soon!
+On this site, you can find more information about our ongoing [research][9],
+[teaching][10], and [software development][11], as well as read our [blog][12]
+where we post along the way. Thanks for visiting.
 
  [1]: {{ site.baseurl }}/
  [2]: http://www.nsf.gov/awardsearch/showAward?AWD_ID=1308885&HistoricalAwards=false
@@ -39,9 +59,8 @@ visiting. This site is still under construction, so come back soon!
  [6]: http://www.ku.edu
  [7]: http://www.nhm.ku.edu/rbrown/
  [8]: http://phylo.bio.ku.edu/
- [9]: index.php?page_id=191
- [10]: index.php?page_id=219
- [11]: index.php?page_id=249
- [12]: index.php?page_id=31
- [13]: {{ site.baseurl }}/people/cv-joaks.pdf
+ [9]: {{ site.baseurl }}/research/
+ [10]: {{ site.baseurl }}/teaching/
+ [11]: {{ site.baseurl }}/software/
+ [12]: {{ site.baseurl }}/posts/
 
