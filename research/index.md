@@ -11,6 +11,8 @@ image:
 
 {% include _toc.html %}
 
+## Overview
+
 What we do in the phyletica lab: Develop phylogenetic methods, collect genetic
 datasets from natural populations, and apply the former to the latter, all with
 the goal of ending up with a better understanding of processes of
