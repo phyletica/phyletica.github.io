@@ -39,17 +39,35 @@
 	float: right;
 	margin-top: 0;
 }
+.image-float-left-30,
+.image-float-left-40,
+.image-float-right-30,
+.image-float-right-40,
+.image-float-left,
+.image-float-right {
+    margin-top: 10px;
+    // margin-bottom: 10px;
+    width: 50%;
+}
+.image-float-right-30,
+.image-float-right-40,
 .image-float-right {
     float: right;
-    margin-top: 10px;
-    margin-bottom: 10px;
     margin-left: 20px;
 }
+.image-float-left-30,
+.image-float-left-40,
 .image-float-left {
     float: left;
-    margin-top: 10px;
-    margin-bottom: 10px;
     margin-right: 20px;
+}
+.image-float-right-40,
+.image-float-left-40 {
+    width: 40%
+}
+.image-float-right-30,
+.image-float-left-30 {
+    width: 30%
 }
 
 /* Clearfix */
