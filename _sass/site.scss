@@ -46,8 +46,7 @@
 .image-float-left,
 .image-float-right {
     margin-top: 10px;
-    // margin-bottom: 10px;
-    width: 50%;
+    max-width: 50%;
 }
 .image-float-right-30,
 .image-float-right-40,
@@ -63,11 +62,11 @@
 }
 .image-float-right-40,
 .image-float-left-40 {
-    width: 40%
+    max-width: 40%;
 }
 .image-float-right-30,
 .image-float-left-30 {
-    width: 30%
+    max-width: 30%;
 }
 
 /* Clearfix */
