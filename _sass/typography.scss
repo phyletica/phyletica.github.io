@@ -55,11 +55,15 @@ a {
    Figure captions
    ========================================================================== */
 
+.figure-caption-box,
 figcaption {
 	padding-top: 10px;
 	@include font(14);
 	line-height: 1.3;
-	color: lighten($text-color, 10);
+	color: lighten($text-color, 25);
+}
+.figure-caption-box {
+    text-align: center;
 }
 
 /* 
