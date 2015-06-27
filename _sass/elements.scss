@@ -33,7 +33,18 @@ hr {
 
 figure {
 	margin-bottom: $indent-var;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+figure img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+// figcaption {
+//     margin-left: 20px;
+//     margin-right: 20px;
+// }
 
 article img {
 	max-width: 100%;
