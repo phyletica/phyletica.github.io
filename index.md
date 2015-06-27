@@ -1,6 +1,5 @@
 ---
 layout: home-content
-title: About
 author: phyletica 
 tags: [about, phyletica, Oaks]
 share: true
@@ -11,17 +10,26 @@ image:
   creditlink: http://phyletica.github.io
 ---
 
-<figure class="tmp-center">
-    <a href="/images/auburn-phylo-mtan-2014-orange-1024.png"><img width="60%" style="display: block; margin-left: auto; margin-right: auto;" src="/images/auburn-phylo-mtan-2014-orange-1024.png"></a>
-    <figcaption>
-        <p class="figure-caption-box">
-            <span class="center-if-single-line">
-                <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>
-            </span>
-        </p>
-    </figcaption>
+<figure>
+    <a href="/images/auburn-phylo-mtan-2014-orange-512.png"><img width="60%" src="/images/auburn-phylo-mtan-2014-orange-512.png"></a>
+    <p class="figure-caption-box">
+        <span class="center-if-single-line">
+            <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>
+        </span>
+    </p>
 </figure>
 
+<!---
+<div class="image-float-right-40">
+    <a href="/images/auburn-phylo-mtan-2014-orange-1024.png"><img src="/images/auburn-phylo-mtan-2014-orange-512.png"></a>
+    <br>
+    <p class="figure-caption-box">
+        <span class="center-if-single-line">
+            <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>
+        </span>
+    </p>
+</div>
+-->
 Welcome to the phyletica lab, which is setting up shop next fall in the
 [Department of Biological Sciences](http://www.auburn.edu/biology) and [Musuem
 of Natural History](http://www.aumnh.org) at [Auburn
@@ -45,7 +53,7 @@ This entails developing phylogenetic models, implementing them as computational
 methods, and ultimately applying these methods to molecular data collected from
 natural populations.
 The focus of our empirical work is reptiles and amphibians, however, we also
-work with systems ranging from from viruses to plants.
+work with systems ranging from viruses to plants.
 
 On this site, you can find more information about our ongoing [research][9],
 [teaching][10], and [software development][11], as well as read our [blog][12]
