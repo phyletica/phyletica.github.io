@@ -230,7 +230,15 @@ diversification across the Afro-tropics.
 
 ## Diversification of Crocodiles
 
-<a href="/images/croc-evol-cover.jpg"><img class="image-float-right" width="40%" style="border:1px solid black" src="/images/croc-evol-cover-small.jpg"></a>
+<div class="image-float-right-40">
+    <a href="/images/croc-evol-cover.jpg"><img style="border:1px solid black" src="/images/croc-evol-cover.jpg"></a>
+    <br>
+    <p class="figure-caption-box">
+        <span class="center-if-single-line">
+            <i>Crocodyuls siamensis</i>
+        </span>
+    </p>
+</div>
 How and when did crocodiles get to where they are today? How many species are
 there? Where and when did their common ancestor live?
 Motivated by these questions, and the fact that crocodiles are awesome, I
@@ -238,7 +246,7 @@ collected a large dataset of DNA sequences from all extant crocodylian species
 and used statistical phylogenetic methods to infer the temporal and
 biogeographical origin of the "true" crocodiles, *Crocodylus*.
 The leading hypothesis was that *Crocodylus* originated in Africa, however,
-**when** was a lot more uncertain.
+*when* was a lot more uncertain.
 Traditionally, crocodiles were stereotyped as an ancient group of "living
 fossils", but molecular data and reassessment of paleontological data suggested
 the genus might be younger than previously believed.
