@@ -30,7 +30,7 @@ image:
     </p>
 </div>
 -->
-Welcome to the phyletica lab, which is setting up shop next fall in the
+Welcome to the Phyletica Lab, which is setting up shop next fall in the
 [Department of Biological Sciences](http://www.auburn.edu/biology) and [Musuem
 of Natural History](http://www.aumnh.org) at [Auburn
 University](http://www.auburn.edu).
@@ -44,7 +44,7 @@ from the [University of Kansas][6] working with [Rafe Brown][7] and [Mark
 Holder][8].
 -->
 
-The phyletica lab is broadly interested in understanding how and why there are
+The Phyletica Lab is broadly interested in understanding how and why there are
 so many species on our planet.
 To approach this question, we explore patterns of variation within and among
 populations of organisms to infer evolutionary history and test models of
