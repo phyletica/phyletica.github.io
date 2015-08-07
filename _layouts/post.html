@@ -58,7 +58,7 @@
   </article>
 </div><!-- /#main -->
 
-<div class="footer-wrap">
+<div class="other-posts-wrap">
   {% if site.related_posts.size > 0 %}
   <div class="related-articles">
   <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.baseurl }}/posts/">View all posts</a>)</small></h4>
@@ -69,10 +69,9 @@
     </ul>
   </div><!-- /.related-articles -->
   {% endif %}
-  <footer>
-    {% include _footer.html %}
-  </footer>
 </div><!-- /.footer-wrap -->
+
+{% include _footer.html %}
 
 {% include _scripts.html %}
 

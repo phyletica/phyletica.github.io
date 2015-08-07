@@ -1,28 +1,43 @@
-{% if site.owner.google.ad-client and site.owner.google.ad-slot %}
-<div class="google-ads">
-  <!-- 320 x 50 ad -->
-  <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <ins class="adsbygoogle"
-       style="display:inline-block;width:320px;height:50px"
-       data-ad-client="{{ site.owner.google.ad-client }}"
-       data-ad-slot="{{ site.owner.google.ad-slot }}"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-</div><!-- /.google-ads -->
-{% endif %}
-
-<hr>
-<div class="center-footer-images">
-    <a rel="au-phylo" href="http://www.auburn.edu/cosam/departments/biology/"><img class="footer-image" alt="Auburn Phylo" src="/images/auburn-phylo-mtan-2014-blue-256.png" /></a>
-    <a rel="aumnh" href="http://aumnh.org/"><img class="footer-image" alt="Auburn MNH" src="/images/toomers-oak.png" /></a>
-</div>
-<br>
-<span>Auburn-phylo graphic <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>.</span>
-<br>
-<span>Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme. <a href="https://github.com/phyletica/phyletica.github.io" title="phyletica source on GitHub">View on GitHub</a>.</span>
-<br>
-<br>
-<span><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Unless noted, content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
-<br>
-<br>
+<footer>
+<div class="footer-wrap">
+        {% if site.owner.google.ad-client and site.owner.google.ad-slot %}
+        <div class="google-ads">
+            <!-- 320 x 50 ad -->
+            <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:320px;height:50px"
+                 data-ad-client="{{ site.owner.google.ad-client }}"
+                 data-ad-slot="{{ site.owner.google.ad-slot }}"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div><!-- /.google-ads -->
+        {% endif %}
+        
+        <div class="center-footer-images">
+            <a rel="au-phylo" href="http://www.auburn.edu/cosam/departments/biology/"><img class="footer-image" alt="Auburn Phylo" src="/images/auburn-phylo-mtan-2014-blue-256.png" /></a>
+            <a rel="aumnh" href="http://aumnh.org/"><img class="footer-image" alt="Auburn MNH" src="/images/toomers-oak.png" /></a>
+        </div>
+        <br>
+        <p class="center-box">
+            <span>
+                Auburn-phylo graphic <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>.
+            </span>
+            <br />
+            <span>
+                Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, based on the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.
+            </span>
+            <br />
+            <span>
+                <a href="https://github.com/phyletica/phyletica.github.io" title="phyletica source on GitHub">View on GitHub</a>.
+            </span>
+            <br />
+            <br />
+            <span>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                <br />
+                Unless noted, content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </span>
+        </p>
+</div><!-- /.footer-wrap -->
+</footer>
