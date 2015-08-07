@@ -43,33 +43,29 @@
     <div class="article-wrap">
       {{ content }}
       <hr />
-      <footer role="contentinfo">
-        {% if page.share != false %}{% include _social-share.html %}{% endif %}
-        <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
-      </footer>
+      <p class="byline"><strong>{{ page.title }}</strong> was published on <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} and last modified on <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
+      {% if page.share != false %}
+        {% include _social-share.html %}
+      {% endif %}
     </div><!-- /.article-wrap -->
-  <div class="article-author-bottom">
-    {% include _author-bio.html %}
-  </div>
-  {% if site.owner.disqus-shortname and page.comments == true %}
-    <br>
-    <section id="disqus_thread"></section><!-- /#disqus_thread -->
-  {% endif %}
+    <div class="article-author-bottom">
+      {% include _author-bio.html %}
+    </div>
+    {% if site.related_posts.size > 0 %}
+    <div class="other-articles">
+      <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.baseurl }}/posts/">View all posts</a>)</small></h4>
+      <ul>
+      {% for post in site.related_posts limit:3 %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </div><!-- /.other-articles -->
+    {% endif %}
+    {% if site.owner.disqus-shortname and page.comments == true %}
+      {% include _disqus_comments.html %}
+    {% endif %}
   </article>
 </div><!-- /#main -->
-
-<div class="other-posts-wrap">
-  {% if site.related_posts.size > 0 %}
-  <div class="related-articles">
-  <h4>You might also enjoy <small class="pull-right">(<a href="{{ site.baseurl }}/posts/">View all posts</a>)</small></h4>
-    <ul>
-    {% for post in site.related_posts limit:3 %}
-      <li><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endfor %}
-    </ul>
-  </div><!-- /.related-articles -->
-  {% endif %}
-</div><!-- /.footer-wrap -->
 
 {% include _footer.html %}
 
