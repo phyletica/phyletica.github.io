@@ -5,4 +5,3 @@ wordpress-enabled site.
 
 For the time being, my main site is still located at
 [www.phyletica.com](http://www.phyletica.com/).
-

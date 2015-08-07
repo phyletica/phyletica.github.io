@@ -36,4 +36,5 @@
   {% if author.department-url %}<a href="{{ author.department-url }}" class="author-social" target="_blank"><i class="fa fa-fw fa-university"></i> {% if author.department %}{{ author.department }}{% else %}Department{% endif %}</a>{% endif %}
   {% if author.museum-url %}<a href="{{ author.museum-url }}" class="author-social" target="_blank"><i class="fa fa-fw fa-leaf"></i> {% if author.museum %}{{ author.museum }}{% else %}Museum{% endif %}</a>{% endif %}
   {% if author.cv %}<a href="{{ site.baseurl }}/people/{{ author.cv }}" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>{% endif %}
+  {% if author.codepen %}<a href="http://codepen.io/{{ author.codepen }}" class="author-social" target="_blank"><i class="fa fa-fw fa-codepen"></i> CodePen</a>{% endif %}
 </div>
