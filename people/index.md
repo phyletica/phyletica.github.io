@@ -8,10 +8,12 @@ image:
   creditlink: http://phyletica.github.io
 ---
 
-# Interested in joining the lab?
+# Interested in joining the Phyletica Lab?
 
-Info.
+The Phyletica Lab "breaks ground" in August 2016. If you are interested in
+becoming a phyletician as a postdoc, graduate student, or undergraduate
+researcher, please [contact me](mailto:phyletica@auburn.edu).
 
-# Lab members:
+# Phyleticians:
 {% include _lab-members.html %}
 
