@@ -8,8 +8,6 @@ image:
   creditlink: http://phyletica.github.io
 ---
 
-{% include _toc.html %}
-
 # Interested in joining the lab?
 
 Info.
