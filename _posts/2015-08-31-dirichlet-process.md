@@ -9,6 +9,7 @@ image:
   feature: header-misty-mangroves.jpg
   credit: Jamie Oaks
   creditlink: http://phyletica.github.io
+  share: dpp-3-share.png
 ---
 
 The [Dirichlet process](https://en.wikipedia.org/wiki/Dirichlet_process) is a
