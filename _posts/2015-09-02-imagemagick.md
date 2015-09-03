@@ -10,37 +10,39 @@ image:
   credit: Jamie Oaks
   creditlink: http://phyletica.github.io
   thumb: phyletica-avatar.png
-Published: false
+published: false
 ---
 
 {% highlight bash %}
-    mkdir imagemagick-play
-    cd imagemagick-play
+mkdir imagemagick-play
+cd imagemagick-play
 {% endhighlight %}
 
 {% highlight bash %}
-    curl -o slides.pdf http://phyletica.org/downloads/dpp-3-slides.pdf
+curl -o slides.pdf http://phyletica.org/downloads/dpp-3-slides.pdf
 {% endhighlight %}
 
 
 {% highlight bash %}
-    convert -density 600 slides.pdf -strip -resize @1048576 PNG8:slide-%02d.png
+convert -density 600 slides.pdf -strip -resize @1048576 PNG8:slide-%02d.png
+{% endhighlight %}
+
+resize is based on 1024x1024, but imagemagick will maintain aspect ratio.
+
+{% highlight bash %}
+convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.gif
 {% endhighlight %}
 
 {% highlight bash %}
-    convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.gif
+convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.mp4
 {% endhighlight %}
 
 {% highlight bash %}
-    convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.mp4
+rm slide-??.png
 {% endhighlight %}
 
 {% highlight bash %}
-    rm slide-??.png
-{% endhighlight %}
-
-{% highlight bash %}
-    ffmpeg -f gif -i slides.gif slides.mp4
+ffmpeg -f gif -i slides.gif slides.mp4
 {% endhighlight %}
 
 The video...
@@ -57,29 +59,29 @@ The video...
 
 [here](http://www.imagemagick.org/Usage/blur/#shadow)
 {% highlight bash %}
-    convert blue-triangle.png \( +clone -background black -shadow 80x3+0+8 \) +swap -background none -layers merge +repage play-button.png
+convert blue-triangle.png \( +clone -background black -shadow 80x3+0+8 \) +swap -background none -layers merge +repage play-button.png
 {% endhighlight %}
 
 
 {% highlight bash %}
-    tmpdir="$(mktemp -d)"
-    convert -coalesce slides.gif "$tmpdir/temp-frame-%06d.png"
-    convert "$tmpdir/temp-frame-000000.png" play-button.png -gravity center -composite play-slide.png
+tmpdir="$(mktemp -d)"
+convert -coalesce slides.gif "$tmpdir/temp-frame-%06d.png"
+convert "$tmpdir/temp-frame-000000.png" play-button.png -gravity center -composite play-slide.png
 {% endhighlight %}
 
 [here](http://codepen.io/CalebGrove/pen/bIsqy)
 {% highlight javascript %}
-    $(document).ready(function() {
-      $(".gif-hover").hover(
+$(document).ready(function() {
+    $(".gif-hover").hover(
         function() {
-          var src = $(this).attr("src");
-          $(this).attr("src", src.replace(/\.png$/i, ".gif"));
+            var src = $(this).attr("src");
+            $(this).attr("src", src.replace(/\.png$/i, ".gif"));
         },
         function() {
-          var src = $(this).attr("src");
-          $(this).attr("src", src.replace(/\.gif$/i, ".png"));
+            var src = $(this).attr("src");
+            $(this).attr("src", src.replace(/\.gif$/i, ".png"));
         });
-    });
+});
 {% endhighlight %}
 
 The hover gif...
@@ -95,21 +97,20 @@ The hover gif...
     </figcaption>
 </figure>
 
-
 {% highlight javascript %}
-    $(document).ready(function() {
-      function swap_to_gif() {
+$(document).ready(function() {
+    function swap_to_gif() {
         var src = $(this).attr("src");
         $(this).attr("src", src.replace(/\.png$/i, ".gif"));
         $(this).one("click", handler2);
-      }
-      function swap_to_png() {
+    }
+    function swap_to_png() {
         var src = $(this).attr("src");
         $(this).attr("src", src.replace(/\.gif$/i, ".png"));
         $(this).one("click", handler1);
-      }
-      $(".gif-click").one("click", swap_to_gif);
-    });
+    }
+    $(".gif-click").one("click", swap_to_gif);
+});
 {% endhighlight %}
 
 The clickable gif...
