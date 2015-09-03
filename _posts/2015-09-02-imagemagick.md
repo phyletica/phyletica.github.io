@@ -34,12 +34,15 @@ convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 30
 {% endhighlight %}
 
 {% highlight bash %}
-convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.mp4
+convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png slides.mp4
 {% endhighlight %}
 
 {% highlight bash %}
 rm slide-??.png
 {% endhighlight %}
+
+I think imagemagick uses ffmpeg in the background to make the video (so it will need to be installed).
+You can also use ffmpeg directly: 
 
 {% highlight bash %}
 ffmpeg -f gif -i slides.gif slides.mp4
@@ -54,7 +57,7 @@ The video...
 </video>
 
 {% highlight bash %}
-    curl -o slides.pdf http://phyletica.org/images/play-blue.png
+curl -o blue-triangle.png http://phyletica.org/images/play-blue.png
 {% endhighlight %}
 
 [here](http://www.imagemagick.org/Usage/blur/#shadow)
