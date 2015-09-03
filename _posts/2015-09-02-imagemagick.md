@@ -10,6 +10,7 @@ image:
   credit: Jamie Oaks
   creditlink: http://phyletica.github.io
   thumb: phyletica-avatar.png
+published: false
 ---
 
 {% highlight bash %}
