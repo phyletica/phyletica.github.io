@@ -9,15 +9,15 @@ $(document).ready(function() {
       var src = $(this).attr("src");
       $(this).attr("src", src.replace(/\.gif$/i, ".png"));
     });
-  function handler1() {
+  function swap_to_gif() {
     var src = $(this).attr("src");
     $(this).attr("src", src.replace(/\.png$/i, ".gif"));
     $(this).one("click", handler2);
   }
-  function handler2() {
+  function swap_to_png() {
     var src = $(this).attr("src");
     $(this).attr("src", src.replace(/\.gif$/i, ".png"));
     $(this).one("click", handler1);
   }
-  $(".gif-click").one("click", handler1);
+  $(".gif-click").one("click", swap_to_gif);
 });
