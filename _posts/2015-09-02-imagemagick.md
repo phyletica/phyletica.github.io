@@ -10,7 +10,6 @@ image:
   credit: Jamie Oaks
   creditlink: http://phyletica.github.io
   thumb: phyletica-avatar.png
-published: false
 ---
 
 {% highlight bash %}
@@ -70,6 +69,7 @@ convert blue-triangle.png \( +clone -background black -shadow 80x3+0+8 \) +swap 
 tmpdir="$(mktemp -d)"
 convert -coalesce slides.gif "$tmpdir/temp-frame-%06d.png"
 convert "$tmpdir/temp-frame-000000.png" play-button.png -gravity center -composite play-slide.png
+rm -r "$tmpdir"
 {% endhighlight %}
 
 [here](http://codepen.io/CalebGrove/pen/bIsqy)
@@ -105,12 +105,12 @@ $(document).ready(function() {
     function swap_to_gif() {
         var src = $(this).attr("src");
         $(this).attr("src", src.replace(/\.png$/i, ".gif"));
-        $(this).one("click", handler2);
+        $(this).one("click", swap_to_png);
     }
     function swap_to_png() {
         var src = $(this).attr("src");
         $(this).attr("src", src.replace(/\.gif$/i, ".png"));
-        $(this).one("click", handler1);
+        $(this).one("click", swap_to_gif);
     }
     $(".gif-click").one("click", swap_to_gif);
 });
