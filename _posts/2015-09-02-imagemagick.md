@@ -13,24 +13,28 @@ image:
 published: false
 ---
 
-I am not an expert on the use of the
-[ImageMagick](http://www.imagemagick.org/script/index.php)
-suite, but it has allowed me to script solutions for many of my image-editing
-needs.
-The power and flexibility of
-[ImageMagick](http://www.imagemagick.org/script/index.php)
+The power and flexibility of the
+[ImageMagick](http://www.imagemagick.org/script/index.php) suite of software
 never fails to amaze me.
-One recent task for which it spared me from having to resort to using a GUI
-image editor was was converting a series of PDF slides into an animation
-for use in one of my [recent posts]({{ site.baseurl }}/dirichlet-process/).
-I wanted to document how I did this here, both for my own memory, and
-in case someone else might find it useful.
+Not only does
+[ImageMagick](http://www.imagemagick.org/script/index.php)
+provide several command-line tools capable of meeting all your image
+editing/conversion needs, there are also APIs for over a dozen languages,
+including Python, Ruby, and Perl.
+I should preface this post by declaring that I am not an expert on the use of
+[ImageMagick](http://www.imagemagick.org/script/index.php), but I have used it
+successfully to script solutions for many of my image-editing needs.
+One recent task for which it spared me from having to resort to using a
+GUI-based image editor was converting a series of PDF slides into an animation
+for one of my [recent posts]({{ site.baseurl }}/dirichlet-process/).
+I wanted to document how I did this for my own memory, and in case someone else
+might find it useful.
 
-If you want follow along, create a directory and download the PDF slides:
+If you want to follow along, create a directory and download the PDF slides:
 
 {% highlight bash %}
-mkdir fun-with-imagemagick
-cd fun-with-imagemagick
+mkdir fun-with-im
+cd fun-with-im
 curl -o slides.pdf http://phyletica.org/downloads/dpp-3-slides.pdf
 {% endhighlight %}
 
@@ -44,16 +48,18 @@ convert -density 600 slides.pdf -strip -resize @1048576 PNG8:slide-%02d.png
 The `-density` option determines the resolution (in dots per inch) at which
 to rasterize the PDF.
 The `-strip` option removes any comments or profiles from the output images; I
-use this a lot to reduce file size for when the end result is intended for the
-web.
+use this option a lot to reduce the file size of images for the web.
 The `-resize` option determines the size of the output PNG.
 This option is very flexible in [the arguments it can
 handle](http://www.imagemagick.org/script/command-line-processing.php#geometry);
-here I use the `@` symbol to specify the area in pixels ([ImageMagick](http://www.imagemagick.org/script/index.php) will
-preserve the aspect ratio).
-To reduce file size, I specified 8-bit PNG files using the `PNG8:` syntax.
-Lastly, the `%02d` syntax in the output file name specifies that I want each
-slide to be named `slide-00.png`, `slide-01.png`, etc.
+here I use the `@` symbol to specify the area in pixels
+([ImageMagick](http://www.imagemagick.org/script/index.php) will preserve the
+aspect ratio).
+To further reduce file size, I specified 8-bit PNG files using the `PNG8:`
+syntax.
+Lastly, the `slide-%02d.png` syntax in the output file name specifies that I
+want the slides to be named `slide-00.png`, `slide-01.png`, `slide-02.png`,
+etc.
 
 Next, we can convert the PNGs into an animated GIF:
 
@@ -65,13 +71,13 @@ I have no idea how the `-layers OptimizePlus` works, but it optimizes the final
 output to reduce the animated file size.
 The `-delay` option specifies the number of ticks (the default rate is 100
 ticks per second) to pause each image.
-My options specify to spend 3/4 of a second on the first 15 slides, and then 3
-seconds on the last three slides.
-The `-loop` option specifies the number of times to GIF animation should
+The options in the command above specify to spend 3/4 of a second on the first
+15 slides, and then 3 seconds on the last three slides.
+The `-loop` option specifies the number of times the GIF animation should
 repeat;
 setting it to zero will cause the GIF to repeat indefinitely.
 
-We can use the same command (minus the `loop` option) to create an movie out of
+We can use the same command (minus the `loop` option) to create a movie out of
 the PNG images:
 
 {% highlight bash %}
@@ -88,7 +94,7 @@ You can also use [ffmpeg](https://www.ffmpeg.org/) directly:
 ffmpeg -f gif -i slides.gif slides.mp4
 {% endhighlight %}
 
-You should end up with a video like the following:
+Either way, you should end up with a video like the following:
 
 <video width="320" height="240" controls>
     <source src="https://raw.githubusercontent.com/joaks1/dirichlet-process-trees/master/images/dpp-3-example.mp4" type="video/mp4">
@@ -103,14 +109,16 @@ You should end up with a video like the following:
     </p>
 </figcaption>
 
-Ok, let's clean up all those PNGs:
+Pretty slick; with just a few simple command lines, we went from a PDF to an
+animated GIF and movie.
+Ok, let's clean up all those intermediate PNGs:
 
 {% highlight bash %}
 rm slide-??.png
 {% endhighlight %}
 
-Next, we can make a faux play-button image, which when used with some
-javascript will make the GIF appear controllable.
+Next, we can make a faux play-button image, which, when used with a little
+javascript, will make the GIF appear controllable.
 To make the "play button," we'll started with a simple blue triangle, which you
 can download:
 
@@ -118,7 +126,7 @@ can download:
 curl -o blue-triangle.png http://phyletica.org/images/play-blue.png
 {% endhighlight %}
 
-We can use `convert` to add a shadow to the triangle:
+We can use `convert` to add a shadow to the triangle to make it stand out a bit:
 
 {% highlight bash %}
 convert blue-triangle.png \( +clone -background black -shadow 80x3+0+8 \) +swap -background none -layers merge +repage play-button.png
@@ -134,7 +142,7 @@ overlay the play button onto the first frame.
 convert -coalesce slides.gif frame-%02d.png
 {% endhighlight %}
 
-**NOTE:** I realize we could have avoided this step by simply used the PNG
+**NOTE:** I realize we could have avoided this step by simply using the PNG
 files we just deleted above, but I often have a GIF as the starting point for
 this task, and so I wanted to document how to convert the GIF into separate
 frames.
@@ -146,6 +154,8 @@ Next, let's overlay the shadowed play button:
 convert frame-00.png play-button.png -gravity center -composite slides.png
 {% endhighlight %}
 
+Now, `slides.png` is the first frame of the GIF and looks like it has a "play"
+button on it.
 Notice that I named the output "play-button" PNG as `slides.png` such that the
 prefix matches the `slides.gif` file we made above.
 That was intentional, because now we can use some javascript sleight-of-hand to
@@ -167,7 +177,8 @@ $(document).ready(function() {
 });
 {% endhighlight %}
 
-This allows us to use the `gif-hover` class when embedding the image:
+Adding this javascript to our page allows us to use the `gif-hover` class when
+embedding the PNG/GIF as an image:
 
 {% highlight html %}
 <img class="gif-hover" src="dpp-3-example.png"></a>
@@ -225,7 +236,8 @@ The result is the following GIF that will start/stop with mouse clicks.
 </figure>
 
 Notice, the javascript functions work by simply changing the path from the
-"play-button" PNG file to the GIF and vice versa, and for this to work, the
-files need to be in the same directory and share the same prefix.
+"play-button" PNG file to the GIF, and vice versa.
+For this to work, the files need to be in the same directory and share the same
+prefix.
 A little hacky, no doubt, but it works.
 
