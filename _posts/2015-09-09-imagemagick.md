@@ -96,8 +96,8 @@ ffmpeg -f gif -i slides.gif slides.mp4
 Either way, you should end up with a video like the following:
 
 <video width="320" height="240" controls>
-    <source src="https://raw.githubusercontent.com/joaks1/dirichlet-process-trees/master/images/dpp-3-example.mp4" type="video/mp4">
-    <source src="https://raw.githubusercontent.com/joaks1/dirichlet-process-trees/master/images/dpp-3-example.ogg" type="video/ogg">
+    <source src="/images/dpp-3-example.mp4" type="video/mp4">
+    <source src="/images/dpp-3-example.ogg" type="video/ogg">
     Your browser does not support this video.
 </video>
 <figcaption>
