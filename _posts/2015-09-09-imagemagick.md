@@ -1,16 +1,15 @@
 ---
 layout: post
 title: Converting PDF slides to animated GIFs and videos with ImageMagick
-excerpt: "Imagemagick rocks."
+excerpt: "The power and flexiblity of Imagemagick command-line tools is ... magickal."
 author: jamie_oaks
 tags: [computing]
 comments: true
 image:
-  feature: header-misty-mangroves.jpg
+  feature: header-koh-rong-samloem.jpg
   credit: Jamie Oaks
   creditlink: http://phyletica.github.io
   thumb: phyletica-avatar.png
-published: false
 ---
 
 The power and flexibility of the
@@ -67,8 +66,8 @@ Next, we can convert the PNGs into an animated GIF:
 convert -layers OptimizePlus -delay 75 slide-0?.png slide-1[01234].png -delay 300 slide-1[567].png -loop 0 slides.gif
 {% endhighlight %}
 
-I have no idea how the `-layers OptimizePlus` works, but it optimizes the final
-output to reduce the animated file size.
+I have no idea how the `-layers OptimizePlus` option works, but it optimizes
+the final output to reduce the animated file size.
 The `-delay` option specifies the number of ticks (the default rate is 100
 ticks per second) to pause each image.
 The options in the command above specify to spend 3/4 of a second on the first
@@ -119,7 +118,7 @@ rm slide-??.png
 
 Next, we can make a faux play-button image, which, when used with a little
 javascript, will make the GIF appear controllable.
-To make the "play button," we'll started with a simple blue triangle, which you
+To make the "play button," we'll start with a simple blue triangle, which you
 can download:
 
 {% highlight bash %}
@@ -156,7 +155,7 @@ convert frame-00.png play-button.png -gravity center -composite slides.png
 
 Now, `slides.png` is the first frame of the GIF and looks like it has a "play"
 button on it.
-Notice that I named the output "play-button" PNG as `slides.png` such that the
+Notice that I named the output "play-button" as `slides.png` such that the
 prefix matches the `slides.gif` file we made above.
 That was intentional, because now we can use some javascript sleight-of-hand to
 make the GIF appear controllable on the web.
