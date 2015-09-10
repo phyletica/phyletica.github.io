@@ -87,18 +87,16 @@ We can draw out all possible assignments as a probability tree, which allows us
 to see how the simple rule of the Dirichlet process determines the probability
 of all possible assignments. Below is an animation that does just that.
 
-<video width="320" height="240" controls>
-    <source src="/images/dpp-3-example.mp4" type="video/mp4">
-    <source src="/images/dpp-3-example.ogg" type="video/ogg">
-    Your browser does not support this video.
-</video>
-<figcaption>
-    <p class="figure-caption-box">
-        <span class="center-if-single-line">
-            Animation of a Dirichlet-process probability tree.
-        </span>
-    </p>
-</figcaption>
+<figure>
+    <img class="gif-click" style="border:1px solid #D0D0D0;" src="/images/dpp-3-example.png">
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                Animation of a Dirichlet-process probability tree.
+            </span>
+        </p>
+    </figcaption>
+</figure>
 
 The video walks through all the possible assignments of $$A$$, $$B$$, and $$C$$
 assuming a concentration parameter of 0.1. It then updates all the
