@@ -95,9 +95,14 @@ ffmpeg -f gif -i slides.gif slides.mp4
 
 Either way, you should end up with a video like the following:
 
+**NOTE:** The video is not displaying for some OS/browser combinations.
+If it's not working for you, check out the animated GIF below.
+{: .notice}
+
 <video width="320" height="240" controls>
     <source src="/images/dpp-3-example.mp4" type="video/mp4">
     <source src="/images/dpp-3-example.ogg" type="video/ogg">
+    <source src="/images/dpp-3-example.mov">
     Your browser does not support this video.
 </video>
 <figcaption>
