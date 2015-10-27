@@ -22,4 +22,4 @@ image:
 {% bibliography --cited %}
 
 
- [1]: http://www.phyletica.com/downloads/data/oaks-2011-evolution-figure-1-trees.tar.gz
+ [1]: {{ site.baseurl }}/research/data/oaks-2011-evolution-figure-1-trees.tar.gz
