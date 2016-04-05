@@ -1,4 +1,4 @@
-# Phyletica website
+# Phyletica Lab Website
 
 This is the jekyll-enabled website for the Phyletica Lab:
 
