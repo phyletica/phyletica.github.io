@@ -525,7 +525,7 @@ $ git commit -m "Removing unnecessary verbiage"
 
 ```
 $ git checkout master
-$ get merge cosmetic
+$ git merge cosmetic
 ```
 
 <p class="fragment fade-up">
@@ -534,7 +534,7 @@ What happened? Take a look at HTML code and refresh browser.
 
 
 ```
-$ get merge programs
+$ git merge programs
 ```
 
 <p class="fragment fade-up">
@@ -547,7 +547,7 @@ This combination of code never existed before, so we need a new snapshot
 
 
 ```
-$ get merge concise
+$ git merge concise
 ```
 
 <p class="fragment fade-up">
@@ -586,6 +586,7 @@ $ git checkout master
 ```
 
 
+
 # Remotes
 
 
@@ -607,7 +608,7 @@ $ cd local-demo
 $ git clone ../remote-demo
 $ ls
 $ cd remote-demo
-$ git remote
+$ git remote -v
 ```
 <p class="fragment fade-up">
 'origin' is the alias for the repo in the other directory
