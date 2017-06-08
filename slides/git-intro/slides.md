@@ -1,13 +1,22 @@
 # Intro to Git
 
 
-
-# Setting up Git
-
-
 <a href="http://www.phdcomics.com"><img src="images/phd101212s.png" alt="Piled Higher and Deeper by Jorge Cham, http://www.phdcomics.com/comics/archive_print.php?comicid=1531" style="max-height: 500px;" /></a>
 
 <http://www.phdcomics.com>
+
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/ddB3Ym1ynsNqhc?startSlide=111" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/chacon/git-101-presentation" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/chacon">Scott Chacon</a></strong> </div>
+
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/ddB3Ym1ynsNqhc?startSlide=343" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/chacon/git-101-presentation" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/chacon">Scott Chacon</a></strong> </div>
+
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/ddB3Ym1ynsNqhc?startSlide=346" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/chacon/git-101-presentation" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/chacon">Scott Chacon</a></strong> </div>
+
+
+
+# Setting up Git
 
 
 ```
