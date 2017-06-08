@@ -45,10 +45,17 @@ $ git config --global core.editor "nano -w"
 [Lots of other options](http://swcarpentry.github.io/git-novice/02-setup/)
 
 
-Let git use pretty colors when it tells you stuff
+Allow git to use pretty colors when it tells you stuff
 
 ```
 $ git config --global color.ui "true"
+```
+
+
+Let's create an alias while we're at it 
+
+```
+$ git config --global alias.dag "log --oneline --graph --decorate"
 ```
 
 
