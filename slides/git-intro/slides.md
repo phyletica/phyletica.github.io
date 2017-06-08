@@ -42,14 +42,14 @@ $ git config --help
 $ git config --global core.editor "nano -w"
 ```
 
+[Lots of other options](http://swcarpentry.github.io/git-novice/02-setup/)
+
 
 Let git use pretty colors when it tells you stuff
 
 ```
 $ git config --global color.ui "true"
 ```
-
-[Lots of other options](http://swcarpentry.github.io/git-novice/02-setup/)
 
 
 ```
