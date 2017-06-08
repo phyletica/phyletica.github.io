@@ -1,3 +1,4 @@
+    require 'shellwords'
     require 'rubygems'
     require 'rake'
     require 'rdoc'
