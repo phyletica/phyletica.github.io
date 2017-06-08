@@ -200,3 +200,188 @@ $ git log
 	<li>Stage and commit changes (`git commit -a`)</li>
 </ul>
 
+
+
+
+# Branches
+
+
+```
+$ git branch cosmetic
+$ git branch programs
+$ git branch concise
+```
+
+```
+$ git branch
+```
+
+
+```
+$ git checkout cosmetic
+```
+
+
+On 'cosmetic' branch, change
+
+```
+<html>
+    <head>
+        <title>AU Bioinformatics Bootcamp Dummy HTML page</title>
+    </head>
+    <body>
+        <h1>This is a big header.</h1>
+```
+to
+
+```
+<html>
+    <head>
+        <title>AU Bioinformatics Bootcamp Dummy HTML page</title>
+    </head>
+    <body style="font-family: Comic Sans MS">
+        <h1><font color="red">This is a big header.</font></h1>
+```
+
+
+```
+$ git status
+$ git diff
+```
+
+Stage changes for the next commit
+```
+$ git add aubb.html
+$ git status
+$ git diff
+```
+
+Commit snapshot to the repo database
+```
+$ git commit -m "Changing font and header color"
+```
+
+
+```
+$ git checkout programs
+```
+
+Are cosmetic changes still there? Why?
+
+
+On 'programs' branch, change
+
+```
+      <td>Mapping stuff, Bowtie, variant calling</td>
+  </tr>
+  <tr>
+      <td>June 8</td>
+      <td>Interminable Git intro and seminar</td>
+```
+to
+
+```
+      <td>Mapping stuff, <b>Bowtie</b>, variant calling</td>
+  </tr>
+  <tr>
+      <td>June 8</td>
+      <td>Interminable <b>Git</b> intro and seminar</td>
+```
+
+
+```
+$ git status
+$ git diff
+```
+
+Stage changes for the next commit
+```
+$ git add aubb.html
+$ git status
+$ git diff
+```
+
+Commit snapshot to the repo database
+```
+$ git commit -m "Bolding program names"
+```
+
+
+```
+$ git checkout concise
+```
+
+Are cosmetic changes or bolded programs still there? Why?
+
+
+On 'concise' branch, change
+
+```
+      <td>Mapping stuff, Bowtie, variant calling</td>
+  </tr>
+  <tr>
+      <td>June 8</td>
+      <td>Interminable Git intro and seminar</td>
+```
+to
+
+```
+      <td>Mapping, Bowtie, variant calling</td>
+  </tr>
+  <tr>
+      <td>June 8</td>
+      <td>Git intro and seminar</td>
+```
+
+
+```
+$ git status
+$ git diff
+```
+
+Stage changes for the next commit
+```
+$ git add aubb.html
+$ git status
+$ git diff
+```
+
+Commit snapshot to the repo database
+```
+$ git commit -m "Removing unnecessary verbiage"
+```
+
+
+## Merging our changes
+
+```
+$ git checkout master
+$ get merge cosmetic
+```
+
+What happened? Take a look at HTML code and refresh browser.
+
+Just simply moved master and HEAD pointers
+
+
+```
+$ get merge programs
+```
+
+What happened? Why?
+
+This combination of code never existed before, so we need a new snapshot
+
+
+```
+$ get merge concise
+```
+
+Conflicts! Why?
+
+
+Resolve flagged conflicts, and then
+```
+$ git add aubb.html
+$ git commit -m "Manual merge"
+```
