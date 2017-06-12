@@ -13,6 +13,13 @@
 	    <img src="{{ site.baseurl }}/images/{{ member.avatar }}" class="bio-photo" alt="{{ member.name }} bio photo">
     {% endif %}
         <h3 itemprop="name">{{ member.name }}{% if member.role %} &#8212; {{ member.role }}{% endif %}</h3>
+        {% if member.coadvisor %}
+            {% if member.coadvisor-url %}
+            <h4 itemprop="coadvisor">Co-advisor: <a href="{{ member.coadvisor-url}}">{{ member.coadvisor }}</a></h4>
+            {% else %}
+                <h4 itemprop="coadvisor">Co-advisor: {{ member.coadvisor }}</h4>
+            {% endif %}
+        {% endif %}
         {% if member.bio %}
         <p class="member-bio-box">
             <span class="center-if-single-line">

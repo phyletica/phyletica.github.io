@@ -11,10 +11,6 @@ image:
 
 Most of my packages, scripts, and other projects are freely available on [GitHub][1]. Below are descriptions of a few.
 
-## [SATé][2]
-
-I am a developer for the software pacakge [SATé][2]. [SATé][2] is a tool for inferring a sequence alignment and phylogenetic tree using an iterative algorithm. In each iteration, the data set is divided into smaller subproblems by a tree-based decomposition, which are subsequently aligned before being merged back together for phylogenetic tree inference.
-
 ## [dpp-msbayes][3]
 
 [dpp-msbayes][3] is a modified version of a popular comparative phylogeographical method for estimating shared evolutionary history in an approximate-Bayesian framework. This version is reparameterized and uses more flexible priors, most notably a Dirichlet-process prior over shared histories. The modifications increase the method's power for detecting temporal variation in divergences across taxa, allowing for more robust inference that more accurately reflects uncertainty. If you are interested in using this method, it is probably easier (and faster) to use it (and its predecessor) using the Python package [PyMsBayes][4] (see below).
@@ -30,6 +26,11 @@ I am a developer for the software pacakge [SATé][2]. [SATé][2] is a tool for i
 ## [SeqSift][6]
 
 [SeqSift][6] is a python package for downloading, vetting, manipulating, and converting molecular sequence data. It also allows for *in silico* restriction digests.
+
+## [SATé][2]
+
+I am a developer for the software pacakge [SATé][2]. [SATé][2] is a tool for inferring a sequence alignment and phylogenetic tree using an iterative algorithm. In each iteration, the data set is divided into smaller subproblems by a tree-based decomposition, which are subsequently aligned before being merged back together for phylogenetic tree inference.
+
 
  [1]: https://github.com/joaks1
  [2]: http://phylo.bio.ku.edu/software/sate/sate.html

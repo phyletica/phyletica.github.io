@@ -30,6 +30,7 @@ image:
     </p>
 </div>
 -->
+<!---
 Welcome to the Phyletica Lab, which is setting up shop next fall in the
 [Department of Biological Sciences](http://www.auburn.edu/biology) and [Musuem
 of Natural History](http://www.aumnh.org) at [Auburn
@@ -38,7 +39,6 @@ My name is [Jamie Oaks][1], and I start as an Assistant Professor at Auburn in
 August 2016. Currently, I am an [NSF Postdoctoral Research Fellow][2] working
 with [Adam Leaché][3] and [Vladimir Minin][4] at the [University of
 Washington][5].
-<!---
 I recently received my Ph.D.
 from the [University of Kansas][6] working with [Rafe Brown][7] and [Mark
 Holder][8].

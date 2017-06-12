@@ -19,20 +19,79 @@
 
 - title: Postdocs
   members:
-  - name: You?
+  - name: Jesse Grismer
     role: Postdoctoral Researcher
-    avatar: avatar-gecko.jpg
+    avatar: bio-photo-jesse.jpg
+    bio: >
+        Jesse is interested in the systematics, biogeography, and conservation
+        of reptile and amphibian species, and is a La Kretz Post doctoral
+        fellow co-advised with Brad Shaffer at the University of California Los
+        Angeles. Jesse's postdoctoral research will be focused on the
+        conservation genomics of Southern California reptiles.
+    email: jlg0067@auburn.edu
+    coadvisor: Brad Shaffer
+    coadvisor-url: https://www.eeb.ucla.edu/Faculty/Shaffer/
+
+  # - name: You?
+  #   role: Postdoctoral Researcher
+  #   avatar: avatar-gecko.jpg
 
 - title: Graduate Students
   members:
-  - name: You?
-    role: Graduate Student
+  - name: Aundrea Westfall
+    role: M.Sc. Student
+    bio: >
+        Investigating phylogenetic patterns of viviparity and expression
+        networks of regulatory genes for the placenta in Squamata.
+    avatar: bio-photo-aundrea.jpg
+    email: akw0018@tigermail.auburn.edu
+    coadvisor: Tonia Schwartz
+    coadvisor-url: https://www.schwartzlab-ecoevolutionarygenomics.org/
+
+  - name: Breanna Sipley
+    role: Ph.D. Student
+    bio: >
+        Interested in the genetic bases of symbiosis, co-phylogeny of parasites
+        and their hosts, and the evolution of gene families associated with
+        blood parasitism.
     avatar: avatar-cyrt.jpg
+    twitter: Breanna_Sipley
+    coadvisor: Ken Halanych
+    coadvisor-url: http://metazoan.auburn.edu/halanych/lab/
+
+  - name: Kerry Cobb
+    role: Ph.D. Student
+    bio: >
+        Interested in the phylogenetics, speciation genomics, and reproductive
+        isolating mechanisms among Anaxyrus toads.
+    avatar: bio-photo-kerry.jpg
+    twitter: KerryACobb
+
+  - name: Randy Klabacka
+    role: Ph.D. Student
+    bio: >
+        I am fascinated by the coevolutionary relationship between
+        mitochondrial and nuclear genomes. I am interested in the role sexual
+        reproduction plays in maintaining a healthy mitonuclear marriage, and
+        analyzing the effects of parthenogenesis on mitochondrial dysfunction
+        using physiological methods within a phylogenetic context.
+    avatar: bio-photo-randy.jpg
+    twitter: R_Klabacka
+    cv: cv-klabacka.pdf
+    coadvisor: Tonia Schwartz
+    coadvisor-url: https://www.schwartzlab-ecoevolutionarygenomics.org/
+
+  # - name: You?
+  #   role: Graduate Student
+  #   avatar: avatar-cyrt.jpg
 
 - title: Undergraduate Researchers
   members:
-  - name: You?
+  - name: Ryan Cook
     role: Undergraduate Researcher
+    bio: >
+        Investigating trends in the morphological changes of Alabama salamander
+        populations over the past 50 years.
     avatar: avatar-croc.jpg
 
 - title: Honorary Members
