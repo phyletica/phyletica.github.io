@@ -695,3 +695,18 @@ Always pull (or fetch and merge) before pushing
 
 
 <http://gitref.org/>
+
+
+
+# Acknowledgments
+
+
+## Material
+These slides were inspired by, and borrowed heavily from, the Git exercise
+written by [Mark Holder](http://phylo.bio.ku.edu/content/mark-t-holder), which
+can be found at <https://github.com/mtholder/swc-tree-support-ex>.
+
+
+## Support
+This work was made possible by funding provided to [Jamie
+Oaks](http://phyletica.org) from the National Science Foundation (DEB 1656004).
