@@ -13,7 +13,7 @@ image:
 ---
 
 <figure>
-    <a href="/images/ssb-2017-phyletica-lab.jpg"><img src="/images/surprise-birthday-2017.jpg"></a>
+    <a href="/images/surprise-birthday-2017.jpg"><img src="/images/surprise-birthday-2017.jpg"></a>
     <figcaption>
         <p class="figure-caption-box">
             <span class="center-if-single-line">

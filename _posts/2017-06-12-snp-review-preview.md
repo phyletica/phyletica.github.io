@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Review of the use of SNPs in phylogenetics---Preview available
+title: Review of the use of SNPs in phylogenetics&#8212;Preview available
 excerpt: "Abstract available of AREES review paper on SNPs in phylogenetics."
 author: phyletica
 tags: [news, science, paper]
