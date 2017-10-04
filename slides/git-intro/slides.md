@@ -694,7 +694,11 @@ Push often
 Always pull (or fetch and merge) before pushing
 
 
-<http://gitref.org/>
+
+# Resources 
+
+
+<https://git-scm.com/docs>
 
 
 
