@@ -11,6 +11,13 @@ image:
 
 Most of my packages, scripts, and other projects are freely available on [GitHub][1]. Below are descriptions of a few.
 
+## [ecoevolity](https://github.com/phyletica/ecoevolity)
+
+[ecoevolity](https://github.com/phyletica/ecoevolity): Estimating evolutionary
+coevality.
+A C++ package for full-likelihood Bayesian comparative phylogeography from
+genomic data.
+
 ## [dpp-msbayes][3]
 
 [dpp-msbayes][3] is a modified version of a popular comparative phylogeographical method for estimating shared evolutionary history in an approximate-Bayesian framework. This version is reparameterized and uses more flexible priors, most notably a Dirichlet-process prior over shared histories. The modifications increase the method's power for detecting temporal variation in divergences across taxa, allowing for more robust inference that more accurately reflects uncertainty. If you are interested in using this method, it is probably easier (and faster) to use it (and its predecessor) using the Python package [PyMsBayes][4] (see below).
