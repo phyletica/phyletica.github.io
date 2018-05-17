@@ -19,6 +19,16 @@
 
 - title: Postdocs
   members:
+  - name: Brian Folt
+    role: Postdoctoral Researcher
+    bio: >
+        Brian is a broadly trained ecologist and evolutionary biologist working
+        with us on the comparative phylogeography of reptiles and amphibians
+        across the Southeastern United States.
+    avatar: bio-photo-brian.jpg
+    twitter: brianf0lt
+    web: https://brianfolt.com/
+
   - name: Jesse Grismer
     role: Postdoctoral Researcher
     avatar: bio-photo-jesse.jpg
