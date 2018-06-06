@@ -600,22 +600,22 @@ $ git checkout master
 
 ```
 $ cd ~/git-intro
-$ mkdir remote-demo
-$ cd remote-demo
+$ mkdir remote-repo
+$ cd remote-repo
 $ git init --bare
 ```
 
 
 ```
 $ cd ..
-$ mkdir local-demo
-$ cd local-demo
+$ mkdir bonnie
+$ cd bonnie
 ```
 
 ```
-$ git clone ../remote-demo
+$ git clone ../remote-repo
 $ ls
-$ cd remote-demo
+$ cd remote-repo
 $ git remote -v
 ```
 <p class="fragment fade-up">
@@ -624,7 +624,7 @@ $ git remote -v
 
 
 ```
-$ echo "Well, hello again, dummy" > dummy.txt
+$ echo "Well hello again dummy" > dummy.txt
 $ git add dummy.txt
 $ git commit -m "Adding dummy.txt"
 $ git status
@@ -679,6 +679,164 @@ This is longer, but sometimes it's nice to
 $ git diff origin/master
 ```
 before merging!
+
+
+Now, let's pretend to be Bonnie's collaborator
+```
+$ cd ../..
+$ ls
+$ mkdir clyde
+$ cd clyde
+$ ls
+$ git clone ../remote-repo
+$ ls
+$ cd remote-repo
+```
+
+
+As Clyde, let's add a line to dummy.txt
+```
+$ cat dummy.txt
+$ echo "I'm no dummy" >> dummy.txt
+$ git add dummy.txt
+$ git commit -m "Adding line to dummy.txt"
+$ git push origin master
+```
+
+
+Now, let's go back to being Bonnie
+```
+$ cd ../../bonnie/remote-repo
+$ cat dummy.txt
+$ git pull origin master
+$ cat dummy.txt
+```
+
+
+Bonnie adds a comma
+
+Open dummy.txt and change
+```
+Well hello again dummy
+```
+to
+
+```
+Well, hello again dummy
+```
+
+```
+$ git add dummy.txt
+$ git commit -m "Adding comma to dummy.txt"
+$ git push origin master
+```
+
+
+Now, let's go back to being Clyde and add a comma
+```
+$ cd ../../clyde/remote-repo
+```
+
+Open dummy.txt and change
+```
+Well hello again dummy
+```
+to
+
+```
+Well hello again, dummy
+```
+
+
+Clyde tries to push his changes
+```
+$ git add dummy.txt
+$ git commit -m "Adding comma to dummy.txt"
+$ git push origin master
+```
+
+But,
+```
+To /home/jamie/git-intro/clyde/../remote-repo/
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to '/home/jamie/git-intro/clyde/../remote-repo/'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+Clyde needs to `pull` down Bonnie's changes first!
+
+
+Let's `pull` down Bonnie's changes
+```
+git pull origin master
+```
+```
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From /home/jamie/git-intro/clyde/../remote-repo
+ * branch            master     -> FETCH_HEAD
+   afe295d..ad99087  master     -> origin/master
+Auto-merging dummy.txt
+CONFLICT (content): Merge conflict in dummy.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+We have a merge conflict, because Bonnie and Clyde both edited the same line!
+
+```
+$ git status
+```
+
+
+Now, as Clyde, we need to manually resolve this conflict
+
+Open `dummy.txt` and you'll see
+```
+<<<<<<< HEAD
+Well hello again, dummy
+=======
+Well, hello again dummy
+>>>>>>> ad99087c06afffc6ab161a749e2b3ca16c092348
+I'm no dummy
+```
+`git` has flagged the conflict with the
+```
+<<<<<<<
+your content
+=======
+other content
+>>>>>>>
+```
+notation
+
+
+Edit `dummy.txt` to
+```
+Well, hello again, dummy
+I'm no dummy
+```
+
+`add`, `commit`, and `push` your changes
+```
+$ git status
+$ git add dummy.txt
+$ git status
+$ git commit -m "Resolving comma conflict"
+$ git push origin master
+```
+
+
+Now, let's go back to being Bonnie
+```
+$ cd ../../bonnie/remote-repo
+$ cat dummy.txt
+$ git pull origin master
+$ cat dummy.txt
+```
 
 
 
