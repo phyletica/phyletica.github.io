@@ -511,6 +511,10 @@ $button-size: 1.5rem;
     text-align: left;
     display: inline-block;
 }
+.former-member-current-box {
+    text-align: left;
+}
+.former-member-wrap,
 .member-wrap {
     text-align: center;
 	h3 {
@@ -561,6 +565,25 @@ $button-size: 1.5rem;
 	}
 	@media #{$x-large} {
 	}
+}
+.former-member-wrap {
+    text-align: left;
+	h3 {
+	    @include font-rem(20);
+		margin-top: 4px;
+		margin-bottom: 4px;
+	}
+	h4 {
+		margin-top: 2px;
+		margin-bottom: 1px;
+	}
+	p {
+	    @include font-rem(16);
+		margin-top: 1px;
+		margin-bottom: 2px;
+	}
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 
