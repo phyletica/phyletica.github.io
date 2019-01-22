@@ -73,8 +73,8 @@ Create a directory we want to version control and `cd` into it
 ```
 $ mkdir git-intro
 $ cd git-intro
-$ mkdir aubb-git-fun
-$ cd aubb-git-fun
+$ mkdir first-git-repo
+$ cd first-git-repo
 ```
 
 
@@ -210,8 +210,8 @@ Date:   Thu Jun 8 09:06:35 2017 -0500
 
     Adding dummy.txt
     
-    Adding new file and writing a long commit message to teach aubb
-    participants good commit practices.
+    Adding new file and writing a long commit message to teach
+    students good commit practices.
 ```
 <p class="fragment fade-up">
 `git log` shows you every commit from where you currently are back to the root
