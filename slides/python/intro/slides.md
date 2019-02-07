@@ -110,19 +110,19 @@ In Python, when we type
 >>> area = 1.5 * 2
 ```
 
-<ul>
+<ol>
 	<li class="fragment fade-up">An *object* is created with value 1.5</li>
 	<li class="fragment fade-up">An *object* is created with value 2</li>
 	<li class="fragment fade-up">The product operation is evaluated, returning a new object with value 3.0</li>
 	<li class="fragment fade-up">The object with value 3.0 is assigned ("bound to") the name "area"</li>
-</ul>
+</ol>
+<p class="fragment fade-up">
+    The *type* of all of these objects is determined dynamically by the Python
+    interpreter
+</p>
 
 
 <ul>
-	<li class="fragment fade-up">
-        The *type* of all of these objects is determined dynamically by the
-        Python interpreter
-    </li>
 	<li class="fragment fade-up">
         Python has many types
     </li>
@@ -132,23 +132,10 @@ In Python, when we type
         </li>
     </ul>
 	<li class="fragment fade-up">
-        Common types include integers, float, strings, and Booleans
+        Common types include integers, floats, strings, and Booleans
     </li>
 	<li class="fragment fade-up">
-        Compared to a statically typed language
-    </li>
-</ul>
-
-
-<ul>
-	<li>
-        Compared to a statically typed language, this means less typing for you
-    </li>
-	<li class="fragment fade-up">
-        It also can make Python code very flexible
-    </li>
-	<li class="fragment fade-up">
-        However, getting familiar with *types* and how *objects* are bound to
+        Getting familiar with *types* and how *objects* are bound to
         *names* will take some getting used to
     </li>
 </ul>
