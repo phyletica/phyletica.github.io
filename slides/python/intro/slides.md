@@ -114,7 +114,7 @@ In Python, when we type
 	<li class="fragment fade-up">An *object* is created with value 1.5</li>
 	<li class="fragment fade-up">An *object* is created with value 2</li>
 	<li class="fragment fade-up">The product operation is evaluated, returning a new object with value 3.0</li>
-	<li class="fragment fade-up">The object with value 3.0 is assigned ("bound to") the name "radius"</li>
+	<li class="fragment fade-up">The object with value 3.0 is assigned ("bound to") the name "area"</li>
 </ul>
 
 
@@ -233,8 +233,8 @@ $ python3
 
 ```python
 >>> 2 / 3
->>> 8 // 3  # floor division
->>> 8 % 3   # modulo
+>>> 10 // 3  # floor division
+>>> 10 % 3   # modulo
 >>> 2 ** 3  # base ** exponent
 ```
 
@@ -296,7 +296,9 @@ Why didn't `another_variable` change?
 >>> print(locals())
 ```
 <p class="fragment fade-up">
-We wouldn't normally use `locals()` when scripting
+We wouldn't normally use `locals()` when scripting,
+but it lets us see what Python has in memory that we
+can access with a variable name
 </p>
 
 
@@ -317,3 +319,18 @@ An important difference from BASH is the best practice for the shebang line
 ```python
 #! /usr/bin/env python3
 ```
+
+
+
+# Acknowledgments
+
+
+## Material
+These slides borrow heavily from notes
+written by [Mark Holder](http://phylo.bio.ku.edu/content/mark-t-holder), which
+can be found at <https://github.com/mtholder/eebprogramming>.
+
+
+## Support
+This work was supported by funding from the National Science Foundation (DEB
+1656004).
