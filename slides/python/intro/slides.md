@@ -160,6 +160,15 @@ $ python3
 
 
 
+# Let me out!
+
+
+```python
+>>> quit()
+```
+
+
+
 # Integers & Floats
 
 
@@ -227,7 +236,7 @@ $ python3
 
 
 
-# Functions
+# Using Functions
 
 
 A useful example is `print`
@@ -236,6 +245,53 @@ A useful example is `print`
 >>> print("any", "number of", "arguments", 1, 2, 3.0, sep="--")
 >>> print("any", "number of", "arguments", 1, 2, 3.0, sep = "--", end = "\n\n\n")
 ```
+
+
+
+# Using Methods
+
+
+<ul>
+	<li>
+        In Python, most functions "belong to" a particular type, or *class* 
+    </li>
+	<li class="fragment fade-up">
+        These are colled *methods*
+    </li>
+	<li class="fragment fade-up">
+        Methods are usually called "from" an *instance* of a *class* (an
+        existing object of a particular type)
+    </li>
+</ul>
+
+
+Examples of string methods
+```python
+>>> "blah".upper()
+>>> a = "blah"
+>>> a.upper()
+>>> a.count("h")
+```
+
+
+More examples using a list
+```python
+>>> a_list = [4, 9, 1]
+>>> a_list
+>>> type(a_list)
+```
+```python
+>>> a_list.sort()
+>>> a_list
+>>> a_list.reverse()
+>>> a_list
+```
+<p class="fragment fade-up">
+This is an example of object-oriented programming
+</p>
+<p class="fragment fade-up">
+Can you think of some advantages of this?
+</p>
 
 
 
@@ -290,12 +346,203 @@ can access with a variable name
 
 
 
-# Let me out!
+# Collections
+
+
+## Sequences
+
+
+### Strings
+<ul>
+	<li class="fragment fade-up">
+        You are already familiar with one sequence class, `str`
+    </li>
+	<li class="fragment fade-up">
+        Strings have lots of methods, how can we see what's possible?
+    </li>
+	<li class="fragment fade-up">
+        The functions `dir` and `help` are very useful
+    </li>
+</ul>
 
 
 ```python
->>> quit()
+>>> a = "blah"
+>>> dir(a)
+>>> help(a)
+>>> help(a.count)
 ```
+**NOTE:** `help` pipes its output to the system tool `less`. Use arrows (or 'j'/'k')
+to navigate, and 'q' to exit.
+
+
+Strings are what is known as an *immutable* data type
+```python
+>>> a = "  blah  "
+>>> print(a)
+>>> a.strip()
+>>> print(a)
+>>> a[3]
+>>> a[3] = "x"
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    a[3] = "x"
+TypeError: 'str' object does not support item assignment
+```
+
+
+### Lists
+Lists are a very useful *mutable* data type
+```python
+>>> a_list = [4, 9, 1]
+>>> a_list
+>>> type(a_list)
+>>> a_list.sort()
+>>> a_list
+>>> a_list.reverse()
+>>> a_list
+>>> a_list.append(18)
+>>> a_list
+>>> a_list[0] = "first item"
+>>> a_list
+```
+<p class="fragment fade-up">
+Can contain any type of element, even other lists!
+</p>
+
+
+### Tuples
+Tuples are similar to lists, but are *immutable*
+```python
+>>> a_tuple = (4, 9.0, "another item")
+>>> a_tuple[0] = 1
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+    a_tuple[0] = 1
+TypeError: 'tuple' object does not support item assignment
+
+```
+
+
+### Switching among sequence
+Getting an object of a different sequence type is fairly easy
+```python
+>>> name = "Luna"
+>>> type(name)
+>>> name_list = list(name)
+>>> type(name_list)
+>>> type(name)
+>>> name_list
+>>> name_tuple = tuple(name)
+>>> type(name_tuple)
+>>> name_tuple
+```
+
+
+But, going from a list or tuple to a string is not as straightforward
+```python
+>>> name = "Luna"
+>>> name_list = list(name)
+>>> name_list
+>>> name_str = str(name_list)
+>>> name_str
+<p class="fragment fade-up">
+```
+Not what you expected?
+</p>
+<p class="fragment fade-up">
+Why does Python do this?
+</p>
+<p class="fragment fade-up">
+Remember, *any* data type can be stored in lists and tuples!
+</p>
+
+
+The `join` method the string class will get us what we want
+```python
+>>> name = "Luna"
+>>> name_list = list(name)
+>>> name_list
+>>> name_str = "".join(name_list)
+>>> name_str
+>>> "---".join(name_list)
+```
+
+
+### Sequence operations
+
+
+#### Indexing & slicing
+All sequence types allow *indexing* (also called *dereferencing* or *subscription*) and *slicing*
+
+**Indexing**
+```python
+>>> name = "Luna"
+>>> name_list = list(name)
+>>> name[1]
+>>> name_list[1]
+```
+This returns a reference to the second element in the string and list
+
+
+When the index is negative, it is counted from the end of the sequence
+```python
+>>> name[-1]
+>>> name_list[-1]
+```
+
+
+**Slicing**
+```python
+>>> letters = "abcdefghij"
+>>> numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> letters[1:4]
+>>> numbers[1:4]
+>>> numbers[-3:-1]
+```
+'seqobject[a:b]' returns a new sequence object that contains the items from the
+original sequence, starting at index 'a' up to (but not including) index 'b'
+
+
+#### Boolean operators
+```python
+>>> restriction_site = "TATA"
+>>> seq = "GCTTAATGCTATAGCAT"
+>>> restriction_site in seq
+>>> restriction_site not in seq
+```
+
+```python
+>>> numbers = list(range(10))
+>>> 0 in numbers
+>>> 10 not in numbers
+```
+
+
+## Other Collection Types
+
+
+### Dictionaries
+Dictionaries (`dict`) map keys to objects
+```python
+>>> dog = {"name": "Luna", "weight": 91.8, "age": 7, "color": "black"}
+```
+The syntax is '{ key1 : value1, key2 : value2 }'
+```python
+>>> dog
+>>> dog["name"]
+>>> "weight" in dog
+>>> "breed" in dog
+>>> dog["breed"] = "great dane"
+>>> "breed" in dog
+>>> dog
+```
+
+
+### Sets
+-   A set is like a dictionary without values
+-   Useful for keeping track unique values (for example)
+-   We'll skip them for now
 
 
 
@@ -305,6 +552,187 @@ can access with a variable name
 An important difference from BASH is the best practice for the shebang line
 ```python
 #! /usr/bin/env python3
+```
+
+
+
+# Flow control
+
+
+## Conditionals
+
+
+### `if` statements
+```python
+>>> restriction_site = "TATA"
+>>> seq = "GCTTAATGCTATAGCAT"
+>>> if restriction_site in seq: 
+...     print("cut!")
+... else:
+...     print("no cut")
+...
+```
+**NOTE:** Indentation is very important! It's how Python knows when a block of
+code ends
+
+Everything after ":" needs to be indented by exactly 4 more spaces to be in
+included in the statement
+
+
+```python
+>>> x = 0
+>>> y = 1
+>>> if x == 0:
+...     if not y == 0:
+...         print("macaroni")
+... elif x > 0:
+...     print("x is positive")
+... else:
+...     print("x is negative")
+...
+```
+
+
+### `assert` statements
+```python
+>>> assert 1 == 1, "Hold on, something is awry!"
+>>> assert 1 == 2, "Hold on, something is awry!"
+```
+Use `assert` and use it often
+
+Whenever you find yourself assuming anything about the current state of the
+program, it's probably a good time for an `assert`
+
+
+## Loops
+
+
+### `while` loop
+General syntax is:
+```python
+while expression:
+    statements
+```
+While the expression evaluates to `True`, the statements will be run again and again
+
+Until the expression is `False` OR another statement interrupts the loop (like
+`break` or `return`)
+
+
+```python
+>>> x = ""
+>>> while x != 'N':
+...     response = input("Would you like to see this prompt again? ")
+...     x = response.upper()
+...
+````
+
+
+```python
+>>> x = ""
+>>> while True:
+...     response = input("Would you like to see this prompt again? ")
+...     x = response.upper()
+...     if x == "N" or x == "NO":
+...         break
+...
+```
+
+
+### `for` loop
+General syntax is:
+```python
+for item in collection:
+    do something
+```
+
+
+Works for sequences and other iterables
+```python
+>>> x = list(range(5))
+>>> print(x)
+>>> for element in x:
+...     print(element)
+... 
+>>> for el in range(5):
+...     print(x)
+... 
+>>> total = 0
+>>> for el in range(5):
+...     total += el
+... 
+print(total)
+```
+
+
+Works for strings (which is a sequence)
+```python
+>>> word = ""
+>>> for character in "Hello!":
+...     word += character
+...     print(character)
+... 
+>>> print(word)
+```
+
+
+Works for dictionaries
+```python
+>>> genetic_code = {'GUC': 'V', 'ACC': 'T', 'GUA': 'V'}
+>>> for element in genetic_code:
+...     print(element)
+```
+It's iterating over the keys!
+```python
+>>> genetic_code = {'GUC': 'V', 'ACC': 'T', 'GUA': 'V'}
+>>> for element in genetic_code:
+...     print(element, "-->", genetic_code[element])
+```
+
+
+We can also iterate over tuples of the key and value
+```python
+>>> genetic_code = {'GUC': 'V', 'ACC': 'T', 'GUA': 'V'}
+>>> for key, value in genetic_code.items():
+...     print(key, "-->", value)
+```
+
+
+
+# Defining functions
+
+
+```python
+>>> locals()
+>>> def calc_square_prism_volume(square_length, height):
+...     volume = (square_length ** 2) * height
+...     print(locals())
+...     return volume
+...
+>>> type(calc_square_prism_volume)
+>>> locals()
+```
+
+
+```python
+>>> calc_square_prism_volume(4, 10)
+>>> locals()
+>>> volume = calc_square_prism_volume(4, 10)
+>>> locals()
+>>> calc_square_prism_volume(10, 4)
+>>> calc_square_prism_volume(height = 10, square_length=4)
+>>> calc_square_prism_volume(square_length = 4, 10)
+>>> calc_square_prism_volume(4, height = 10)
+```
+
+
+We can provide default values for parameters
+```python
+>>> def calc_square_prism_volume(square_length, height = 2.0):
+...     volume = (square_length ** 2) * height
+...     return volume
+... 
+>>> calc_square_prism_volume(4)
 ```
 
 
