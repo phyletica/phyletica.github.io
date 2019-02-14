@@ -450,8 +450,8 @@ But, going from a list or tuple to a string is not as straightforward
 >>> name_list
 >>> name_str = str(name_list)
 >>> name_str
-<p class="fragment fade-up">
 ```
+<p class="fragment fade-up">
 Not what you expected?
 </p>
 <p class="fragment fade-up">
@@ -462,7 +462,7 @@ Remember, *any* data type can be stored in lists and tuples!
 </p>
 
 
-The `join` method the string class will get us what we want
+The `join` method of the string class will get us what we want
 ```python
 >>> name = "Luna"
 >>> name_list = list(name)
