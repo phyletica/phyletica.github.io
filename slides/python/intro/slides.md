@@ -369,7 +369,7 @@ can access with a variable name
 ```python
 >>> a = "blah"
 >>> dir(a)
->>> help(a)
+>>> help(type(a))
 >>> help(a.count)
 ```
 **NOTE:** `help` pipes its output to the system tool `less`. Use arrows (or 'j'/'k')
@@ -405,6 +405,7 @@ Lists are a very useful *mutable* data type
 >>> a_list
 >>> a_list[0] = "first item"
 >>> a_list
+>>> help(a_list)
 ```
 <p class="fragment fade-up">
 Can contain any type of element, even other lists!
@@ -420,7 +421,10 @@ Traceback (most recent call last):
   File "<input>", line 1, in <module>
     a_tuple[0] = 1
 TypeError: 'tuple' object does not support item assignment
+```
 
+```python
+>>> help(a_tuple)
 ```
 
 
@@ -536,6 +540,7 @@ The syntax is '{ key1 : value1, key2 : value2 }'
 >>> dog["breed"] = "great dane"
 >>> "breed" in dog
 >>> dog
+>>> help(dog)
 ```
 
 
