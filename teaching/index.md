@@ -15,8 +15,15 @@ image:
 
 ### Introduction to Git
 
-*   [Slides][4]
-*   [Exercise][5]
+-   [Slides][4]
+-   [Exercise][5]
+
+
+### Introduction to Python
+
+-   [Slides]({{ site.baseurl }}/slides/python/intro/)
+-   Exercises:
+    -   [Python translation exercises](https://github.com/joaks1/python-translation-project)
 
 
  [1]: {{ site.baseurl }}/teaching/uw-biol-449/
