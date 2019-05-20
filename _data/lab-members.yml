@@ -48,7 +48,7 @@
 - title: Graduate Students
   members:
   - name: Breanna Sipley
-    role: Ph.D. Student
+    role: M.Sc. Student
     start-date: 2016
     bio: >
         Interested in the genetic bases of symbiosis, co-phylogeny of parasites
@@ -56,8 +56,6 @@
         blood parasitism.
     avatar: bio-photo-breanna.jpg
     twitter: Breanna_Sipley
-    coadvisor: Ken Halanych
-    coadvisor-url: http://metazoan.auburn.edu/halanych/lab/
 
   - name: Kerry Cobb
     role: Ph.D. Student
