@@ -1,4 +1,4 @@
-# Computational Biology Education at Auburn University
+### Computational Biology Education at Auburn University
 
 Jamie Oaks
 -   Web: [phyletica.org](http://phyletica.org)
