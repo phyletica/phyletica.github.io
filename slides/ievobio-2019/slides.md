@@ -107,18 +107,18 @@ challenging</small>
 ### Raspberry Pi: First session
 
 <ul>
-	<ul class="fragment fade-up">
+	<li class="fragment fade-up">
         Unboxing
-    </ul>
-	<ul class="fragment fade-up">
+    </li>
+	<li class="fragment fade-up">
         Burn Raspbian to microSD and install on Pi
-    </ul>
-	<ul class="fragment fade-up">
+    </li>
+	<li class="fragment fade-up">
         SSH to pi via USB cable and play around
-    </ul>
-	<ul class="fragment fade-up">
+    </li>
+	<li class="fragment fade-up">
         We demo how to run the pi like a desktop (using monitor and keyboard)
-    </ul>
+    </li>
 </ul>
 
 <p class="fragment fade-up">
@@ -129,35 +129,57 @@ challenging</small>
 ### Benefits of Pi:
 
 <ul>
-	<ul class="fragment fade-up">
+	<li class="fragment fade-up">
         Makes what they are doing on the ASC much less abstract
-    </ul>
-	<ul class="fragment fade-up">
+    </li>
+	<li class="fragment fade-up">
         Students get to keep it
-	    <ul class="fragment fade-up">
+    </li>
+    <ul>
+	    <li class="fragment fade-up">
             Enables life-long learners
-        </ul>
+        </li>
     </ul>
-	<ul class="fragment fade-up">
+	<li class="fragment fade-up">
         SSH to pi via USB cable and play around
-    </ul>
-	<ul class="fragment fade-up">
+    </li>
+	<li class="fragment fade-up">
         We demo how to run the pi like a desktop (using monitor and keyboard)
-    </ul>
+    </li>
 </ul>
 
 
 ### Weaknesses of Pi:
 
--   Takes time to set up   
-    -   But, if you do this with the students, they can learn a lot!
-
--   Need other equipment to access
-    -   We mainly SSH from a laptop
-    -   Other option: Keyboard, mouse, and screen
-        -   This could be kept cheap and re-used
-
--   Limited computational power
+<ul>
+	<li class="fragment fade-up">
+        Takes time to set up   
+    </li>
+    <ul>
+	    <li class="fragment fade-up">
+            But, if you do this with the students, they can learn a lot!
+        </li>
+    </ul>
+	<li class="fragment fade-up">
+        Need other equipment to access
+    </li>
+    <ul>
+	    <li class="fragment fade-up">
+            We mainly SSH from a laptop
+        </li>
+	    <li class="fragment fade-up">
+            Other option: Keyboard, mouse, and screen
+        </li>
+        <ul>
+	        <li class="fragment fade-up">
+                This could be kept cheap and re-used
+            </li>
+        </ul>
+    </ul>
+	<li class="fragment fade-up">
+        Limited computational power
+    </li>
+</ul>
 
 
 
@@ -165,8 +187,14 @@ challenging</small>
 
 
 ### Learners
--   Students of all ages from diverse backgrounds
--   Best students ever!
+<ul>
+    <li class="fragment fade-up">
+        Students of all ages from diverse backgrounds
+    </li>
+    <li class="fragment fade-up">
+        Best students ever!
+    </li>
+</ul>
 
 
 ### Content
