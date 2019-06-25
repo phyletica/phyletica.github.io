@@ -172,7 +172,7 @@ challenging</small>
         </li>
         <ul>
 	        <li class="fragment fade-up">
-                This could be kept cheap and re-used
+                This can be cheap and re-used
             </li>
         </ul>
     </ul>
