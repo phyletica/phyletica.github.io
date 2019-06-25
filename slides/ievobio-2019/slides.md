@@ -28,7 +28,7 @@ and
 
 
 ### Delivery
--   All students get a free, temporary account on the Alabama Super Computer
+-   All students get a free, temporary account on the Alabama Super Computer (ASC)
 
 -   Combination of interactive slides followed by a "test-driven exercise"\*\*
 
@@ -183,7 +183,8 @@ challenging</small>
 
 
 
-## Alabama Prison Arts + Education Project
+## [Alabama Prison Arts + Education Project](http://apaep.auburn.edu/)
+([Kyes Stevens](http://apaep.auburn.edu/staff/))
 
 
 ### Learners
