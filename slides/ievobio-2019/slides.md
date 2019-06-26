@@ -1,14 +1,15 @@
 ### Computational Biology Education at Auburn University
 
 Jamie Oaks
--   Web: [phyletica.org](http://phyletica.org)
--   GitHub: [joaks1](https://github.com/joaks1)
--   Twitter: [@jamoaks](https://twitter.com/jamoaks)
+
+[@jamoaks](https://twitter.com/jamoaks) | [phyletica.org](http://phyletica.org) | GitHub: [joaks1](https://github.com/joaks1)
 
 [Les Goertzen](http://www.auburn.edu/academic/cosam/faculty/biology/goertzen/),
 [Ken Halanych](http://metazoan.auburn.edu/halanych/lab/),
 and
 [Scott Santos](http://webhome.auburn.edu/~santosr/)
+
+<a href="http://phyletica.org/slides/ievobio-2019"><img src="../images/ievobio-slides-qr-code.png" alt="QR Code" style="border:5px solid black;max-height: 150px;" /></a>
 
 <http://phyletica.org/slides/ievobio-2019>
 
@@ -79,7 +80,7 @@ Example TD exercises:
 
 ### Shameless plug
 
-Preprint by my REU student, Nadia L'Bahy:
+Preprint by REU student, Nadia L'Bahy:
 
 <a href="https://www.biorxiv.org/content/10.1101/679878v1"><img src="../images/codemog-qr-code.png" alt="QR Code" style="border:0px;max-height: 500px;" /></a>
 
