@@ -141,12 +141,6 @@ challenging</small>
             Enables life-long learners
         </li>
     </ul>
-	<li class="fragment fade-up">
-        SSH to pi via USB cable and play around
-    </li>
-	<li class="fragment fade-up">
-        We demo how to run the pi like a desktop (using monitor and keyboard)
-    </li>
 </ul>
 
 
