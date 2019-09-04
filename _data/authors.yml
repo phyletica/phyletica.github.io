@@ -4,6 +4,7 @@ default: &DEFAULT
     web: http://phyletica.github.io
     email: phyletica@auburn.edu
     avatar: bio-photo.jpg
+    youtube: UCPPWy11zYqq-9lE_CQ0qPrw
 
 phyletica: &PHYLETICA
     <<: *DEFAULT
