@@ -30,33 +30,12 @@
     twitter: perryleewoodjr
     web: https://perryleewoodjr.com/
 
-  - name: Brian Folt
-    role: Postdoctoral Researcher
-    start-date: 2018
-    bio: >
-        Brian is a broadly trained ecologist and evolutionary biologist working
-        with us on the comparative phylogeography of reptiles and amphibians
-        across the Southeastern United States.
-    avatar: bio-photo-brian.jpg
-    twitter: brianf0lt
-    web: https://brianfolt.com/
-
   # - name: You?
   #   role: Postdoctoral Researcher
   #   avatar: avatar-gecko.jpg
 
 - title: Graduate Students
   members:
-  - name: Breanna Sipley
-    role: M.Sc. Student
-    start-date: 2016
-    bio: >
-        Interested in the genetic bases of symbiosis, co-phylogeny of parasites
-        and their hosts, and the evolution of gene families associated with
-        blood parasitism.
-    avatar: bio-photo-breanna.jpg
-    twitter: Breanna_Sipley
-
   - name: Kerry Cobb
     role: Ph.D. Student
     start-date: 2016
@@ -81,6 +60,43 @@
     coadvisor: Tonia Schwartz
     coadvisor-url: https://www.schwartzlab-ecoevolutionarygenomics.org/
 
+  - name: Tashitso Anamza 
+    role: Ph.D. Student
+    start-date: 2019
+    bio: >
+        From a nomadic region of Amdo. Tashi has an associate degree from Qinghai
+        Normal University, and bachelor's and master's degree from the University
+        of Kansas.
+        She's interested in the mechanisms underlying biogeographic patterns of
+        biodiversity.
+    avatar: bio-photo-tashi.jpg
+    twitter: Oceantso
+
+  - name: Claire Tracy
+    role: Ph.D. Student
+    start-date: 2019
+    bio: >
+        Interested in the interplay between speciation and adaptation, and the
+        convergent evolutin of adaptive traits in response to environmental
+        factors.
+    avatar: bio-photo-claire.jpg
+
+  - name: Matt Buehler
+    role: Ph.D. Student
+    start-date: 2019
+    bio: >
+        Interested in the diversification of <i>Phrynocephalus</i> sand lizards
+        across central Asia.
+    avatar: bio-photo-buehler.jpg
+
+  - name: Tanner Myers 
+    role: Ph.D. Student
+    start-date: 2019
+    bio: >
+        Interested in the processes that drive speciation, using reptiles and
+        amphibians as a model.
+    avatar: bio-photo-tanner.jpg
+
   # - name: You?
   #   role: Graduate Student
   #   avatar: avatar-cyrt.jpg
@@ -95,29 +111,13 @@
         Southeastern United States.
     avatar: avatar-ahaetulla.jpg
 
-  - name: Virginia White 
-    start-date: 2017
-    role: Undergraduate Researcher
-    bio: >
-        Working on the phylogeography of reptiles and amphibians across the
-        Southeastern United States.
-    avatar: avatar-coluber.jpg
-
   - name: Ryan Cook
     start-date: 2017
-    role: Undergraduate Researcher
+    role: Post-grad Researcher
     bio: >
         Investigating trends in the morphological changes of Alabama salamander
         populations over the past 50 years.
     avatar: avatar-croc.jpg
-
-  - name: Miles Horne
-    start-date: 2018
-    role: Undergraduate Researcher
-    bio: >
-        Studying the phylogenetics and phylogeography of <i>Incilius</i>
-        toads.
-    avatar: avatar-cyrt.jpg
 
   - name: Holden Smith
     start-date: 2018
@@ -144,11 +144,23 @@
 
 - title: Former Lab Members
   members:
+  - name: Breanna Sipley
+    role: M.Sc. Student
+    start-date: 2016
+    end-date: 2019
+    current-position: Ph.D. student at the University of Idaho
+    bio: >
+        Interested in the genetic bases of symbiosis, co-phylogeny of parasites
+        and their hosts, and the evolution of gene families associated with
+        blood parasitism.
+    avatar: bio-photo-breanna.jpg
+    twitter: Breanna_Sipley
+
   - name: Aundrea Westfall
     role: M.Sc. Student
     start-date: 2016
     end-date: 2018
-    current-position: Ph.D. student at University of Texas, Arlington
+    current-position: Ph.D. student at the University of Texas, Arlington
     bio: >
         Investigating phylogenetic patterns of viviparity and expression
         networks of regulatory genes for the placenta in Squamata.
@@ -156,6 +168,19 @@
     email: akw0018@tigermail.auburn.edu
     coadvisor: Tonia Schwartz
     coadvisor-url: https://www.schwartzlab-ecoevolutionarygenomics.org/
+
+  - name: Brian Folt
+    role: Postdoctoral Researcher
+    start-date: 2018
+    end-date: 2018
+    current-position: Postdoctoral Research Fellow at Auburn University Forestry and Wildlife Sciences
+    bio: >
+        Brian is a broadly trained ecologist and evolutionary biologist working
+        with us on the comparative phylogeography of reptiles and amphibians
+        across the Southeastern United States.
+    avatar: bio-photo-brian.jpg
+    twitter: brianf0lt
+    web: https://brianfolt.com/
 
   - name: Jesse Grismer
     role: Postdoctoral Researcher
@@ -172,6 +197,33 @@
     email: jlg0067@auburn.edu
     coadvisor: Brad Shaffer
     coadvisor-url: https://www.eeb.ucla.edu/Faculty/Shaffer/
+
+  - name: Miles Horne
+    start-date: 2018
+    end-date: 2019
+    current-position: Graduate student at the University of Texas at El Paso
+    role: Undergraduate Researcher
+    bio: >
+        Studying the phylogenetics and phylogeography of <i>Incilius</i>
+        toads.
+    avatar: avatar-cyrt.jpg
+
+  - name: Jorge Lopez-Perez
+    role: Undergraduate Researcher (Summer REU)
+    start-date: 2019
+    end-date: 2019
+    bio: >
+        Nest-site selection in emydid turtles.
+    avatar: avatar-croc.jpg
+
+  - name: Virginia White 
+    start-date: 2017
+    end-date: 2018
+    role: Undergraduate Researcher
+    bio: >
+        Working on the phylogeography of reptiles and amphibians across the
+        Southeastern United States.
+    avatar: avatar-coluber.jpg
 
   - name: Nadia L'Bahy
     role: Undergraduate Researcher (Summer REU)
@@ -197,6 +249,7 @@
     role: Undergraduate Researcher
     start-date: 2018
     end-date: 2018
+    current-position: Graduate student at the University of Alabama in Huntsville 
     bio: >
         Investigating trends in the morphological changes of Alabama salamander
         populations over the past 50 years.
