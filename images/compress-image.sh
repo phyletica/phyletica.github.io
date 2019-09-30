@@ -16,4 +16,4 @@ fi
 
 out_path="$(dirname "$image_path")/reduced-$(basename "$image_path")"
 
-convert "$image_path" -flatten -strip -resize 512 -quality 80 "$out_path"
+convert "$image_path" -flatten -strip -auto-orient -resize 512 -quality 80 "$out_path"
