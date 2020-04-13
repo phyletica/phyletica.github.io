@@ -58,7 +58,8 @@
                 {% if member.weibo %}<a href="http://www.weibo.com/{{ member.weibo }}" class="member-social" target="_blank"><i class="fa fa-fw fa-weibo"></i> Weibo</a>{% endif %}
                 {% if member.flickr %}<a href="http://www.flickr.com/{{ member.flickr }}" class="member-social" target="_blank"><i class="fa fa-fw fa-flickr"></i> Flickr</a>{% endif %}
                 {% if member.web %}<a href="{{ member.web }}" class="member-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>{% endif %}
-                {% if member.cv %}<a href="{{ site.baseurl }}/people/{{ member.cv }}" class="member-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>{% endif %}
+                {% if member.cv %}<a href="{{ member.cv }}" class="member-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>{% endif %}
+                <!-- {% if member.cv %}<a href="{{ site.baseurl }}/people/{{ member.cv }}" class="member-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>{% endif %} -->
             </div>
         {% endfor %}
     {% endif %}

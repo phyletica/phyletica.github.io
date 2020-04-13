@@ -4,7 +4,7 @@
   members:
   - name: Jamie Oaks
     role: Principal Investigator
-    web: http://phyletica.github.io
+    web: &jroweb http://phyletica.github.io
     email: joaks@auburn.edu
     bio: >
         Interested in developing phylogenetic methods and applying them to data
@@ -16,7 +16,7 @@
     google:
         plus: JamieOaks
     github: joaks1
-    cv: cv-joaks.pdf
+    cv: http://phyletica.github.io/people/cv-joaks.pdf
 
 - title: Postdocs
   members:
@@ -57,7 +57,8 @@
         using physiological methods within a phylogenetic context.
     avatar: bio-photo-randy.jpg
     twitter: R_Klabacka
-    cv: cv-klabacka.pdf
+    cv: http://randyklabacka.com/Klabacka_CV.pdf
+    web: http://randyklabacka.com
     coadvisor: Tonia Schwartz
     coadvisor-url: https://www.schwartzlab-ecoevolutionarygenomics.org/
 
