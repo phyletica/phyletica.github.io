@@ -1,43 +1,890 @@
----
-sitemap: false
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">{{ site.title }}</title>
+<title type="text">phyletica</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="{{ site.url }}{{ site.baseurl }}/feed.xml" />
-<link rel="alternate" type="text/html" href="{{ site.url }}{{ site.baseurl }}" />
-<updated>{{ site.time | date_to_xmlschema }}</updated>
-<id>{{ site.url }}{{ site.baseurl }}/</id>
+<link rel="self" type="application/atom+xml" href="http://phyletica.org/feed.xml" />
+<link rel="alternate" type="text/html" href="http://phyletica.org" />
+<updated>2020-08-24T15:09:55-05:00</updated>
+<id>http://phyletica.org/</id>
 <author>
-  <name>{{ site.owner.name }}</name>
-  <uri>{{ site.url }}{{ site.baseurl }}/</uri>
-  {% if site.owner.email %}<email>{{ site.owner.email }}</email>{% endif %}
+  <name>Jamie Oaks</name>
+  <uri>http://phyletica.org/</uri>
+  <email>phyletica@auburn.edu</email>
 </author>
-{% for post in site.posts limit:20 %}
-{% if post.author %}
-  {% assign author = site.data.authors[post.author] %}
-{% else %}
-  {% assign author = site.owner %}
-{% endif %}
+
+
 <entry>
-  <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
-  <link rel="alternate" type="text/html" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" />
-  <id>{{ site.url }}{{ site.baseurl }}{{ post.id }}</id>
-  {% if post.modified %}<updated>{{ post.modified | to_xmlschema }}T00:00:00-00:00</updated>
-  <published>{{ post.date | date_to_xmlschema }}</published>
-  {% else %}<published>{{ post.date | date_to_xmlschema }}</published>
-  <updated>{{ post.date | date_to_xmlschema }}</updated>{% endif %}
+  <title type="html"><![CDATA[Randy gets the Henri Seibert Award!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/randy-seibert-award/" />
+  <id>http://phyletica.org/randy-seibert-award</id>
+  <published>2019-08-20T00:00:00-05:00</published>
+  <updated>2019-08-20T00:00:00-05:00</updated>
   <author>
-    <name>{{ author.name }}</name>
-    <uri>{{ site.url }}{{ site.baseurl }}</uri>
-    {% if author.email %}<email>{{ author.email }}</email>{% endif %}
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
   </author>
   <content type="html">
-    {{ post.content | xml_escape }}
-    {% include _feed-footer.html %}
+    &lt;h2 id=&quot;congrats-to-randy&quot;&gt;Congrats to Randy!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to Randy Klabacka for
+&lt;a href=&quot;https://www.auburn.edu/cosam/news/articles/2019/08/auburn_student_honored_with_research_award_on_reptile_study.htm&quot;&gt;winning the prestigious Henri Seibert Award&lt;/a&gt;
+at the
+&lt;a href=&quot;https://conferences.k-state.edu/jmih/&quot;&gt;Joint Meeting of Ichthyologists and Herpetologists&lt;/a&gt;.
+This award from the
+&lt;a href=&quot;https://ssarherps.org/&quot;&gt;Society for the Study of Amphibians and Reptiles&lt;/a&gt;
+recognizes the student with the best talk in one of four research categories.
+Randy was awarded the best talk in Evolution/Systematics for his presentation
+on “Riverine barriers as potential drivers of biodiversification in the &lt;em&gt;Draco
+maculatus&lt;/em&gt; species complex of Indochina.”
+This project started out as a relatively simple exploration into this species
+complex of gliding lizards.
+However, Randy has done a great job transforming this work
+into an in-depth comparison of
+a large number of biogeographic models to determine the best explanation for
+the current geographic distribution of this group’s genetic diversity across
+Indochina.
+Auburn University published
+&lt;a href=&quot;https://www.auburn.edu/cosam/news/articles/2019/08/auburn_student_honored_with_research_award_on_reptile_study.htm&quot;&gt;a nice story&lt;/a&gt;
+about Randy’s accomplishment.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/randy-seibert-award/&quot;&gt;Randy gets the Henri Seibert Award!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 20, 2019.&lt;/p&gt;
+
   </content>
 </entry>
-{% endfor %}
+
+
+<entry>
+  <title type="html"><![CDATA[Claire and Tanner awarded AU fellowships]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/au-fellows/" />
+  <id>http://phyletica.org/au-fellows</id>
+  <published>2019-08-19T00:00:00-05:00</published>
+  <updated>2019-08-19T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-to-claire-and-tanner&quot;&gt;Congrats to Claire and Tanner!&lt;/h2&gt;
+
+&lt;p&gt;New Phyletica Lab members, Claire Tracy and Tanner Myers, were awarded the
+&lt;a href=&quot;http://graduate.auburn.edu/au-presidential-graduate-research-fellowships/&quot;&gt;Auburn University Presidential Graduate Research Fellowship&lt;/a&gt;,
+which includes three years of funding for their dissertation work.
+Claire was also awarded the Allsup Fellowship for her first year at AU.
+Congratulations, Claire and Tanner!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/au-fellows/&quot;&gt;Claire and Tanner awarded AU fellowships&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 19, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[The Phyletica Lab welcomes 4 new PhD students]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/new-grad-students/" />
+  <id>http://phyletica.org/new-grad-students</id>
+  <published>2019-08-15T00:00:00-05:00</published>
+  <updated>2019-08-15T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;welcome-tashitso-claire-matt-and-tanner&quot;&gt;Welcome Tashitso, Claire, Matt, and Tanner!&lt;/h2&gt;
+
+&lt;p&gt;The Phyletica lab is welcoming four new Ph.D. students this week.
+Tashitso Anamza joins us from Tibet, where she is from;
+she also spent time in Lawrence, Kansas earning her bachelor’s and master’s
+degrees from the University of Kansas.
+Claire Tracy and Matt Buehler are joining us from
+&lt;a href=&quot;https://www1.villanova.edu&quot;&gt;Villanova University&lt;/a&gt;
+where they are
+finishing up their master’s work in
+&lt;a href=&quot;https://www1.villanova.edu/villanova/artsci/biology.html&quot;&gt;Biology&lt;/a&gt;.
+Tanner Myers comes to us after finishing his B.Sc. at the University of Kansas
+while working in the Herpetology Division of the
+&lt;a href=&quot;https://biodiversity.ku.edu/&quot;&gt;KU Biodiversity Institute&lt;/a&gt;.
+Welcome, new phyleticians!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/new-grad-students/&quot;&gt;The Phyletica Lab welcomes 4 new PhD students&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 15, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Phyleticians in Providence for Evolution 2019]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/evolution-recap/" />
+  <id>http://phyletica.org/evolution-recap</id>
+  <published>2019-07-01T00:00:00-05:00</published>
+  <updated>2019-07-01T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Charlotte Benedict, Kerry Cobb, and I had a great time at
+&lt;a href=&quot;https://www.evolutionmeetings.org/evolution-2019---providence.html&quot;&gt;Evolution 2019&lt;/a&gt;
+in Providence, RI.
+Charlotte presented a great poster on the independent evolution of clownfish
+symbiosis among sea anemones.
+Kerry gave a poster about our work showing the difficulty of estimating
+simultaneous demographic changes among populations
+(see
+&lt;a href=&quot;/codemog-preprint/&quot;&gt;post here&lt;/a&gt;
+and
+&lt;a href=&quot;https://www.biorxiv.org/content/10.1101/679878v1&quot;&gt;preprint here&lt;/a&gt;).
+I talked about our
+&lt;a href=&quot;https://onlinelibrary.wiley.com/doi/full/10.1111/evo.13754&quot;&gt;recent paper&lt;/a&gt;
+on the comparative biogeography of Philippine geckos.
+The slides from my talk are available for
+&lt;a href=&quot;/slides/evol2019.pdf&quot;&gt;download here&lt;/a&gt;
+and can be viewed via 
+&lt;a href=&quot;https://www.slideshare.net/jamieoaks7/full-bayesian-comparative-biogeography-of-philippine-geckos-challenges-predictions-of-climatedriven-vicariant-speciation&quot;&gt;SlideShare&lt;/a&gt;
+here:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/LPkpqnD9GjO2IA&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/jamieoaks7/full-bayesian-comparative-biogeography-of-philippine-geckos-challenges-predictions-of-climatedriven-vicariant-speciation&quot; title=&quot;Full Bayesian comparative biogeography of Philippine geckos challenges predictions of climate-driven vicariant speciation&quot; target=&quot;_blank&quot;&gt;Full Bayesian comparative biogeography of Philippine geckos challenges predictions of climate-driven vicariant speciation&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;https://www.slideshare.net/jamieoaks7&quot; target=&quot;_blank&quot;&gt;Jamie Oaks&lt;/a&gt;&lt;/strong&gt;
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The recording of my talk is also
+&lt;a href=&quot;https://www.youtube.com/watch?v=gULtPGdAQME&quot;&gt;up on YouTube&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/gULtPGdAQME&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Recording of Jamie's talk about the comparative biogeography of Philippine gekkonids.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Kerry and I also attended the
+&lt;a href=&quot;https://ievobio2019.github.io/2019-iEvoBio/index.html&quot;&gt;iEvoBio Conference&lt;/a&gt;
+the day after evolution, for
+which I was a member of a panel on computational biology education.
+The slides from my iEvoBio presentation can be
+&lt;a href=&quot;/slides/ievobio-2019&quot;&gt;viewed here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We enjoyed our time in Providence and learned a ton from all the amazing talks
+and posters we attended.
+A huge thanks to the
+&lt;a href=&quot;https://www.amnat.org/home.html&quot;&gt;ASN&lt;/a&gt;,
+&lt;a href=&quot;https://www.systbio.org/&quot;&gt;SSB&lt;/a&gt;,
+&lt;a href=&quot;https://www.evolutionsociety.org/&quot;&gt;SSE&lt;/a&gt;,
+and all the conference organizers for a wonderful event.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/evolution-recap/&quot;&gt;Phyleticians in Providence for Evolution 2019&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on July 01, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Preprint: Insights from a general, full-likelihood Bayesian approach to inferring shared evolutionary events from genomic data]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/codemog-preprint/" />
+  <id>http://phyletica.org/codemog-preprint</id>
+  <published>2019-06-22T00:00:00-05:00</published>
+  <updated>2019-06-22T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;A
+&lt;a href=&quot;https://www.biorxiv.org/content/10.1101/679878v1&quot;&gt;new preprint&lt;/a&gt;
+out of the lab demostrates the difficulties in estimating simultaneous changes
+in effective population sizes across taxa.
+REU Nadia L’Bahy (our 2018 Comp Bio REU student from UMass Amherst) and Kerry
+Cobb contributed to this work.
+Feedback is welcome!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/codemog-preprint/&quot;&gt;Preprint: Insights from a general, full-likelihood Bayesian approach to inferring shared evolutionary events from genomic data&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on June 22, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[An evolutionary perspective on the association between forest fragmentation and pathogen spillover]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/coevolution-effect/" />
+  <id>http://phyletica.org/coevolution-effect</id>
+  <published>2019-04-30T00:00:00-05:00</published>
+  <updated>2019-04-30T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;There is a troubling association between forest fragmentation and an increase
+of emerging infectious diseases spilling over into human populations.
+A lot of important work has led to ecological explanations for this pattern.
+In a &lt;a href=&quot;http://dx.doi.org/10.1016/j.pt.2019.03.010&quot;&gt;recent opinion piece&lt;/a&gt;,
+&lt;a href=&quot;http://wp.auburn.edu/zohdylab/&quot;&gt;Sarah Zohdy&lt;/a&gt;,
+&lt;a href=&quot;https://www.schwartzlab-ecoevolutionarygenomics.org/&quot;&gt;Tonia Schwartz&lt;/a&gt;,
+and I propose an evolutionary mechanism for this pattern that we think can
+complement ecological perspectives on this problem &lt;a class=&quot;citation&quot; href=&quot;#Zohdy2019&quot;&gt;(Zohdy, Schwartz &amp;amp; Oaks, 2019)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Zohdy2019&quot;&gt;Zohdy S, Schwartz TS, Oaks JR. 2019. The Coevolution Effect as a Driver of Spillover. &lt;i&gt;Trends in Parasitology&lt;/i&gt;. DOI: 10.1016/j.pt.2019.03.010.&lt;/span&gt;
+
+&lt;a href=&quot;http://dx.doi.org/10.1016/j.pt.2019.03.010&quot;&gt;Link.&lt;/a&gt; 
+
+&lt;/li&gt;&lt;/ol&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/coevolution-effect/&quot;&gt;An evolutionary perspective on the association between forest fragmentation and pathogen spillover&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on April 30, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Updated bioRxiv preprint: Full Bayesian comparative phylogeography from genomic data]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/ecoevolity-preprint-update/" />
+  <id>http://phyletica.org/ecoevolity-preprint-update</id>
+  <published>2018-08-31T00:00:00-05:00</published>
+  <updated>2018-08-31T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I posted an
+&lt;a href=&quot;https://www.biorxiv.org/content/early/2018/08/30/324525&quot;&gt;updated version of the preprint&lt;/a&gt;
+that introduces the new method
+&lt;a href=&quot;https://github.com/phyletica/ecoevolity&quot;&gt;ecoevolity&lt;/a&gt;.
+The updates are relatively minor, but there are new plots in the Supporting
+Information that illustrate the model-choice accuracy of the new method, which
+complement the plots that show the accuracy of estimating the number of
+divergence events.&lt;/p&gt;
+
+&lt;p&gt;Also, thanks to the
+&lt;a href=&quot;/ssb-workshop/&quot;&gt;workshop at the SSB Meeting&lt;/a&gt;
+in June,
+&lt;a href=&quot;http://phyletica.org/ecoevolity&quot;&gt;the documentation&lt;/a&gt;
+is much improved.
+Checkout the 
+&lt;a href=&quot;https://github.com/phyletica/ecoevolity-experiments&quot;&gt;open-science repository&lt;/a&gt;
+for the project if you want all the details.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/ecoevolity-preprint-update/&quot;&gt;Updated bioRxiv preprint: Full Bayesian comparative phylogeography from genomic data&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 31, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Visiting Carsten's Lab at OSU]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/osu-visit/" />
+  <id>http://phyletica.org/osu-visit</id>
+  <published>2018-08-24T00:00:00-05:00</published>
+  <updated>2018-08-24T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;I am flying back down to Alabama after visiting the
+&lt;a href=&quot;https://eeob.osu.edu/&quot;&gt;Department of Evolution, Ecology, and Organismal Biology&lt;/a&gt;
+at
+&lt;a href=&quot;https://www.osu.edu/&quot;&gt;Ohio State University&lt;/a&gt;
+to give a seminar.
+The Phyletica Lab was up here
+in June for the &lt;a href=&quot;/ssb-recap/&quot;&gt;SSB Meeting&lt;/a&gt;,
+and it was great to be back.&lt;/p&gt;
+
+&lt;p&gt;One of the highlights of the visit was the graduate students of the EEOB
+Department.
+I was impressed by how many of them attended the pizza lunch and seminar, and how
+many signed up to meet with me individually.
+They asked a lot of great questions that already have me thinking about future
+research directions.&lt;/p&gt;
+
+&lt;p&gt;Many thanks to &lt;a href=&quot;https://carstenslab.osu.edu/&quot;&gt;Bryan Carsten’s lab&lt;/a&gt; for hosting
+and Megan Smith for organizing my visit.&lt;/p&gt;
+
+&lt;p&gt;Here are the slides from my talk:&lt;/p&gt;
+
+&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/g1et5UiXkt6Fsz&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
+&lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/jamieoaks7/generalizing-phylogenetics-to-infer-patterns-of-shared-evolutionary-events&quot; title=&quot;Generalizing phylogenetics to infer patterns of shared evolutionary events&quot; target=&quot;_blank&quot;&gt;Generalizing phylogenetics to infer patterns of shared evolutionary events&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;https://www.slideshare.net/jamieoaks7&quot; target=&quot;_blank&quot;&gt;Jamie Oaks&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/osu-visit/&quot;&gt;Visiting Carsten's Lab at OSU&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 24, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[BioRxiv preprint: Full-likelihood Bayesian comparative biogeography of Philippine geckos]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/gekkonid-ecoevolity-preprint/" />
+  <id>http://phyletica.org/gekkonid-ecoevolity-preprint</id>
+  <published>2018-08-21T00:00:00-05:00</published>
+  <updated>2018-08-21T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;A
+&lt;a href=&quot;https://www.biorxiv.org/content/early/2018/08/20/395434&quot;&gt;new preprint&lt;/a&gt;
+out of the lab tests the predictions of a climate-driven model
+of vicariant speciation (the “species-pump” model) across
+the Philippine Islands.
+After the better part of a decade, we finally have the data and method
+necessary to robustly test the predictions of this model.
+We collected comparative genomic (RADseq) data from 16 pairs of &lt;em&gt;Gekko&lt;/em&gt; and
+&lt;em&gt;Cyrtodactylus&lt;/em&gt; populations and analyzed these data with our
+new full-likelihood Bayesian comparative biogeographic method,
+&lt;a href=&quot;http://phyletica.org/ecoevolity&quot;&gt;ecoevolity&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our results support independent divergence times across the gekkonid taxa,
+&lt;strong&gt;not&lt;/strong&gt; temporally clustered divergences as predicted by the species-pump
+model.
+We need to collect genomic data from more taxa across the islands to “rule out”
+the species-pump model, but these results demonstrate that diversification is
+much more dynamic across the archipelago than assumed by the often-invoked
+paradigm of Pleistocene vicariant diversification.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/gekkonid-ecoevolity-preprint/&quot;&gt;BioRxiv preprint: Full-likelihood Bayesian comparative biogeography of Philippine geckos&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 21, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Two new lab members, two departures]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/new-postdocs/" />
+  <id>http://phyletica.org/new-postdocs</id>
+  <published>2018-08-02T00:00:00-05:00</published>
+  <updated>2018-08-02T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;It’s been a busy summer, and there’s been a bit of turnover in the lab.
+&lt;a href=&quot;/aundrea-defends/&quot;&gt;Aundrea defended her thesis&lt;/a&gt;
+and headed to Arlington to join
+&lt;a href=&quot;http://www.snakegenomics.org/CastoeLab/Castoe_Lab_Home.html&quot;&gt;Todd Castoe’s Lab&lt;/a&gt;,
+and Jesse has moved to Los Angeles to start his next postdoc with
+&lt;a href=&quot;https://www.eeb.ucla.edu/Faculty/Shaffer/&quot;&gt;Brad Shaffer&lt;/a&gt;.
+We are all sad to see them go, but excited to see what comes of their next
+research endeavors.&lt;/p&gt;
+
+&lt;p&gt;To balance the departures, we had
+&lt;a href=&quot;https://brianfolt.com/&quot;&gt;Brian Folt&lt;/a&gt;
+and
+&lt;a href=&quot;https://perryleewoodjr.com/&quot;&gt;Perry (JR) Wood, Jr.&lt;/a&gt;
+join the lab this summer.
+Brian is working with us to collect comparative genomic data from across the
+distributions of multiple salamander taxa to delimit species and learn about
+the biogeography of the Southeastern United States.
+JR is a collaborator on our
+&lt;a href=&quot;/nsf-award/&quot;&gt;NSF funded project&lt;/a&gt;
+to generalize phylogenetics in order test hypotheses about processes of
+co-divergence in Southeast Asian gekkonid lizards.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/new-postdocs/&quot;&gt;Two new lab members, two departures&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 02, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Aundrea Defends her Thesis!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/aundrea-defends/" />
+  <id>http://phyletica.org/aundrea-defends</id>
+  <published>2018-06-27T00:00:00-05:00</published>
+  <updated>2018-06-27T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-to-aundrea&quot;&gt;Congrats to Aundrea!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to Aundrea Westfall for successfully defending her Master’s
+Thesis!
+She found evidence that the insulin/insulin-like signaling network is involved
+in the evolution of viviparity (live birth) in fence lizards, but different
+parts of the network are involved in different, independent transitions to live
+birth; really great work and seminar.
+Aundrea was the best first M.S. student a PI could hope for;
+she will be missed!
+Aundrea is joining
+&lt;a href=&quot;http://www.snakegenomics.org/CastoeLab/Castoe_Lab_Home.html&quot;&gt;Todd Castoe’s Lab&lt;/a&gt;
+this Fall at the University of Texas Arlington.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/aundreas-defense.jpg&quot;&gt;&lt;img src=&quot;/images/aundreas-defense.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Aundrea and her co-advisors at the defense
+                (&lt;a href=&quot;https://www.schwartzlab-ecoevolutionarygenomics.org/&quot;&gt;Tonia Schwartz&lt;/a&gt;
+                on right, Jamie on left).
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/aundrea-defends/&quot;&gt;Aundrea Defends her Thesis!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on June 27, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Phyletica Lab enjoys SSB 2018]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/ssb-recap/" />
+  <id>http://phyletica.org/ssb-recap</id>
+  <published>2018-06-06T00:00:00-05:00</published>
+  <updated>2018-06-06T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;We just returned from our road trip to the
+&lt;a href=&quot;https://eeob.osu.edu/ssb2018&quot;&gt;SSB standalone meeting in Columbus, Ohio&lt;/a&gt;.
+The meeting was fantastic, and the Phyletica Lab was well-represented.
+Aundrea Westfall gave a great talk about her thesis work looking for patterns
+of molecular evolution associated with transitions to viviparity in squamates.
+Breanna Sipley
+(&lt;a href=&quot;https://twitter.com/Breanna_Sipley&quot;&gt;@Breanna_Sipley&lt;/a&gt;)
+let everyone know what VAPs (venom allergen-like proteins) got to do with it;
+specifically, what they have to do with the evolution of blood parasitism in
+flatworms.
+You can
+&lt;a href=&quot;/downloads/slides-ssb-2018-sipley.pdf&quot;&gt;download her slides here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/ssb-2018-breanna.jpg&quot;&gt;&lt;img src=&quot;/images/ssb-2018-breanna.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                What's VAP got to do with it?
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://kyletdavid.github.io/&quot;&gt;Kyle David&lt;/a&gt;
+(&lt;a href=&quot;https://twitter.com/KyleTheDavid&quot;&gt;@KyleTheDavid&lt;/a&gt;)
+talked about his work showing that the ortholog conjecture is often not a good
+assumption.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/ssb-2018-kyle.jpg&quot;&gt;&lt;img src=&quot;/images/ssb-2018-kyle.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                The ortholog conjecture through time.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Randy Klabacka
+(&lt;a href=&quot;https://twitter.com/HumbleHerper&quot;&gt;@HumbleHerper&lt;/a&gt;)
+presented a poster about testing models for explaining genetic variation across
+a broadly distributed flying lizard (&lt;em&gt;Draco maculatus&lt;/em&gt;).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/ssb-2018-randy.jpg&quot;&gt;&lt;img src=&quot;/images/ssb-2018-randy.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                &lt;i&gt;D. mac.&lt;/i&gt; phylogeography.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://brianfolt.com/&quot;&gt;Brian Folt&lt;/a&gt;
+presented a poster on the
+&lt;a href=&quot;https://www.biorxiv.org/content/early/2018/05/11/318766&quot;&gt;phylogeography and taxonomic status of the Eastern Indigo snake&lt;/a&gt;
+(&lt;em&gt;Drymarchon couperi&lt;/em&gt;); a bioRxiv preprint of his work can be found
+&lt;a href=&quot;https://www.biorxiv.org/content/early/2018/05/11/318766&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/ssb-2018-brian.jpg&quot;&gt;&lt;img src=&quot;/images/ssb-2018-brian.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Indigo snake phylogeography (photo taken post-SSB).
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;I gave a lightning talk about the challenges associated with trying to estimate
+synchronous population-size changes across species,
+and gave a
+&lt;a href=&quot;http://phyletica.org/ecoevolity/workshops/ssb-2018.html&quot;&gt;workshop on using the comparative phylogeography software package
+ecoevolity&lt;/a&gt;.
+You can view the slides from my lightning talk below, or
+&lt;a href=&quot;/downloads/slides-ssb-2018-oaks.pdf&quot;&gt;download them here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/EJIrHfYMjgBwj3&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/jamieoaks7/inferring-shared-demographic-changes-from-genomic-data&quot; title=&quot;Inferring shared demographic changes from genomic data&quot; target=&quot;_blank&quot;&gt;Inferring shared demographic changes from genomic data&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;https://www.slideshare.net/jamieoaks7&quot; target=&quot;_blank&quot;&gt;Jamie Oaks&lt;/a&gt;&lt;/strong&gt;
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;On the drive back from Columbus, we stopped at Painter’s Gap in the Appalachian
+Mountains of Northern Georgia for a half-day respite.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/ssb-2018-painters-gap.jpg&quot;&gt;&lt;img src=&quot;/images/ssb-2018-painters-gap.jpg&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;a href=&quot;/images/ssb-2018-painters-gap-group-photo.jpg&quot;&gt;&lt;img src=&quot;/images/ssb-2018-painters-gap-group-photo.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Phyletica lab post-SSB, half-day retreat to Painter's Gap.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A huge thanks to
+Megan Smith, Tara Pelletier, Laura Kubatko, Meg Daly, and Bryan Carstens
+for organizing the meeting, and many
+OSU biology graduate students that helped make the conference successful! Thank
+you!&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/ssb-recap/&quot;&gt;Phyletica Lab enjoys SSB 2018&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on June 06, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[SSB 2018 Comparative Phylogeography Workshop]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/ssb-workshop/" />
+  <id>http://phyletica.org/ssb-workshop</id>
+  <published>2018-05-28T00:00:00-05:00</published>
+  <updated>2018-05-28T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;We are looking forward to the comparative phylogeography workshop at the
+&lt;a href=&quot;https://eeob.osu.edu/ssb2018&quot;&gt;SSB meeting in Columbus, Ohio&lt;/a&gt;.
+If you are participating, before the workshop, please try installing the
+software that we will be using.
+This will allow us to cover more interesting material during our time together
+and will lessen our reliance on guest WiFi.
+Instructions for installing the software are here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://phyletica.org/ecoevolity/installation.html&quot;&gt;http://phyletica.org/ecoevolity/installation.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Please install ecoevolity and pycoevolity, the R packages used by pycoevolity,
+and the example data (this is all explained at the link).
+Either direct installation or getting the Docker image is fine (also explained
+at the link).
+Also, though not required, I recommend you also install Tracer for visualizing
+MCMC chain output from ecoevolity:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tree.bio.ed.ac.uk/software/tracer/&quot;&gt;http://tree.bio.ed.ac.uk/software/tracer/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You will also need a plain text editor; Sublime Text
+(&lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;http://www.sublimetext.com/&lt;/a&gt;) is a nice example.&lt;/p&gt;
+
+&lt;p&gt;Lastly, it might be helpful to read the preprint that describes the method
+implemented in ecoevolity
+(&lt;a href=&quot;https://www.biorxiv.org/content/early/2018/05/17/324525&quot;&gt;https://www.biorxiv.org/content/early/2018/05/17/324525&lt;/a&gt;).
+We will cover some of the theory behind the method at the beginning of the
+workshop, but having some context will likely help.&lt;/p&gt;
+
+&lt;p&gt;If you run into trouble installing ecoevolity and/or pycoevolity, please use
+the community forum to seek help:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://groups.google.com/forum/#!forum/ecoevolity-users&quot;&gt;https://groups.google.com/forum/#!forum/ecoevolity-users&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you for your help with making the workshop run smoothly. See you in
+Columbus!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/ssb-workshop/&quot;&gt;SSB 2018 Comparative Phylogeography Workshop&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on May 28, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Full Bayesian comparative phylogeography from genomic data (bioRxiv preprint)]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/ecoevolity-preprint/" />
+  <id>http://phyletica.org/ecoevolity-preprint</id>
+  <published>2018-05-17T00:00:00-05:00</published>
+  <updated>2018-05-17T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;A
+&lt;a href=&quot;https://www.biorxiv.org/content/early/2018/05/17/324525&quot;&gt;new preprint&lt;/a&gt;
+out of the lab introduces the new method
+&lt;a href=&quot;https://github.com/phyletica/ecoevolity&quot;&gt;ecoevolity&lt;/a&gt;.
+The
+&lt;a href=&quot;http://phyletica.org/ecoevolity&quot;&gt;documentation&lt;/a&gt;
+for the new software is a bit sparse at the moment, but will improve rapidly
+(there’s a looming workshop coming up!).
+Checkout the 
+&lt;a href=&quot;https://github.com/phyletica/ecoevolity-experiments&quot;&gt;open-science repository&lt;/a&gt;
+for the project if you want all the details.&lt;/p&gt;
+
+&lt;p&gt;Oh, why the name “ecoevolity?” Well, it stands for &lt;strong&gt;&lt;em&gt;E&lt;/em&gt;&lt;/strong&gt;stimating
+&lt;strong&gt;&lt;em&gt;evo&lt;/em&gt;&lt;/strong&gt;lutionary &lt;strong&gt;&lt;em&gt;coevality&lt;/em&gt;&lt;/strong&gt;. Coevolity is a mash-up of evolution and
+&lt;a href=&quot;https://en.wiktionary.org/wiki/coevality&quot;&gt;coevality&lt;/a&gt;.
+What does coevality mean? Being of the same age (the noun form of
+&lt;a href=&quot;https://en.wiktionary.org/wiki/coeval&quot;&gt;coeval&lt;/a&gt;).&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/ecoevolity-preprint/&quot;&gt;Full Bayesian comparative phylogeography from genomic data (bioRxiv preprint)&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on May 17, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Marginal likelihoods in phylogenetics (arXiv preprint)]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/marginal-likelihood-preprint/" />
+  <id>http://phyletica.org/marginal-likelihood-preprint</id>
+  <published>2018-05-15T00:00:00-05:00</published>
+  <updated>2018-05-15T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;marginal-likelihoods-in-phylogenetics-a-review-of-methods-and-applications&quot;&gt;Marginal likelihoods in phylogenetics: a review of methods and applications&lt;/h2&gt;
+
+&lt;p&gt;A
+&lt;a href=&quot;https://arxiv.org/abs/1805.04072&quot;&gt;new preprint&lt;/a&gt;
+out of the lab reviews the theory, methods, and applications of marginal
+likelihoods in Bayesian phylogenetics.
+We couldn’t resist throwing in a few simulations to test the predicted behavior
+of one marginal likelihood estimator.
+Yes, a review paper with supplemental material.&lt;/p&gt;
+
+&lt;p&gt;Check out the slick
+&lt;a href=&quot;https://kerrycobb.github.io/beta-binomial-web-demo/&quot;&gt;interactive plots&lt;/a&gt;
+that Kerry Cobb developed to accompany the paper!
+I’m glad someone in the lab knows javascript better than me.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/marginal-likelihood-preprint/&quot;&gt;Marginal likelihoods in phylogenetics (arXiv preprint)&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on May 15, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Eastern indigo snake phylogeography (bioRxiv preprint)]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/drymarchon-preprint/" />
+  <id>http://phyletica.org/drymarchon-preprint</id>
+  <published>2018-05-11T00:00:00-05:00</published>
+  <updated>2018-05-11T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;preprint-out-of-the-lab-on-the-taxonomic-status-of-eastern-indigo-snakes&quot;&gt;Preprint out of the lab on the taxonomic status of Eastern Indigo Snakes&lt;/h2&gt;
+
+&lt;p&gt;A
+&lt;a href=&quot;https://www.biorxiv.org/content/early/2018/05/11/318766&quot;&gt;new preprint&lt;/a&gt;
+is up on bioRxiv by
+&lt;a href=&quot;https://brianfolt.com/&quot;&gt;Brian Folt&lt;/a&gt;
+and colleagues on the taxonomic status of the Eastern Indigo Snake.
+With more genetic and morphological data, we find support for only one species.
+Not surprisingly, the clades found from mitochondrial sequence data that
+loosely coincide with geography do not delimit isolated lineages.
+This appears to be an example of a spurious
+&lt;a href=&quot;https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0014-3820.2002.tb00164.x&quot;&gt;phylogeographic break without geographic barriers to gene flow&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/drymarchon-preprint/&quot;&gt;Eastern indigo snake phylogeography (bioRxiv preprint)&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on May 11, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Breanna Awarded NSF GRFP!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/breanna-grfp/" />
+  <id>http://phyletica.org/breanna-grfp</id>
+  <published>2018-04-03T00:00:00-05:00</published>
+  <updated>2018-04-03T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-to-breanna&quot;&gt;Congrats to Breanna!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to phyletician Breanna Sipley for winning the prestigious
+&lt;a href=&quot;https://www.nsfgrfp.org/&quot;&gt;Graduate Research Fellowship&lt;/a&gt;
+from the National Science Foundation.
+This fellowship will support Breanna’s graduate work for three years, allowing
+her to focus on her research into the evolution of symbiosis and her outreach
+initiatives.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/breanna-grfp/&quot;&gt;Breanna Awarded NSF GRFP!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on April 03, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Breanna Awarded CMB Fellowship!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/cmb-fellowship/" />
+  <id>http://phyletica.org/cmb-fellowship</id>
+  <published>2018-02-22T00:00:00-06:00</published>
+  <updated>2018-02-22T00:00:00-06:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-to-breanna&quot;&gt;Congrats to Breanna!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to phyletician Breanna Sipley for winning the
+competitive
+&lt;a href=&quot;http://www.auburn.edu/cosam/cmb/index.htm&quot;&gt;Auburn University Cellular and Molecular Biosciences Peaks of Excellence
+Research Fellowships&lt;/a&gt;
+for the Summer of 2018! This fellowship will allow Breanna to focus her time
+this summer on research into the evolution of parasitism.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/cmb-fellowship/&quot;&gt;Breanna Awarded CMB Fellowship!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on February 22, 2018.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[AU Herpetology Social]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/au-herp-social/" />
+  <id>http://phyletica.org/au-herp-social</id>
+  <published>2017-11-20T00:00:00-06:00</published>
+  <updated>2017-11-20T00:00:00-06:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;On Friday, Melissa and I hosted a social for herpetologists associated
+with &lt;a href=&quot;http://www.auburn.edu/&quot;&gt;Auburn University&lt;/a&gt;.
+During the social, Phyletica Lab Postdoc, &lt;a href=&quot;https://www.ioes.ucla.edu/person/jesse-grismer/&quot;&gt;Jesse
+Grismer&lt;/a&gt;, presented a very
+entertaining travelogue about some of his field work in Southeast Asia.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/2017-11-17-grismer-travelogue-front.jpg&quot;&gt;&lt;img src=&quot;/images/2017-11-17-grismer-travelogue-front.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Jesse describes how we were outclassed in catching *Leiolepis* lizards
+                by Khmer children.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;We all had a great time.
+The next morning, I could not help taking advantage of the borrowed HD
+projector to do some big-screen code testing and manuscript writing from the
+couch.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/2017-11-18-couch-coding.jpg&quot;&gt;&lt;img src=&quot;/images/2017-11-18-couch-coding.jpg&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Coding on the couch.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/au-herp-social/&quot;&gt;AU Herpetology Social&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on November 20, 2017.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Visiting LSU]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/lsu-visit/" />
+  <id>http://phyletica.org/lsu-visit</id>
+  <published>2017-11-13T00:00:00-06:00</published>
+  <updated>2017-11-13T00:00:00-06:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Last week, I had a great time visiting the
+&lt;a href=&quot;http://www.lsu.edu/science/biosci/&quot;&gt;Biological Sciences Department&lt;/a&gt;
+at
+&lt;a href=&quot;http://www.lsu.edu/&quot;&gt;Louisiana State University&lt;/a&gt;
+to give a
+seminar.
+It was my first time spending time on campus since I finished my Masters degree
+there back in 2007.
+It was a blast revisiting my old stomping grounds and meeting with some of the
+many great faculty, postdocs, and graduate students in the department and
+&lt;a href=&quot;http://www.lsu.edu/mns/&quot;&gt;Museum of Natural Science&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Many thanks to &lt;a href=&quot;http://www.phyleaux1.lsu.edu/&quot;&gt;Jeremy Brown’s lab&lt;/a&gt; for hosting
+my visit, &lt;a href=&quot;http://carloliveros.weebly.com/&quot;&gt;Carl Oliveros&lt;/a&gt; for orchestrating,
+and Dolly and &lt;a href=&quot;http://www.museum.lsu.edu/esselstyn/&quot;&gt;Jake Esselstyn&lt;/a&gt; for
+holding a reception at their house.&lt;/p&gt;
+
+&lt;p&gt;Here are the slides from my talk:&lt;/p&gt;
+
+&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/v1BIMu6pKAg5nT&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
+&lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/secret/v1BIMu6pKAg5nT&quot; title=&quot;Generalizing phylogenetics to infer shared evolutionary events&quot; target=&quot;_blank&quot;&gt;Generalizing phylogenetics to infer shared evolutionary events&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;https://www.slideshare.net/jamieoaks7&quot; target=&quot;_blank&quot;&gt;Jamie Oaks&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/lsu-visit/&quot;&gt;Visiting LSU&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on November 13, 2017.&lt;/p&gt;
+
+  </content>
+</entry>
+
 </feed>
