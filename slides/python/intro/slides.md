@@ -7,14 +7,14 @@ p { text-align: left; }
 
 ## About these sides
 
-I use "`$`" at the beginning of lines to signify that we are typing at the
+I use "<code>$</code>" at the beginning of lines to signify that we are typing at the
 command prompt
 
 ```bash
 $ echo "Hello World!"
 ```
 
-I use "`>>>`" at the beginning of lines that we are typing in the Python
+I use "<code>>>></code>" at the beginning of lines that we are typing in the Python
 interpreter
 
 ```python
@@ -30,7 +30,7 @@ print("Hello World!")
 
 
 
-Before we do anything else, add these two lines to the bottom of `.nanorc` file
+Before we do anything else, add these two lines to the bottom of <code>.nanorc</code> file
 in your home directory
 
 ```
@@ -87,11 +87,11 @@ In BASH, when we type
 $ x=Jamie
 ```
 
-we *assign* the *value* `Jamie` to the variable `x`
+we *assign* the *value* <code>Jamie</code> to the variable <code>x</code>
 
-During this *assignment* operation, everything to the right of the "`=`" is
+During this *assignment* operation, everything to the right of the "<code>=</code>" is
 *evaluated* to determine its *value*, which is then *assigned* to the variable
-named `x`
+named <code>x</code>
 
 This evaluation was trivial, but think of
 
@@ -111,13 +111,13 @@ In Python, when we type
 ```
 
 <ol>
-	<li class="fragment fade-up">An *object* is created with value 1.5</li>
-	<li class="fragment fade-up">An *object* is created with value 2</li>
+	<li class="fragment fade-up">An <i>object</i> is created with value 1.5</li>
+	<li class="fragment fade-up">An <i>object</i> is created with value 2</li>
 	<li class="fragment fade-up">The product operation is evaluated, returning a new object with value 3.0</li>
 	<li class="fragment fade-up">The object with value 3.0 is assigned ("bound to") the name "area"</li>
 </ol>
 <p class="fragment fade-up">
-    The *type* of all of these objects is determined dynamically by the Python
+    The <i>type</i> of all of these objects is determined dynamically by the Python
     interpreter
 </p>
 
@@ -135,8 +135,8 @@ In Python, when we type
         Common types include integers, floats, strings, and Booleans
     </li>
 	<li class="fragment fade-up">
-        Getting familiar with *types* and how *objects* are bound to
-        *names* will take some getting used to
+        Getting familiar with <i>types</i> and how <i>objects</i> are bound to
+        <i>names</i> will take some getting used to
     </li>
 </ul>
 
@@ -239,7 +239,7 @@ $ python3
 # Using Functions
 
 
-A useful example is `print`
+A useful example is <code>print</code>
 ```python
 >>> print("any", "number of", "arguments", 1, 2, 3.0)
 >>> print("any", "number of", "arguments", 1, 2, 3.0, sep="--")
@@ -253,13 +253,13 @@ A useful example is `print`
 
 <ul>
 	<li>
-        In Python, most functions "belong to" a particular type, or *class* 
+        In Python, most functions "belong to" a particular type, or <i>class</i>
     </li>
 	<li class="fragment fade-up">
-        These are colled *methods*
+        These are called <i>methods</i>
     </li>
 	<li class="fragment fade-up">
-        Methods are usually called "from" an *instance* of a *class* (an
+        Methods are usually called "from" an <i>instance</i> of a <i>class</i> (an
         existing object of a particular type)
     </li>
 </ul>
@@ -309,7 +309,7 @@ Can you think of some advantages of this?
 >>> print(circum)
 ```
 <p class="fragment fade-up">
-Why didn't `circum` change?
+Why didn't <code>circum</code> change?
 </p>
 
 
@@ -323,7 +323,7 @@ Why didn't `circum` change?
 >>> print(another_variable)
 ```
 <p class="fragment fade-up">
-Why didn't `another_variable` change?
+Why didn't <code>another_variable</code> change?
 </p>
 
 
@@ -339,7 +339,7 @@ Why didn't `another_variable` change?
 >>> print(locals())
 ```
 <p class="fragment fade-up">
-We wouldn't normally use `locals()` when scripting,
+We wouldn't normally use <code>locals()</code> when scripting,
 but it lets us see what Python has in memory that we
 can access with a variable name
 </p>
@@ -355,13 +355,13 @@ can access with a variable name
 ### Strings
 <ul>
 	<li class="fragment fade-up">
-        You are already familiar with one sequence class, `str`
+        You are already familiar with one sequence class, <code>str</code>
     </li>
 	<li class="fragment fade-up">
         Strings have lots of methods, how can we see what's possible?
     </li>
 	<li class="fragment fade-up">
-        The functions `dir` and `help` are very useful
+        The functions <code>dir</code> and <code>help</code> are very useful
     </li>
 </ul>
 
@@ -372,7 +372,7 @@ can access with a variable name
 >>> help(type(a))
 >>> help(a.count)
 ```
-**NOTE:** `help` pipes its output to the system tool `less`. Use arrows (or 'j'/'k')
+**NOTE:** <code>help</code> pipes its output to the system tool <code>less</code>. Use arrows (or 'j'/'k')
 to navigate, and 'q' to exit.
 
 
@@ -458,11 +458,11 @@ Not what you expected?
 Why does Python do this?
 </p>
 <p class="fragment fade-up">
-Remember, *any* data type can be stored in lists and tuples!
+Remember, <i>any</i> data type can be stored in lists and tuples!
 </p>
 
 
-The `join` method of the string class will get us what we want
+The <code>join</code> method of the string class will get us what we want
 ```python
 >>> name = "Luna"
 >>> name_list = list(name)
@@ -527,7 +527,7 @@ original sequence, starting at index 'a' up to (but not including) index 'b'
 
 
 ### Dictionaries
-Dictionaries (`dict`) map keys to objects
+Dictionaries (<code>dict</code>) map keys to objects
 ```python
 >>> dog = {"name": "Luna", "weight": 91.8, "age": 7, "color": "black"}
 ```
@@ -567,7 +567,7 @@ An important difference from BASH is the best practice for the shebang line
 ## Conditionals
 
 
-### `if` statements
+### <code>if</code> statements
 ```python
 >>> restriction_site = "TATA"
 >>> seq = "GCTTAATGCTATAGCAT"
@@ -598,30 +598,30 @@ included in the statement
 ```
 
 
-### `assert` statements
+### <code>assert</code> statements
 ```python
 >>> assert 1 == 1, "Hold on, something is awry!"
 >>> assert 1 == 2, "Hold on, something is awry!"
 ```
-Use `assert` and use it often
+Use <code>assert</code> and use it often
 
 Whenever you find yourself assuming anything about the current state of the
-program, it's probably a good time for an `assert`
+program, it's probably a good time for an <code>assert</code>
 
 
 ## Loops
 
 
-### `while` loop
+### <code>while</code> loop
 General syntax is:
 ```python
 while expression:
     statements
 ```
-While the expression evaluates to `True`, the statements will be run again and again
+While the expression evaluates to <code>True</code>, the statements will be run again and again
 
-Until the expression is `False` OR another statement interrupts the loop (like
-`break` or `return`)
+Until the expression is <code>False</code> OR another statement interrupts the loop (like
+<code>break</code> or <code>return</code>)
 
 
 ```python
@@ -630,7 +630,7 @@ Until the expression is `False` OR another statement interrupts the loop (like
 ...     response = input("Would you like to see this prompt again? ")
 ...     x = response.upper()
 ...
-````
+```
 
 
 ```python
@@ -644,7 +644,7 @@ Until the expression is `False` OR another statement interrupts the loop (like
 ```
 
 
-### `for` loop
+### <code>for</code> loop
 General syntax is:
 ```python
 for item in collection:
