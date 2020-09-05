@@ -79,7 +79,7 @@
     start-date: 2019
     bio: >
         Interested in the interplay between speciation and adaptation, and the
-        convergent evolutin of adaptive traits in response to environmental
+        convergent evolution of adaptive traits in response to environmental
         factors.
     avatar: bio-photo-claire.jpg
 
@@ -105,35 +105,58 @@
         amphibians as a model.
     avatar: bio-photo-tanner.jpg
 
+  - name: Morgan Muell
+    role: Ph.D. Student
+    start-date: 2020
+    bio: >
+        My research interests focus on the evolution of phenotypic traits,
+        particularly those with potential applications to global change
+        biology. I received my Bachelor of Science in Biology from Iowa State
+        University in 2018, where I studied how proximate environmental cues
+        promote nesting emergence in painted turtles while working in Dr.
+        Fredric Janzen's lab. Subsequently, I earned my Masters degree in
+        Zoology in 2020 from Southern Illinois University at Carbondale, where
+        I worked with Dr. Jason L. Brown on phylogenomics and color pattern
+        evolution of <i>Ranitomeya</i> poison frogs. In the Phyletica Lab, with
+        co-advisement from Dr. Dan Warner, I am taking a comparative approach
+        to studying the evolution of developmental plasticity among multiple
+        lineages of <i>Anolis</i> lizards, with emphasis on the mainland
+        species of Costa Rica. My goal is to examine how developmental
+        plasticity is tied to both environment and common ancestry, in order to
+        further our understanding of how organisms may respond to changing
+        climates. Visit my website to get to know my research and me!
+    avatar: bio-photo-morgan.png
+    twitter: MorganRMuell
+    web: https://morganmuell.wixsite.com/home
+    coadvisor: Dan Warner
+    coadvisor-url: https://warnerlab.weebly.com/
+
   # - name: You?
   #   role: Graduate Student
   #   avatar: avatar-cyrt.jpg
 
 - title: Undergraduate Researchers
   members:
-  - name: Charlotte Benedict
-    start-date: 2017
+  - name: Hailey Whitaker 
+    start-date: 2020
     role: Undergraduate Researcher
     bio: >
-        Working on the phylogeography of reptiles and amphibians across the
-        Southeastern United States.
+        Working on computational genomics and toad speciation.
     avatar: avatar-ahaetulla.jpg
 
-  - name: Ryan Cook
-    start-date: 2017
-    role: Post-grad Researcher
-    bio: >
-        Investigating trends in the morphological changes of Alabama salamander
-        populations over the past 50 years.
-    avatar: avatar-croc.jpg
-
-  - name: Holden Smith
-    start-date: 2018
+  - name: Noah Yawn
+    start-date: 2020
     role: Undergraduate Researcher
     bio: >
-        Working on husbandry, phylogenetics, and speciation of <i>Anaxyrus</i>
-        toads.
+        Working on plant diversification and conservation.
     avatar: avatar-kalophrynus.jpg
+
+  - name: Jacob Landrum
+    start-date: 2020
+    role: Undergraduate Researcher
+    bio: >
+        Working on indigo snake conservation genomics.
+    avatar: avatar-croc.jpg
 
 
 - title: Honorary Members
@@ -152,6 +175,36 @@
 
 - title: Former Lab Members
   members:
+  - name: Charlotte Benedict
+    start-date: 2017
+    end-date: 2020
+    role: Undergraduate Researcher
+    current-position: Graduate student at The Ohio State University 
+    bio: >
+        Working on the phylogeography of reptiles and amphibians across the
+        Southeastern United States.
+    avatar: avatar-ahaetulla.jpg
+
+  - name: Ryan Cook
+    start-date: 2017
+    end-date: 2020
+    role: Undergraduate and Post-grad Researcher
+    current-position: Graduate student at Villanova University
+    bio: >
+        Investigating trends in the morphological changes of Alabama salamander
+        populations over the past 50 years.
+    avatar: avatar-croc.jpg
+
+  - name: Holden Smith
+    start-date: 2018
+    end-date: 2020
+    role: Undergraduate Researcher
+    current-position: Hydrologic Technician at the USGS
+    bio: >
+        Working on husbandry, phylogenetics, and speciation of <i>Anaxyrus</i>
+        toads.
+    avatar: avatar-kalophrynus.jpg
+
   - name: Breanna Sipley
     role: M.Sc. Student
     start-date: 2016
