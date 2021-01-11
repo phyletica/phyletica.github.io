@@ -11,12 +11,14 @@ image:
 
 {% include _toc.html %}
 
+*   [Scripting for Biologists]({{ site.baseurl }}/teaching/s4b/)
+
 ## Workshops
 
 ### Introduction to Git
 
--   [Slides][4]
--   [Exercise][5]
+-   [Slides]({{ site.baseurl }}/slides/git-intro/)
+-   [Exercise](https://github.com/joaks1/au-bootcamp-git-intro)
 
 
 ### Introduction to Python
@@ -26,16 +28,10 @@ image:
     -   [Python translation exercises](https://github.com/joaks1/python-translation-project)
 
 
- [1]: {{ site.baseurl }}/teaching/uw-biol-449/
- [2]: {{ site.baseurl }}/teaching/uw-biol-470/
- [3]: {{ site.baseurl }}/teaching/uw-biol-180/
- [4]: {{ site.baseurl }}/slides/git-intro/
- [5]: https://github.com/joaks1/au-bootcamp-git-intro
-
 ---
 
 ## Courses
 
-*   [Applied Phylogenetics][1]
-*   [Biogeography][2]
-*   [Introductory Biology][3]
+*   [Applied Phylogenetics]({{ site.baseurl }}/teaching/uw-biol-449/)
+*   [Biogeography]({{ site.baseurl }}/teaching/uw-biol-470/)
+*   [Introductory Biology]({{ site.baseurl }}/teaching/uw-biol-180/)
