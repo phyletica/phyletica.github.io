@@ -214,7 +214,7 @@ Date:   Thu Jun 8 09:06:35 2017 -0500
     students good commit practices.
 ```
 <p class="fragment fade-up">
-`git log` shows you every commit from where you currently are back to the root
+<code>git log</code> shows you every commit from where you currently are back to the root
 </p>
 <p class="fragment fade-up">
 This is your lab notebook!
@@ -225,9 +225,9 @@ This is your lab notebook!
 
 <ul>
 	<li class="fragment fade-up">Edit files</li>
-	<li class="fragment fade-up">Stage your changes (`git add`)</li>
-	<li class="fragment fade-up">Review your changes (`git status`)</li>
-	<li class="fragment fade-up">Commit your changes (`git commit`)</li>
+	<li class="fragment fade-up">Stage your changes (<code>git add</code>)</li>
+	<li class="fragment fade-up">Review your changes (<code>git status</code>)</li>
+	<li class="fragment fade-up">Commit your changes (<code>git commit</code>)</li>
 </ul>
 
 
@@ -262,7 +262,7 @@ index 5987551..67e03ef 100644
 +This is yet another line
 ```
 <p class="fragment fade-up">
-`git diff` shows you differences between your working directory and the index (staging area)
+<code>git diff</code> shows you differences between your working directory and the index (staging area)
 </p>
 
 
@@ -270,13 +270,13 @@ index 5987551..67e03ef 100644
 $ git add dummy.txt
 ```
 <p class="fragment fade-up">
-Why are we adding `dummy.txt` again?
+Why are we adding <code>dummy.txt</code> again?
 </p>
 <p class="fragment fade-up">
 We are adding new content to the staging area
 </p>
 <p class="fragment fade-up">
-The git database tracks *content*, not *files* per se
+The git database tracks <b>content</b>, not <b>files</b> per se
 </p>
 
 
@@ -308,7 +308,7 @@ index 5987551..67e03ef 100644
 +This is yet another line
 ```
 <p class="fragment fade-up">
-`--staged` option shows you differences between the staging area and the current commit 
+<code>--staged</code> option shows you differences between the staging area and the current commit 
 </p>
 
 
@@ -331,9 +331,9 @@ $ git diff --staged
 
 <ul>
 	<li class="fragment fade-up">Edit files</li>
-	<li class="fragment fade-up">Stage your changes (`git add`)</li>
-	<li class="fragment fade-up">Review your changes (`git status`)</li>
-	<li class="fragment fade-up">Commit your changes (`git commit`)</li>
+	<li class="fragment fade-up">Stage your changes (<code>git add</code>)</li>
+	<li class="fragment fade-up">Review your changes (<code>git status</code>)</li>
+	<li class="fragment fade-up">Commit your changes (<code>git commit</code>)</li>
 </ul>
 
 
@@ -662,8 +662,8 @@ $ git pull <REMOTE-ALIAS> <BRANCH-NAME>
 ```
 
 <p class="fragment fade-up">
-What this does is *fetch* any new commits to the 'remote' branch
-'origin/master' and then *merge* those new commits into the 'local' branch
+What this does is <b>fetch</b> any new commits to the 'remote' branch
+'origin/master' and then <b>merge</b> those new commits into the 'local' branch
 'master'
 </p>
 
