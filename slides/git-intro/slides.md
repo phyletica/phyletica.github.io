@@ -38,6 +38,13 @@ $ git config --help
 ```
 
 
+If you have a GitHub account, tell git your username:
+
+```
+git config --global github.user "joaks1"
+```
+
+
 ```
 $ git config --global core.editor "nano -w"
 ```
