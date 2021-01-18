@@ -3,7 +3,7 @@
 ---
 
 <ul>
-	<li class="fragment fade-up">
+	<li>
         Most people communicate with their computer through graphical user
         interfaces (GUI)
     </li>
@@ -11,15 +11,15 @@
         These GUIs are translators
         <ul>
             <li>
-                Translates your clicks into instructions for your computer
+                Translates your clicks into instructions
             </li>
         </ul>
     </li>
 	<li class="fragment fade-up">
-        This works well for simple tasks, but does not scale well
+        Works well for simple tasks, but does not scale well
         <ul>
             <li class="fragment fade-up">
-                E.g., what if you need a specific piece of information from 1000
+                E.g., what if you need to gather info from 1000
                 files?
             </li>
             <li class="fragment fade-up">
