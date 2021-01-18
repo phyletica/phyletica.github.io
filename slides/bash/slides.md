@@ -50,7 +50,7 @@
 
 ---
 
-## About these sides
+## About these slides
 
 I use "<code>$</code>" at the beginning of lines to signify that we are typing at the
 command prompt
