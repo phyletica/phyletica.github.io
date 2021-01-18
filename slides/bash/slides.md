@@ -18,11 +18,11 @@
 	<li class="fragment fade-up">
         Works well for simple tasks, but does not scale well
         <ul>
-            <li class="fragment fade-up">
+            <li>
                 E.g., what if you need to gather info from 1000
                 files?
             </li>
-            <li class="fragment fade-up">
+            <li>
                 Click, click, click &#8230;
             </li>
         </ul>
