@@ -126,6 +126,13 @@ $ man echo
 
 ---
 
+<figure>
+    <img src="../images/file-system-tree.gif" alt="File-system tree" style="max-width: 100%; height: auto;">
+    <figcaption><a href="https://flylib.com/books/en/1.295.1.47/1/">flylib.com</a></figcaption>
+</figure>
+
+---
+
 ```bash
 $ pwd
 $ ls /
