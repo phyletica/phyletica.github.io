@@ -243,14 +243,14 @@ $ for x in 1 2 3 4; do echo $x; done
 Let's make a file with one word in it
 
 ```bash
-echo how > file1.txt
+$ echo how > file1.txt
 ```
 
 Confirm the file now exists and has "how" in it
 
 ```bash
-ls
-cat file1.txt
+$ ls
+$ cat file1.txt
 ```
 
 ---
@@ -258,8 +258,8 @@ cat file1.txt
 Let's make 2 more files
 
 ```bash
-echo are > file2.txt
-echo you? > file3.txt
+$ echo are > file2.txt
+$ echo you? > file3.txt
 ```
 
 ---
@@ -280,6 +280,36 @@ $ for f in file?.txt; do cat $f; done
 
 ```bash
 $ for f in f*.txt; do cat $f; done
+```
+
+***
+
+# You are coding!
+
+---
+
+Let's make a file and put some of our commands in it
+
+(I use nano below, but you can use any text editor)
+
+```bash
+$ nano my_bash_script.sh
+```
+
+Add these lines to `my_bash_script.sh`
+
+```bash
+echo "Hello, World!"
+
+for x in 1 2 3 4; do echo $x; done
+```
+
+---
+
+Now, you can run `my_bash_script.sh` as a script with Bash!
+
+```
+$ bash my_bash_script.sh
 ```
 
 ***
