@@ -94,6 +94,22 @@ $ echo -e "Hello, World!"
 
 ---
 
+Precision (spelling, case, and spaces) matters
+
+```bash
+$ echo - e "hello"
+```
+
+```bash
+$ Echo "hello"
+```
+
+```bash
+$ eco "hello"
+```
+
+---
+
 ### Getting help with a command
 
 
@@ -209,6 +225,65 @@ $ echo $PATH
 
 
 ***
+
+# For loop
+
+---
+
+```bash
+$ for x in 1 2 3 4; do echo hello; done
+```
+
+```bash
+$ for x in 1 2 3 4; do echo $x; done
+```
+
+---
+
+Let's make a file with one word in it
+
+```bash
+echo how > file1.txt
+```
+
+Confirm the file now exists and has "how" in it
+
+```bash
+ls
+cat file1.txt
+```
+
+---
+
+Let's make 2 more files
+
+```bash
+echo are > file2.txt
+echo you? > file3.txt
+```
+
+---
+
+Let's loop over the files and print their content
+
+```bash
+$ for f in file1.txt file2.txt file3.txt; do cat $f; done
+```
+
+---
+
+We can use wildcards to make this easier
+
+```bash
+$ for f in file?.txt; do cat $f; done
+```
+
+```bash
+$ for f in f*.txt; do cat $f; done
+```
+
+***
+
 
 # Resources 
 
