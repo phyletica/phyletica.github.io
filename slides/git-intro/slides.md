@@ -1,5 +1,11 @@
 # Intro to Git
 
+Jamie Oaks
+
+[@jamoaks](https://twitter.com/jamoaks) | [phyletica.org](http://phyletica.org) | GitHub: [joaks1](https://github.com/joaks1)
+
+<a href="http://phyletica.org/slides/git-intro"><img src="../images/qr-code-git-intro.png" alt="QR Code" style="border:5px solid black;max-height: 150px;" /></a>
+
 
 <a href="http://www.phdcomics.com"><img src="images/phd101212s.png" alt="Piled Higher and Deeper by Jorge Cham, http://www.phdcomics.com/comics/archive_print.php?comicid=1531" style="max-height: 500px;" /></a>
 
