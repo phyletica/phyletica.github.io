@@ -36,6 +36,8 @@ skills that will allow them to approach biological questions in new ways.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o1Q1r2gmCPw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SN0--hLR6qM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <!-- ## References -->
 
 <!-- {% bibliography --cited %} -->
