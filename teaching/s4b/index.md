@@ -25,6 +25,14 @@ skills that will allow them to approach biological questions in new ways.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/38Ur1RWNq0U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+### Topic 3: Intro to Git
+
+-   [Slides]({{ site.baseurl }}/slides/git-intro)
+-   Video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/evZj6XbeQ-s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_R3q2rv5wxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!-- ## References -->
 
