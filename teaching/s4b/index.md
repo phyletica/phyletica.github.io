@@ -38,6 +38,10 @@ skills that will allow them to approach biological questions in new ways.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SN0--hLR6qM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Extras
+
+### [SSH Keys]({{ site.baseurl }}/teaching/s4b/ssh-keys)
+
 <!-- ## References -->
 
 <!-- {% bibliography --cited %} -->
