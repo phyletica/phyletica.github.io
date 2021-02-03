@@ -4,6 +4,7 @@ p { text-align: left; }
 
 # Intro to Python
 
+---
 
 ## About these sides
 
@@ -28,17 +29,28 @@ a script with a text editor
 print("Hello World!")
 ```
 
+---
 
+Before we do anything else, we want to configure our text editor to insert 4
+spaces when why press the "tab" key
 
-Before we do anything else, add these two lines to the bottom of <code>.nanorc</code> file
-in your home directory
-
+For nano, add these two lines to the bottom of <code>.nanorc</code> file in
+your home directory
 ```
 set tabsize 4
 set tabstospaces
 ```
 
+For vim, add this line to your <code>.vimrc</code> file in your home directory
+```
+set tabstop=4 shiftwidth=4 expandtab
+```
 
+For other editors, this option should be relatively easy to find (Google it if
+you can't find it)
+
+
+***
 
 # What is Python?
 
@@ -55,6 +67,7 @@ It's a programming language that is
 	<li class="fragment fade-up">Diverse, stable libraries for work across many domains</li>
 </ul>
 
+---
 
 How is Python different than BASH?
 <ul>
@@ -80,6 +93,7 @@ How is Python different than BASH?
     </ul>
 </ul>
 
+---
 
 In BASH, when we type
 
@@ -103,6 +117,7 @@ In BASH, the result is always a string of characters
 
 Hence, why we never thought about the *type* of values (and why spaces are so important!)
 
+---
 
 In Python, when we type
 
@@ -114,13 +129,17 @@ In Python, when we type
 	<li class="fragment fade-up">An <i>object</i> is created with value 1.5</li>
 	<li class="fragment fade-up">An <i>object</i> is created with value 2</li>
 	<li class="fragment fade-up">The product operation is evaluated, returning a new object with value 3.0</li>
-	<li class="fragment fade-up">The object with value 3.0 is assigned ("bound to") the name "area"</li>
+	<li class="fragment fade-up">The object with value 3.0 is <i>assigned</i> to ("bound to") the <i>variable</i> <code>area</code></li>
+    <ul>
+	    <li class="fragment fade-up">In python-speak: the object <b>bound</b> to the <b>name</b> <code>area</code></li>
+    </ul>
 </ol>
 <p class="fragment fade-up">
     The <i>type</i> of all of these objects is determined dynamically by the Python
     interpreter
 </p>
 
+---
 
 <ul>
 	<li class="fragment fade-up">
@@ -135,15 +154,44 @@ In Python, when we type
         Common types include integers, floats, strings, and Booleans
     </li>
 	<li class="fragment fade-up">
-        Getting familiar with <i>types</i> and how <i>objects</i> are bound to
-        <i>names</i> will take some getting used to
+        Getting familiar with <i>types</i> and how <i>objects</i> are assigned to
+        <i>variables</i> will take some getting used to
+    </li>
+</ul>
+
+---
+
+Everything in Python is an object
+
+<p class="fragment fade-up">
+Every object has an <b>id</b> (its "address"),
+<b>type</b>, and <b>value</b>
+</p>
+
+<p class="fragment fade-up">
+Objects whose value cannot change are **immutable**
+</p>
+<ul>
+	<li class="fragment fade-up">
+        E.g., int, float, bool, string, tuple
+    </li>
+</ul>
+
+<p class="fragment fade-up">
+Objects whose value can change are **mutable**
+</p>
+<ul>
+	<li class="fragment fade-up">
+        E.g., list, dictionary, set, user-defined classes
     </li>
 </ul>
 
 
+***
 
 # Let's play!
 
+---
 
 ```bash
 $ python3
@@ -159,18 +207,22 @@ $ python3
 </ul>
 
 
+***
 
 # Let me out!
 
+---
 
 ```python
 >>> quit()
 ```
 
+***
 
 
 # Integers & Floats
 
+---
 
 ```python
 >>> 2+3
@@ -181,9 +233,11 @@ $ python3
 ```
 
 
+***
 
 # Strings 
 
+---
 
 ```python
 >>> "Hello, world!"
@@ -200,9 +254,11 @@ $ python3
 ```
 
 
+***
 
 # Types
 
+---
 
 ```python
 >>> type(2)
@@ -212,9 +268,11 @@ $ python3
 ```
 
 
+***
 
 # Operations
 
+---
 
 ```python
 >>> "hi" * 4
@@ -226,6 +284,7 @@ $ python3
 >>> float("2") + 3
 ```
 
+---
 
 ```python
 >>> 2 / 3
@@ -235,9 +294,11 @@ $ python3
 ```
 
 
+***
 
 # Using Functions
 
+---
 
 A useful example is <code>print</code>
 ```python
@@ -247,9 +308,11 @@ A useful example is <code>print</code>
 ```
 
 
+***
 
 # Using Methods
 
+---
 
 <ul>
 	<li>
@@ -264,6 +327,7 @@ A useful example is <code>print</code>
     </li>
 </ul>
 
+---
 
 Examples of string methods
 ```python
@@ -273,6 +337,7 @@ Examples of string methods
 >>> a.count("h")
 ```
 
+---
 
 More examples using a list
 ```python
@@ -294,9 +359,11 @@ Can you think of some advantages of this?
 </p>
 
 
+***
 
 # Variables
 
+---
 
 ```python
 >>> radius = 2
@@ -312,6 +379,7 @@ Can you think of some advantages of this?
 Why didn't <code>circum</code> change?
 </p>
 
+---
 
 ```python
 >>> print(radius)
@@ -326,6 +394,7 @@ Why didn't <code>circum</code> change?
 Why didn't <code>another_variable</code> change?
 </p>
 
+---
 
 ```python
 >>> print(locals())
@@ -345,12 +414,15 @@ can access with a variable name
 </p>
 
 
+***
 
 # Collections
 
+---
 
 ## Sequences
 
+---
 
 ### Strings
 <ul>
@@ -365,6 +437,7 @@ can access with a variable name
     </li>
 </ul>
 
+---
 
 ```python
 >>> a = "blah"
@@ -375,6 +448,7 @@ can access with a variable name
 **NOTE:** <code>help</code> pipes its output to the system tool <code>less</code>. Use arrows (or 'j'/'k')
 to navigate, and 'q' to exit.
 
+---
 
 Strings are what is known as an *immutable* data type
 ```python
@@ -390,6 +464,7 @@ Traceback (most recent call last):
 TypeError: 'str' object does not support item assignment
 ```
 
+---
 
 ### Lists
 Lists are a very useful *mutable* data type
@@ -411,6 +486,7 @@ Lists are a very useful *mutable* data type
 Can contain any type of element, even other lists!
 </p>
 
+---
 
 ### Tuples
 Tuples are similar to lists, but are *immutable*
@@ -427,8 +503,9 @@ TypeError: 'tuple' object does not support item assignment
 >>> help(a_tuple)
 ```
 
+---
 
-### Switching among sequence
+### Switching among sequence types
 Getting an object of a different sequence type is fairly easy
 ```python
 >>> name = "Luna"
@@ -442,6 +519,7 @@ Getting an object of a different sequence type is fairly easy
 >>> name_tuple
 ```
 
+---
 
 But, going from a list or tuple to a string is not as straightforward
 ```python
@@ -461,6 +539,7 @@ Why does Python do this?
 Remember, <i>any</i> data type can be stored in lists and tuples!
 </p>
 
+---
 
 The <code>join</code> method of the string class will get us what we want
 ```python
@@ -472,12 +551,14 @@ The <code>join</code> method of the string class will get us what we want
 >>> "---".join(name_list)
 ```
 
+---
 
 ### Sequence operations
 
+---
 
 #### Indexing & slicing
-All sequence types allow *indexing* (also called *dereferencing* or *subscription*) and *slicing*
+All sequence types allow <b>indexing</b> (also called <b>dereferencing</b> or <b>subscription</b>) and <b>slicing</b>
 
 **Indexing**
 ```python
@@ -488,6 +569,7 @@ All sequence types allow *indexing* (also called *dereferencing* or *subscriptio
 ```
 This returns a reference to the second element in the string and list
 
+---
 
 When the index is negative, it is counted from the end of the sequence
 ```python
@@ -495,6 +577,7 @@ When the index is negative, it is counted from the end of the sequence
 >>> name_list[-1]
 ```
 
+---
 
 **Slicing**
 ```python
@@ -507,6 +590,7 @@ When the index is negative, it is counted from the end of the sequence
 'seqobject[a:b]' returns a new sequence object that contains the items from the
 original sequence, starting at index 'a' up to (but not including) index 'b'
 
+---
 
 #### Boolean operators
 ```python
@@ -522,9 +606,11 @@ original sequence, starting at index 'a' up to (but not including) index 'b'
 >>> 10 not in numbers
 ```
 
+---
 
 ## Other Collection Types
 
+---
 
 ### Dictionaries
 Dictionaries (<code>dict</code>) map keys to objects
@@ -543,6 +629,7 @@ The syntax is '{ key1 : value1, key2 : value2 }'
 >>> help(dog)
 ```
 
+---
 
 ### Sets
 -   A set is like a dictionary without values
@@ -550,9 +637,11 @@ The syntax is '{ key1 : value1, key2 : value2 }'
 -   We'll skip them for now
 
 
+***
 
 # Scripts
 
+---
 
 An important difference from BASH is the best practice for the shebang line
 ```python
@@ -560,12 +649,15 @@ An important difference from BASH is the best practice for the shebang line
 ```
 
 
+***
 
 # Flow control
 
+---
 
 ## Conditionals
 
+---
 
 ### <code>if</code> statements
 ```python
@@ -580,9 +672,10 @@ An important difference from BASH is the best practice for the shebang line
 **NOTE:** Indentation is very important! It's how Python knows when a block of
 code ends
 
-Everything after ":" needs to be indented by exactly 4 more spaces to be in
+Everything after ":" needs to be indented by exactly 4 more spaces to be
 included in the statement
 
+---
 
 ```python
 >>> x = 0
@@ -597,6 +690,7 @@ included in the statement
 ...
 ```
 
+---
 
 ### <code>assert</code> statements
 ```python
@@ -608,9 +702,11 @@ Use <code>assert</code> and use it often
 Whenever you find yourself assuming anything about the current state of the
 program, it's probably a good time for an <code>assert</code>
 
+---
 
 ## Loops
 
+---
 
 ### <code>while</code> loop
 General syntax is:
@@ -623,6 +719,7 @@ While the expression evaluates to <code>True</code>, the statements will be run 
 Until the expression is <code>False</code> OR another statement interrupts the loop (like
 <code>break</code> or <code>return</code>)
 
+---
 
 ```python
 >>> x = ""
@@ -632,6 +729,7 @@ Until the expression is <code>False</code> OR another statement interrupts the l
 ...
 ```
 
+---
 
 ```python
 >>> x = ""
@@ -643,6 +741,7 @@ Until the expression is <code>False</code> OR another statement interrupts the l
 ...
 ```
 
+---
 
 ### <code>for</code> loop
 General syntax is:
@@ -651,6 +750,7 @@ for item in collection:
     do something
 ```
 
+---
 
 Works for sequences and other iterables
 ```python
@@ -669,6 +769,7 @@ Works for sequences and other iterables
 print(total)
 ```
 
+---
 
 Works for strings (which is a sequence)
 ```python
@@ -680,6 +781,7 @@ Works for strings (which is a sequence)
 >>> print(word)
 ```
 
+---
 
 Works for dictionaries
 ```python
@@ -694,6 +796,7 @@ It's iterating over the keys!
 ...     print(element, "-->", genetic_code[element])
 ```
 
+---
 
 We can also iterate over tuples of the key and value
 ```python
@@ -703,9 +806,11 @@ We can also iterate over tuples of the key and value
 ```
 
 
+***
 
 # Defining functions
 
+---
 
 ```python
 >>> locals()
@@ -718,6 +823,7 @@ We can also iterate over tuples of the key and value
 >>> locals()
 ```
 
+---
 
 ```python
 >>> calc_square_prism_volume(4, 10)
@@ -730,6 +836,7 @@ We can also iterate over tuples of the key and value
 >>> calc_square_prism_volume(4, height = 10)
 ```
 
+---
 
 We can provide default values for parameters
 ```python
@@ -741,15 +848,18 @@ We can provide default values for parameters
 ```
 
 
+***
 
 # Acknowledgments
 
+---
 
 ## Material
 These slides borrow heavily from notes
 written by [Mark Holder](http://phylo.bio.ku.edu/content/mark-t-holder), which
 can be found at <https://github.com/mtholder/eebprogramming>.
 
+---
 
 ## Support
 This work was supported by funding from the National Science Foundation (DEB

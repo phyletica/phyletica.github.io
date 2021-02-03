@@ -19,6 +19,27 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../reveal.js/plugin/highlight/zenburn.css">
+
+		<!-- CSS for inline code to match zenburn blocks -->
+        <!-- 'pre code' rule ensures the code blocks are not affected -->
+        <style>
+            code {
+                background-color: #3f3f3f;
+                color: #dcdcdc;
+                border-radius: 0.2em;
+                padding: 0.2px 3px 0.2px;
+                white-space: nowrap;
+                font-size: 90%;
+            }
+            pre code {
+                background-color: inherit;
+                color: inherit;
+                border-radius: inherit;
+                padding: inherit;
+                white-space: inherit;
+                font-size: inherit;
+            }
+        </style>
 	</head>
 
 	<body>
@@ -29,8 +50,8 @@
 			<div class="slides">
 
                 <section data-markdown="slides.md"
-                    data-separator="^\n\n\n"
-                    data-separator-vertical="^\n\n"
+                    data-separator="^\s{0,3}\*\s*\*\s*\*[\*\s]*$"
+                    data-separator-vertical="^\s{0,3}-\s*-\s*-[-\s]*$"
                     data-separator-notes="^Note:"
                     data-charset="iso-8859-15">
                 </section>
