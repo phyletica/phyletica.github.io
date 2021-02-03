@@ -4,11 +4,19 @@ p { text-align: left; }
 
 # Intro to Python
 
+<center>
 Jamie Oaks
+</center>
 
-[@jamoaks](https://twitter.com/jamoaks) | [phyletica.org](http://phyletica.org) | GitHub: [joaks1](https://github.com/joaks1)
+<center>
+<a href="https://twitter.com/jamoaks">@jamoaks</a> |
+<a href="http://phyletica.org">phyletica.org</a> |
+GitHub: <a href="https://github.com/joaks1">joaks1</a>
+</center>
 
+<center>
 <a href="http://phyletica.org/slides/python/intro"><img src="../../images/qr-code-python-intro.png" alt="QR Code" style="border:5px solid black;max-height: 150px;" /></a>
+</center>
 
 ---
 
@@ -35,10 +43,17 @@ a script with a text editor
 print("Hello World!")
 ```
 
----
+
+***
+
+# Getting setup
+
+--- 
 
 Before we do anything else, we want to configure our text editor to insert 4
 spaces when why press the "tab" key
+
+---
 
 For nano, add these two lines to the bottom of <code>.nanorc</code> file in
 your home directory
@@ -60,6 +75,7 @@ you can't find it)
 
 # What is Python?
 
+---
 
 It's a programming language that is
 <ul>
@@ -137,7 +153,7 @@ In Python, when we type
 	<li class="fragment fade-up">The product operation is evaluated, returning a new object with value 3.0</li>
 	<li class="fragment fade-up">The object with value 3.0 is <i>assigned</i> to ("bound to") the <i>variable</i> <code>area</code></li>
     <ul>
-	    <li class="fragment fade-up">In python-speak: the object <b>bound</b> to the <b>name</b> <code>area</code></li>
+	    <li class="fragment fade-up">In python-speak: the object is <b>bound</b> to the <b>name</b> <code>area</code></li>
     </ul>
 </ol>
 <p class="fragment fade-up">
@@ -148,7 +164,7 @@ In Python, when we type
 ---
 
 <ul>
-	<li class="fragment fade-up">
+	<li>
         Python has many types
     </li>
     <ul>
@@ -175,20 +191,22 @@ Every object has an <b>id</b> (its "address"),
 </p>
 
 <p class="fragment fade-up">
-Objects whose value cannot change are **immutable**
+Objects whose value cannot change are <b>immutable</b>
 </p>
+
 <ul>
 	<li class="fragment fade-up">
-        E.g., int, float, bool, string, tuple
+        <i>E.g.</i>, int, float, bool, string, tuple
     </li>
 </ul>
 
 <p class="fragment fade-up">
-Objects whose value can change are **mutable**
+Objects whose value can change are <b>mutable</b>
 </p>
+
 <ul>
 	<li class="fragment fade-up">
-        E.g., list, dictionary, set, user-defined classes
+        <i>E.g.</i>, list, dictionary, set, user-defined classes
     </li>
 </ul>
 
