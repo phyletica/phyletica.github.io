@@ -4,6 +4,12 @@ p { text-align: left; }
 
 # Intro to Python
 
+Jamie Oaks
+
+[@jamoaks](https://twitter.com/jamoaks) | [phyletica.org](http://phyletica.org) | GitHub: [joaks1](https://github.com/joaks1)
+
+<a href="http://phyletica.org/slides/python/intro"><img src="../../images/qr-code-python-intro.png" alt="QR Code" style="border:5px solid black;max-height: 150px;" /></a>
+
 ---
 
 ## About these sides
