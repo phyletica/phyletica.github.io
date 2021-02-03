@@ -116,7 +116,7 @@ easier and more secure.
 To do this, you need to put the contents of your `id_rsa.pub` file into the
 `~/.ssh/authorized_keys` file in your home directory on the remote computer you
 use.
-You can do this with one command entered on *your* computer::
+You can do this with one command entered on *your* computer:
 
     cat ~/.ssh/id_rsa.pub | ssh YOUR-USERNAME@REMOTE.COMPUTER.ADDRESS "cat >> ~/.ssh/authorized_keys"
 
