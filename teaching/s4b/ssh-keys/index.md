@@ -72,9 +72,10 @@ You should see the files `id_rsa` and `id_rsa.pub` listed.
 
 ## Register your public key with GitHub
 
-Log in to your |github|_ account, and go to the "Settings" for your account
-(there should be a drop down near the top right corner of the |github|_ page,
-with a "Settings" option).
+Log in to your [GitHub](https://github.com/) account, and go to the "Settings"
+for your account
+(there should be a drop down near the top right corner of the
+[GitHub](https://github.com/) page, with a "Settings" option).
 Along the left side of your settings page, there should be an "SSH and GPG
 keys" link; click on this.
 
@@ -101,14 +102,29 @@ Then hit "Add SSH Key."
 
 ## Setting up passwordless SSH login with any server
 
-You can also use your SSH key pair to allow you to log in to servers (e.g., a
-computer cluster) more securely and without using your password.
+Do you access a remote computer, such as a computer cluster, using `ssh`
+by entering a command like:
+
+    ssh YOUR-USERNAME@REMOTE.COMPUTER.ADDRESS
+
+For example, I often log in to AU's Hopper computer cluster by using
+`ssh jro0014@hopper.auburn.edu`.
+If you answered "No," then you can skip this section. But, if your
+answer was "Yes," you can use your SSH keys to make logging in with `ssh`
+easier and more secure.
+
 To do this, you need to put the contents of your `id_rsa.pub` file into the
-`~/.ssh/authorized_keys` file in your home directory on the server you use.
+`~/.ssh/authorized_keys` file in your home directory on the remote computer you
+use.
 You can do this with one command entered on *your* computer::
 
-    cat ~/.ssh/id_rsa.pub | ssh YOUR-AU-USERNAME@SERVER-ADDRESS "cat >> ~/.ssh/authorized_keys"
+    cat ~/.ssh/id_rsa.pub | ssh YOUR-USERNAME@REMOTE.COMPUTER.ADDRESS "cat >> ~/.ssh/authorized_keys"
 
-Now, after you start a fresh shell session, you should be able to log in to
-your account on the server without entering your password.
-Rather, your identity is confirmed automatically using the SSH keys.
+For example, I added my public SSH key to the authorized_keys file for my
+account on AU's Hopper computer cluster using this command
+
+    cat ~/.ssh/id_rsa.pub | ssh jro0014@hopper.auburn.edu "cat >> ~/.ssh/authorized_keys"
+
+After you do this and start a fresh shell session, you should be able to log in
+to your account on the remote computer without entering your password.
+Rather, your identity is confirmed automatically using your SSH keys.
