@@ -151,7 +151,7 @@ In Python, when we type
 	<li class="fragment fade-up">An <i>object</i> is created with value 1.5</li>
 	<li class="fragment fade-up">An <i>object</i> is created with value 2</li>
 	<li class="fragment fade-up">The product operation is evaluated, returning a new object with value 3.0</li>
-	<li class="fragment fade-up">The object with value 3.0 is <i>assigned</i> to ("bound to") the <i>variable</i> <code>area</code></li>
+	<li class="fragment fade-up">The object with value 3.0 is <i>assigned</i> to the <i>variable</i> <code>area</code></li>
     <ul>
 	    <li class="fragment fade-up">In python-speak: the object is <b>bound</b> to the <b>name</b> <code>area</code></li>
     </ul>
