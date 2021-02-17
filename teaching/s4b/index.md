@@ -28,7 +28,7 @@ skills that will allow them to approach biological questions in new ways.
 ### Topic 3: Intro to Git
 
 -   [Slides]({{ site.baseurl }}/slides/git-intro)
--   Video:
+-   Videos:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/evZj6XbeQ-s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -37,6 +37,15 @@ skills that will allow them to approach biological questions in new ways.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/o1Q1r2gmCPw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SN0--hLR6qM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+-   [Exercise](https://github.com/joaks1/au-bootcamp-git-intro)
+
+### Topic 4: Intro to Python
+
+-   [Slides]({{ site.baseurl }}/slides/python/intro)
+-   Exercise:
+    -   Exercise 1 of [Python translation project](https://github.com/joaks1/python-translation-project)
+
 
 ## Extras
 
