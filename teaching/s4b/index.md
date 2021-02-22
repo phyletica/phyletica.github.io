@@ -46,6 +46,10 @@ skills that will allow them to approach biological questions in new ways.
 -   Exercise:
     -   Exercise 1 of [Python translation project](https://github.com/joaks1/python-translation-project)
 
+### Topic 5: Scripting best practices
+
+-   [Exercise](https://github.com/joaks1/python-script-best-practice)
+
 
 ## Extras
 
