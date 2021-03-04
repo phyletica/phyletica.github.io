@@ -51,6 +51,17 @@ skills that will allow them to approach biological questions in new ways.
 -   [Exercise](https://github.com/joaks1/python-script-best-practice)
 
 
+### Topic 5: Regular expressions
+
+-   Resources:
+    -   See Canvas for Randy's notes
+    -   [Jamie's regex notes](https://github.com/joaks1/python-regex-notes)
+    -   [Python docs](https://docs.python.org/3/howto/regex.html)
+
+-   Exercise:
+    -   Exercise 2 of [Python translation project](https://github.com/joaks1/python-translation-project)
+
+
 ## Extras
 
 ### [SSH Keys]({{ site.baseurl }}/teaching/s4b/ssh-keys)
