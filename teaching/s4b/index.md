@@ -51,7 +51,7 @@ skills that will allow them to approach biological questions in new ways.
 -   [Exercise](https://github.com/joaks1/python-script-best-practice)
 
 
-### Topic 5: Regular expressions
+### Topic 6: Regular expressions
 
 -   Resources:
     -   See Canvas for Randy's notes
@@ -60,6 +60,11 @@ skills that will allow them to approach biological questions in new ways.
 
 -   Exercise:
     -   Exercise 2 of [Python translation project](https://github.com/joaks1/python-translation-project)
+
+### Topic 7: Reading and writing files
+
+-   Notes and exercise:
+    -   [python-file-io](https://github.com/joaks1/python-file-io)
 
 
 ## Extras
