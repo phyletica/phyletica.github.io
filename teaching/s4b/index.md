@@ -66,6 +66,16 @@ skills that will allow them to approach biological questions in new ways.
 -   Notes and exercise:
     -   [python-file-io](https://github.com/joaks1/python-file-io)
 
+### Topic 8: Debugging
+
+-   Notes and exercise:
+    -   [python-debugging](https://github.com/joaks1/python-debugging)
+
+### Topic 9: Using external packages to manipulate, analyze, and plot data
+
+-   Notes and exercise:
+    -   [python-tabular-data](https://github.com/joaks1/python-tabular-data)
+
 
 ## Extras
 
