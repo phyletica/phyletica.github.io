@@ -76,6 +76,14 @@ skills that will allow them to approach biological questions in new ways.
 -   Notes and exercise:
     -   [python-tabular-data](https://github.com/joaks1/python-tabular-data)
 
+### Topic 10: A simple demo of argparse for parsing command-line args
+
+-   Notes and demo:
+    -   [python-argparse-demo](https://github.com/joaks1/python-argparse-demo)
+-   No exercise
+
+### Topic 11: Classes in Python
+
 
 ## Extras
 
