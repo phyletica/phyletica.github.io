@@ -87,7 +87,15 @@ skills that will allow them to approach biological questions in new ways.
 
 ## Extras
 
-### [SSH Keys]({{ site.baseurl }}/teaching/s4b/ssh-keys)
+### Extra Topic 1: SSH Keys
+
+-   [Notes and video here]({{ site.baseurl }}/teaching/s4b/ssh-keys)
+
+
+## Acknowledgments
+
+This work was made possible by funding provided to [Jamie Oaks](http://phyletica.org) from the National Science Foundation (DEB 1656004).
+
 
 <!-- ## References -->
 
