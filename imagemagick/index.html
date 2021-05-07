@@ -1,0 +1,546 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Converting PDF slides to animated GIFs and videos with ImageMagick &#8211; phyletica</title>
+<meta name="description" content="The power and flexiblity of Imagemagick command-line tools is ... magickal.">
+<meta name="keywords" content="computing">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Converting PDF slides to animated GIFs and videos with ImageMagick">
+
+<meta name="twitter:description" content="The power and flexiblity of Imagemagick command-line tools is ... magickal.">
+
+<meta name="twitter:site" content="@jamoaks">
+<meta name="twitter:creator" content="@jamoaks">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/phyletica-avatar.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Converting PDF slides to animated GIFs and videos with ImageMagick">
+
+<meta property="og:description" content="The power and flexiblity of Imagemagick command-line tools is ... magickal.">
+
+<meta property="og:url" content="http://phyletica.org/imagemagick/">
+<meta property="og:site_name" content="phyletica">
+
+<meta property="og:image" content="http://phyletica.org/images/phyletica-avatar.png">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Converting PDF slides to animated GIFs and videos with ImageMagick">
+
+<meta itemprop="description" content="The power and flexiblity of Imagemagick command-line tools is ... magickal.">
+
+
+<meta itemprop="image" content="http://phyletica.org/images/phyletica-avatar.png">
+
+
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="7RL6oMJptXKQ9M8JGuy2wFRfXlScLOKDmiSAQpTOpPQ">
+
+
+
+<link rel="canonical" href="http://phyletica.org/imagemagick/">
+<link href="http://phyletica.org/feed.xml" type="application/atom+xml" rel="alternate" title="phyletica Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=Raleway|Lato|Roboto+Slab:300,400|Roboto:500|PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<!-- Hack font -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack.min.css">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="/">phyletica</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+                    <li><a href="/" >Home</a></li>
+				
+				    
+                    <li><a href="/people/" >People</a></li>
+				
+				    
+                    <li><a href="/research/" >Research</a></li>
+				
+				    
+                    <li><a href="/teaching/" >Teaching</a></li>
+				
+				    
+                    <li><a href="/software/" >Software</a></li>
+				
+				    
+                    <li><a href="/publications/" >Publications</a></li>
+				
+				    
+                    <li><a href="/posts/" >Posts</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "/images/header-koh-rong-samloem.jpg"
+    
+  alt="Converting PDF slides to animated GIFs and videos with ImageMagick feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="http://phyletica.github.io">Jamie Oaks</a></span>
+  
+  </div><!-- /.image-wrap -->
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/gravatar.jpg" class="bio-photo" alt="Jamie Oaks bio photo">
+
+
+  <h3 itemprop="name">Jamie Oaks</h3>
+  <p>Evolutionary biologist.</p>
+  <a href="mailto:joaks@auburn.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/jamoaks" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  <a href="http://github.com/joaks1" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa fa-fw fa-youtube-square"></i> Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>
+  
+  
+  
+  <a href="/people/cv-joaks.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/imagemagick/" rel="bookmark" title="Converting PDF slides to animated GIFs and videos with ImageMagick">Converting PDF slides to animated GIFs and videos with ImageMagick</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>The power and flexibility of the
+<a href="http://www.imagemagick.org/script/index.php">ImageMagick</a> suite of software
+never fails to amaze me.
+Not only does
+<a href="http://www.imagemagick.org/script/index.php">ImageMagick</a>
+provide several command-line tools capable of meeting all your image
+editing/conversion needs, there are also APIs for over a dozen languages,
+including Python, Ruby, and Perl.
+I should preface this post by declaring that I am not an expert on the use of
+<a href="http://www.imagemagick.org/script/index.php">ImageMagick</a>, but I have used it
+successfully to script solutions for many of my image-editing needs.
+One recent task for which it spared me from having to resort to using a
+GUI-based image editor was converting a series of PDF slides into an animation
+for one of my <a href="/dirichlet-process/">recent posts</a>.
+I wanted to document how I did this for my own memory, and in case someone else
+might find it useful.</p>
+
+<p>If you want to follow along, create a directory and download the PDF slides:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">mkdir </span>fun-with-im
+<span class="nb">cd </span>fun-with-im
+curl <span class="nt">-o</span> slides.pdf http://phyletica.org/downloads/dpp-3-slides.pdf</code></pre></figure>
+
+<p>My first step was to use the <code class="language-plaintext highlighter-rouge">convert</code> tool to convert the slides into separate
+PNG files:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">convert <span class="nt">-density</span> 600 slides.pdf <span class="nt">-strip</span> <span class="nt">-resize</span> @1048576 PNG8:slide-%02d.png</code></pre></figure>
+
+<p>The <code class="language-plaintext highlighter-rouge">-density</code> option determines the resolution (in dots per inch) at which
+to rasterize the PDF.
+The <code class="language-plaintext highlighter-rouge">-strip</code> option removes any comments or profiles from the output images; I
+use this option a lot to reduce the file size of images for the web.
+The <code class="language-plaintext highlighter-rouge">-resize</code> option determines the size of the output PNG.
+This option is very flexible in <a href="http://www.imagemagick.org/script/command-line-processing.php#geometry">the arguments it can
+handle</a>;
+here I use the <code class="language-plaintext highlighter-rouge">@</code> symbol to specify the area in pixels
+(<a href="http://www.imagemagick.org/script/index.php">ImageMagick</a> will preserve the
+aspect ratio).
+To further reduce file size, I specified 8-bit PNG files using the <code class="language-plaintext highlighter-rouge">PNG8:</code>
+syntax.
+Lastly, the <code class="language-plaintext highlighter-rouge">slide-%02d.png</code> syntax in the output file name specifies that I
+want the slides to be named <code class="language-plaintext highlighter-rouge">slide-00.png</code>, <code class="language-plaintext highlighter-rouge">slide-01.png</code>, <code class="language-plaintext highlighter-rouge">slide-02.png</code>,
+etc.</p>
+
+<p>Next, we can convert the PNGs into an animated GIF:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">convert <span class="nt">-layers</span> OptimizePlus <span class="nt">-delay</span> 75 slide-0?.png slide-1[01234].png <span class="nt">-delay</span> 300 slide-1[567].png <span class="nt">-loop</span> 0 slides.gif</code></pre></figure>
+
+<p>I have no idea how the <code class="language-plaintext highlighter-rouge">-layers OptimizePlus</code> option works, but it optimizes
+the final output to reduce the animated file size.
+The <code class="language-plaintext highlighter-rouge">-delay</code> option specifies the number of ticks (the default rate is 100
+ticks per second) to pause each image.
+The options in the command above specify to spend 3/4 of a second on the first
+15 slides, and then 3 seconds on the last three slides.
+The <code class="language-plaintext highlighter-rouge">-loop</code> option specifies the number of times the GIF animation should
+repeat;
+setting it to zero will cause the GIF to repeat indefinitely.</p>
+
+<p>We can use the same command (minus the <code class="language-plaintext highlighter-rouge">loop</code> option) to create a movie out of
+the PNG images:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">convert <span class="nt">-layers</span> OptimizePlus <span class="nt">-delay</span> 75 slide-0?.png slide-1[01234].png <span class="nt">-delay</span> 300 slide-1[567].png slides.mp4</code></pre></figure>
+
+<p>Here, we specified an MP4, but other output formats are supported.
+I think <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a> uses
+<a href="https://www.ffmpeg.org/">ffmpeg</a> in the background to make the video, so you
+might have to install it.
+You can also use <a href="https://www.ffmpeg.org/">ffmpeg</a> directly:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ffmpeg <span class="nt">-f</span> gif <span class="nt">-i</span> slides.gif slides.mp4</code></pre></figure>
+
+<p>Either way, you should end up with a video like the following:</p>
+
+<p class="notice"><strong>NOTE:</strong> The video is not displaying for some OS/browser combinations.
+If it’s not working for you, check out the animated GIF below.</p>
+
+<video width="320" height="240" controls="">
+    <source src="/images/dpp-3-example.mp4" type="video/mp4" />
+    <source src="/images/dpp-3-example.ogg" type="video/ogg" />
+    <source src="/images/dpp-3-example.mov" />
+    Your browser does not support this video.
+</video>
+<figcaption>
+    <p class="figure-caption-box">
+        <span class="center-if-single-line">
+            The slides animated as a video.
+        </span>
+    </p>
+</figcaption>
+
+<p>Pretty slick; with just a few simple command lines, we went from a PDF to an
+animated GIF and movie.
+Ok, let’s clean up all those intermediate PNGs:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">rm </span>slide-??.png</code></pre></figure>
+
+<p>Next, we can make a faux play-button image, which, when used with a little
+javascript, will make the GIF appear controllable.
+To make the “play button,” we’ll start with a simple blue triangle, which you
+can download:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl <span class="nt">-o</span> blue-triangle.png http://phyletica.org/images/play-blue.png</code></pre></figure>
+
+<p>We can use <code class="language-plaintext highlighter-rouge">convert</code> to add a shadow to the triangle to make it stand out a bit:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">convert blue-triangle.png <span class="se">\(</span> +clone <span class="nt">-background</span> black <span class="nt">-shadow</span> 80x3+0+8 <span class="se">\)</span> +swap <span class="nt">-background</span> none <span class="nt">-layers</span> merge +repage play-button.png</code></pre></figure>
+
+<p>This command was taken, almost verbatim, from <a href="http://www.imagemagick.org/Usage/blur/#shadow">the fantastic ImageMagick
+documentation</a>.</p>
+
+<p>Next, we will parse the GIF frames into individual PNG files in order to
+overlay the play button onto the first frame.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">convert <span class="nt">-coalesce</span> slides.gif frame-%02d.png</code></pre></figure>
+
+<p class="notice"><strong>NOTE:</strong> I realize we could have avoided this step by simply using the PNG
+files we just deleted above, but I often have a GIF as the starting point for
+this task, and so I wanted to document how to convert the GIF into separate
+frames.</p>
+
+<p>Next, let’s overlay the shadowed play button:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">convert frame-00.png play-button.png <span class="nt">-gravity</span> center <span class="nt">-composite</span> slides.png</code></pre></figure>
+
+<p>Now, <code class="language-plaintext highlighter-rouge">slides.png</code> is the first frame of the GIF and looks like it has a “play”
+button on it.
+Notice that I named the output “play-button” as <code class="language-plaintext highlighter-rouge">slides.png</code> such that the
+prefix matches the <code class="language-plaintext highlighter-rouge">slides.gif</code> file we made above.
+That was intentional, because now we can use some javascript sleight-of-hand to
+make the GIF appear controllable on the web.
+Here’s the javascript magic that I found on
+<a href="http://codepen.io/CalebGrove/pen/bIsqy">codepen</a>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">.gif-hover</span><span class="dl">"</span><span class="p">).</span><span class="nx">hover</span><span class="p">(</span>
+        <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">src</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\.</span><span class="sr">png$/i</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.gif</span><span class="dl">"</span><span class="p">));</span>
+        <span class="p">},</span>
+        <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">src</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\.</span><span class="sr">gif$/i</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.png</span><span class="dl">"</span><span class="p">));</span>
+        <span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Adding this javascript to our page allows us to use the <code class="language-plaintext highlighter-rouge">gif-hover</code> class when
+embedding the PNG/GIF as an image:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"gif-hover"</span> <span class="na">src=</span><span class="s">"dpp-3-example.png"</span><span class="nt">&gt;&lt;/a&gt;</span></code></pre></figure>
+
+<p>The result is the following GIF that will “play” when moused over.</p>
+
+<figure>
+    <img class="gif-hover" src="/images/dpp-3-example.png" />&lt;/a&gt;
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                A GIF that will "play" when hovered over.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>If we prefer to “control” the GIF with mouse clicks, we can modify the
+javascript a bit:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">function</span> <span class="nx">swap_to_gif</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">src</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\.</span><span class="sr">png$/i</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.gif</span><span class="dl">"</span><span class="p">));</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">one</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">swap_to_png</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="kd">function</span> <span class="nx">swap_to_png</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">src</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">src</span><span class="dl">"</span><span class="p">,</span> <span class="nx">src</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">\.</span><span class="sr">gif$/i</span><span class="p">,</span> <span class="dl">"</span><span class="s2">.png</span><span class="dl">"</span><span class="p">));</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">one</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">swap_to_gif</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">.gif-click</span><span class="dl">"</span><span class="p">).</span><span class="nx">one</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="nx">swap_to_gif</span><span class="p">);</span>
+<span class="p">});</span></code></pre></figure>
+
+<p>Now, we can use the <code class="language-plaintext highlighter-rouge">gif-click</code> class for the image:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"gif-click"</span> <span class="na">src=</span><span class="s">"dpp-3-example.png"</span><span class="nt">&gt;</span></code></pre></figure>
+
+<p>The result is the following GIF that will start/stop with mouse clicks.</p>
+
+<figure>
+    <img class="gif-click" src="/images/dpp-3-example.png" />
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                A GIF that will "play/stop" when clicked.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>Notice, the javascript functions work by simply changing the path from the
+“play-button” PNG file to the GIF, and vice versa.
+For this to work, the files need to be in the same directory and share the same
+prefix.
+A little hacky, no doubt, but it works.</p>
+
+
+      <hr />
+      <p class="byline"><strong>Converting PDF slides to animated GIFs and videos with ImageMagick</strong> was published on <time datetime="2015-09-09T00:00:00-05:00">September 09, 2015</time> and last modified on <time datetime="2015-09-09">September 09, 2015</time>.</p>
+      
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=http://phyletica.org/imagemagick/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://phyletica.org/imagemagick/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://phyletica.org/imagemagick/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+
+      
+    </div><!-- /.article-wrap -->
+    <div class="article-author-bottom">
+      
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/gravatar.jpg" class="bio-photo" alt="Jamie Oaks bio photo">
+
+
+  <h3 itemprop="name">Jamie Oaks</h3>
+  <p>Evolutionary biologist.</p>
+  <a href="mailto:joaks@auburn.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/jamoaks" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  <a href="http://github.com/joaks1" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa fa-fw fa-youtube-square"></i> Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>
+  
+  
+  
+  <a href="/people/cv-joaks.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>
+  
+</div>
+
+    </div>
+    
+    <div class="other-articles">
+      <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
+      <ul>
+      
+        <li><a href="/mic-phy/" title="Gen-Phy at MIC-Phy">Gen-Phy at MIC-Phy</a></li>
+      
+        <li><a href="/holden-usgs/" title="Holden joining the USGS">Holden joining the USGS</a></li>
+      
+        <li><a href="/welcome-morgan/" title="Morgan joins the Phyleticians">Morgan joins the Phyleticians</a></li>
+      
+      </ul>
+    </div><!-- /.other-articles -->
+    
+    
+      <hr />
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'phyletica';
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    
+  </article>
+</div><!-- /#main -->
+
+<footer>
+<div class="footer-wrap">
+        
+        
+        <div class="center-footer-images">
+            <a rel="au-phylo" href="http://www.auburn.edu/cosam/departments/biology/"><img class="footer-image" alt="Auburn Phylo" src="/images/auburn-phylo-mtan-2014-blue-256.png" /></a>
+            <a rel="aumnh" href="http://aumnh.org/"><img class="footer-image" alt="Auburn MNH" src="/images/aumnh-crop-thumb.png" /></a>
+        </div>
+        <br>
+        <p class="center-box">
+            <span>
+                Auburn-phylo graphic <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>.
+            </span>
+            <br />
+            <span>
+                Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, based on the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.
+            </span>
+            <br />
+            <span>
+                <a href="https://github.com/phyletica/phyletica.github.io" title="phyletica source on GitHub">View on GitHub</a>.
+            </span>
+            <br />
+            <br />
+            <span>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                <br />
+                Unless noted, content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </span>
+        </p>
+</div><!-- /.footer-wrap -->
+</footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/gif.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-66934027-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>
