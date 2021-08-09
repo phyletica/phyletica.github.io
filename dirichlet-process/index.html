@@ -1,0 +1,480 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>The Dirichlet process for dummies (i.e., biologists, like me) &#8211; phyletica</title>
+<meta name="description" content="An accessible introduction to how the Dirichlet process works and why it's useful.">
+<meta name="keywords" content="statistics">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="The Dirichlet process for dummies (i.e., biologists, like me)">
+
+<meta name="twitter:description" content="An accessible introduction to how the Dirichlet process works and why it's useful.">
+
+<meta name="twitter:site" content="@jamoaks">
+<meta name="twitter:creator" content="@jamoaks">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/images/dpp-3-share.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Dirichlet process for dummies (i.e., biologists, like me)">
+
+<meta property="og:description" content="An accessible introduction to how the Dirichlet process works and why it's useful.">
+
+<meta property="og:url" content="http://phyletica.org/dirichlet-process/">
+<meta property="og:site_name" content="phyletica">
+
+<meta property="og:image" content="http://phyletica.org/images/dpp-3-share.png">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="The Dirichlet process for dummies (i.e., biologists, like me)">
+
+<meta itemprop="description" content="An accessible introduction to how the Dirichlet process works and why it's useful.">
+
+
+<meta itemprop="image" content="http://phyletica.org/images/dpp-3-share.png">
+
+
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="7RL6oMJptXKQ9M8JGuy2wFRfXlScLOKDmiSAQpTOpPQ">
+
+
+
+<link rel="canonical" href="http://phyletica.org/dirichlet-process/">
+<link href="http://phyletica.org/feed.xml" type="application/atom+xml" rel="alternate" title="phyletica Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=Raleway|Lato|Roboto+Slab:300,400|Roboto:500|PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<!-- Hack font -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack.min.css">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="/">phyletica</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+                    <li><a href="/" >Home</a></li>
+				
+				    
+                    <li><a href="/people/" >People</a></li>
+				
+				    
+                    <li><a href="/research/" >Research</a></li>
+				
+				    
+                    <li><a href="/teaching/" >Teaching</a></li>
+				
+				    
+                    <li><a href="/software/" >Software</a></li>
+				
+				    
+                    <li><a href="/publications/" >Publications</a></li>
+				
+				    
+                    <li><a href="/posts/" >Posts</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "/images/header-misty-mangroves.jpg"
+    
+  alt="The Dirichlet process for dummies (i.e., biologists, like me) feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="http://phyletica.github.io">Jamie Oaks</a></span>
+  
+  </div><!-- /.image-wrap -->
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/gravatar.jpg" class="bio-photo" alt="Jamie Oaks bio photo">
+
+
+  <h3 itemprop="name">Jamie Oaks</h3>
+  <p>Evolutionary biologist.</p>
+  <a href="mailto:joaks@auburn.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/jamoaks" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  <a href="http://github.com/joaks1" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa fa-fw fa-youtube-square"></i> Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>
+  
+  
+  
+  <a href="/people/cv-joaks.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/dirichlet-process/" rel="bookmark" title="The Dirichlet process for dummies (i.e., biologists, like me)">The Dirichlet process for dummies (i.e., biologists, like me)</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>The <a href="https://en.wikipedia.org/wiki/Dirichlet_process">Dirichlet process</a> is a
+very useful tool in Bayesian nonparametric statistics, but most treatments of
+it are largely impenetrable to a mere biologist with a limited background in
+probability theory.
+The goal of this post is to provide an accessible introduction to how the
+Dirichlet process works and why it’s useful.</p>
+
+<p>The Dirichlet process is commonly used in Bayesian statistics in situations
+where we suspect there is clustering among random variables, but we do not know
+how many clusters there are, nor which random variables belong to which
+cluster.
+In other words, we want to treat the assignment of the random variables to
+clusters as a random variable itself which can be estimated from the data (or
+integrated out).
+This sounds complicated, but the beauty of Dirichlet processes is simplicity.</p>
+
+<p>To see this simplicity, let’s drop some jargon, and just think about assigning
+things (I’ll call these things “elements”) to categories.
+By doing so, we are ignoring the “base distribution” bit of the Dirichlet
+process; this will allow us to gain intuition about what the Dirichlet process
+is and how it can be used to determine the probability of all possible
+clusterings (i.e., set partitions) of elements to categories.</p>
+
+<p>The idea of the Dirichlet process is simple; we assign elements to categories
+following a very simple rule:
+When assigning the \(n^{th}\) element, we assign it to a new category with the
+probability</p>
+
+\[\frac{\alpha}{\alpha + n -1}\]
+
+<p>or we assign it to an already existing category \(x\) with probability</p>
+
+\[\frac{n_x}{\alpha + n -1}\]
+
+<p>where \(n_x\) is the number of random variables already assigned to category
+\(x\).
+What’s \(\alpha\)?
+It’s the concentration parameter that controls the “clumpiness” of the
+Dirichlet process; it can be any positive real number.
+Repeat this rule for all elements, and that’s it!</p>
+
+<p>Ok, that might not sound super simple, so let’s work through an example.
+Let’s imagine that we want to assign three elements, \(A\), \(B\), and \(C\),
+to an unknown number of categories according to the Dirichlet process.
+In this case, there could be 1, 2, or 3 categories, and 5 possible assignments
+(partitions):
+\(ABC\), \(A|BC\), \(B|AC\), \(C|AB\), and \(A|B|C\).
+We start with Element \(A\), for which our only option is to assign it to its
+very own, shiny, new category, which we’ll call the “blue” category.
+This happens with a probability of 1, because we have to put \(A\) somewhere!
+Next, let’s figure out what to do with Element \(B\).
+We have two options: (1) We can assign \(B\) to the same “blue” category that
+\(A\) is in, or (2) we can assign it to a new “red” category.
+Following the rule of the Dirichlet process, we assign \(B\) to a new “red”
+category with probability \(\alpha/(\alpha+1)\), or to the existing “blue”
+category with probability \(1/(\alpha+1)\) (the numerator 1 is simply the
+number of things in the “blue” category).
+To continue our example, let’s say we draw a random number, and \(B\) gets
+assigned to the “blue” category, along with \(A\).
+Next, we need to assign \(C\).
+We can assign it to either a new category with probability
+\(\alpha/(\alpha+2)\), or to the “blue” category, along with \(A\) and \(B\),
+with probability \(2/(\alpha+2)\) (the numerator is now 2, because there are
+two elements in blue).
+If we had more elements, we would continue this logic until they
+were all assigned to categories; very simple!</p>
+
+<p>We can draw out all possible assignments as a probability tree, which allows us
+to see how the simple rule of the Dirichlet process determines the probability
+of all possible assignments. Below is an animation that does just that.</p>
+
+<figure>
+    <img class="gif-click" style="border:1px solid #D0D0D0;" src="/images/dpp-3-example.png" />
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                Animation of a Dirichlet-process probability tree.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>The video walks through all the possible assignments of \(A\), \(B\), and \(C\)
+assuming a concentration parameter of 0.1. It then updates all the
+probabilities for \(\alpha\) values of 1.5, and finally 50.0.
+Notice that as the concentration parameter increases, the probability of more
+clustered assignments (i.e., fewer categories) decreases, while the probability
+of less clustered assignments (i.e., more categories) increases.
+This is the opposite of what you might expect, given it’s called the
+“concentration” parameter!
+But, if you remember that the concentration parameter is in the numerator for
+the probability of assigning an element to a new category, you can intuit that
+as \(\alpha\) increases, you’ll tend to get more categories.</p>
+
+<p>To gain a better feel for how the Dirichlet process works, and how the 
+concentration parameter controls it, check out the larger, interactive
+example here:</p>
+
+<div><a class="btn btn-info" href="/dpp-demo/">Click here for a DPP demo!</a></div>
+
+<p>The example shows the probability tree for 4 elements, and allows you to tinker
+with the concentration parameter and observe the effect on partition
+probabilities.
+By studying the animation and interactive demo, you might notice that the
+elements, despite not being independent, are
+<a href="https://en.wikipedia.org/wiki/Exchangeable_random_variables">exchangeable</a>
+(i.e., the probability of the assignment does not depend on the identity of the
+elements).</p>
+
+<p>Above, we’ve ignored the bit about the Dirichlet process called the <em>base
+distribution</em>.
+However, that is not too complicated either.
+To incorporate the base distribution, all we need to do is think of the
+“categories” above as a particular random value drawn from a distribution.
+I.e., all the random variables in a category share the same value, and the
+values are distributed according to our chosen base distribution.</p>
+
+<p>Why is this useful?
+Well, let’s say we are trying to model the rate of mutation for thousands
+of genes across the genome.
+The most general model assigns each gene its own independent mutation-rate
+parameter.
+The simplest model assumes all the genes share the same mutation rate.
+We might suspect that reality is somewhere in between these extremes, but <em>a
+priori</em> we have no information about how many free mutation-rate parameters
+there should be, or how the genes should be assigned to the rates.
+The Dirichlet process gives us a mathematically convenient and flexible way to
+assign prior probabilities to all possible models (i.e., all possible
+assignments of genes to rate parameters).
+Also, when coupled with a <a href="https://en.wikipedia.org/wiki/Gibbs_sampling">Gibbs
+sampler</a>, the Dirichlet process
+provides a computationally efficient way of sampling from the posterior
+distribution over all these possible models.
+Thus, we can make inferences about gene evolution while integrating out
+uncertainty about how rates of mutation are distributed across the genes.
+Cool!</p>
+
+
+      <hr />
+      <p class="byline"><strong>The Dirichlet process for dummies (i.e., biologists, like me)</strong> was published on <time datetime="2015-08-31T00:00:00-05:00">August 31, 2015</time>.</p>
+      
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=http://phyletica.org/dirichlet-process/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://phyletica.org/dirichlet-process/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://phyletica.org/dirichlet-process/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+
+      
+    </div><!-- /.article-wrap -->
+    <div class="article-author-bottom">
+      
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/gravatar.jpg" class="bio-photo" alt="Jamie Oaks bio photo">
+
+
+  <h3 itemprop="name">Jamie Oaks</h3>
+  <p>Evolutionary biologist.</p>
+  <a href="mailto:joaks@auburn.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/jamoaks" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  <a href="http://github.com/joaks1" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa fa-fw fa-youtube-square"></i> Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>
+  
+  
+  
+  <a href="/people/cv-joaks.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>
+  
+</div>
+
+    </div>
+    
+    <div class="other-articles">
+      <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
+      <ul>
+      
+        <li><a href="/mic-phy/" title="Gen-Phy at MIC-Phy">Gen-Phy at MIC-Phy</a></li>
+      
+        <li><a href="/holden-usgs/" title="Holden joining the USGS">Holden joining the USGS</a></li>
+      
+        <li><a href="/welcome-morgan/" title="Morgan joins the Phyleticians">Morgan joins the Phyleticians</a></li>
+      
+      </ul>
+    </div><!-- /.other-articles -->
+    
+    
+      <hr />
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'phyletica';
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    
+  </article>
+</div><!-- /#main -->
+
+<footer>
+<div class="footer-wrap">
+        
+        
+        <div class="center-footer-images">
+            <a rel="au-phylo" href="http://www.auburn.edu/cosam/departments/biology/"><img class="footer-image" alt="Auburn Phylo" src="/images/auburn-phylo-mtan-2014-blue-256.png" /></a>
+            <a rel="aumnh" href="http://aumnh.org/"><img class="footer-image" alt="Auburn MNH" src="/images/aumnh-crop-thumb.png" /></a>
+        </div>
+        <br>
+        <p class="center-box">
+            <span>
+                Auburn-phylo graphic <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>.
+            </span>
+            <br />
+            <span>
+                Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, based on the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.
+            </span>
+            <br />
+            <span>
+                <a href="https://github.com/phyletica/phyletica.github.io" title="phyletica source on GitHub">View on GitHub</a>.
+            </span>
+            <br />
+            <br />
+            <span>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                <br />
+                Unless noted, content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </span>
+        </p>
+</div><!-- /.footer-wrap -->
+</footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/gif.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-66934027-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>
