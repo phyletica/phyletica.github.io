@@ -1,0 +1,441 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Getting image of TeX equation from the command line &#8211; phyletica</title>
+<meta name="description" content="A useful trick for generating pretty equations from the prompt.">
+<meta name="keywords" content="computing">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Getting image of TeX equation from the command line">
+
+<meta name="twitter:description" content="A useful trick for generating pretty equations from the prompt.">
+
+<meta name="twitter:site" content="@jamoaks">
+<meta name="twitter:creator" content="@jamoaks">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/phyletica-avatar.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting image of TeX equation from the command line">
+
+<meta property="og:description" content="A useful trick for generating pretty equations from the prompt.">
+
+<meta property="og:url" content="http://phyletica.org/tex-equations-on-cmd-line/">
+<meta property="og:site_name" content="phyletica">
+
+<meta property="og:image" content="http://phyletica.org/images/phyletica-avatar.png">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Getting image of TeX equation from the command line">
+
+<meta itemprop="description" content="A useful trick for generating pretty equations from the prompt.">
+
+
+<meta itemprop="image" content="http://phyletica.org/images/phyletica-avatar.png">
+
+
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="7RL6oMJptXKQ9M8JGuy2wFRfXlScLOKDmiSAQpTOpPQ">
+
+
+
+<link rel="canonical" href="http://phyletica.org/tex-equations-on-cmd-line/">
+<link href="http://phyletica.org/feed.xml" type="application/atom+xml" rel="alternate" title="phyletica Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=Raleway|Lato|Roboto+Slab:300,400|Roboto:500|PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<!-- Hack font -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack.min.css">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="/">phyletica</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+                    <li><a href="/" >Home</a></li>
+				
+				    
+                    <li><a href="/people/" >People</a></li>
+				
+				    
+                    <li><a href="/research/" >Research</a></li>
+				
+				    
+                    <li><a href="/teaching/" >Teaching</a></li>
+				
+				    
+                    <li><a href="/software/" >Software</a></li>
+				
+				    
+                    <li><a href="/publications/" >Publications</a></li>
+				
+				    
+                    <li><a href="/posts/" >Posts</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "/images/header-bukit-larut-hq.jpg"
+    
+  alt="Getting image of TeX equation from the command line feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="http://phyletica.github.io">Jamie Oaks</a></span>
+  
+  </div><!-- /.image-wrap -->
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/gravatar.jpg" class="bio-photo" alt="Jamie Oaks bio photo">
+
+
+  <h3 itemprop="name">Jamie Oaks</h3>
+  <p>Evolutionary biologist.</p>
+  <a href="mailto:joaks@auburn.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/jamoaks" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  <a href="http://github.com/joaks1" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa fa-fw fa-youtube-square"></i> Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>
+  
+  
+  
+  <a href="/people/cv-joaks.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/tex-equations-on-cmd-line/" rel="bookmark" title="Getting image of TeX equation from the command line">Getting image of TeX equation from the command line</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <figure>
+    <a href="/images/selection.png"><img src="/images/selection.png" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                Change in the frequency of an allele in one generation.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>As much as we love working in *TeX, we inevitably get stuck working
+in MS Office or Google Docs and have no way of making nice equations.
+This happened to me last fall while teaching Evolution using mostly Google
+Slides.
+Early in the semester, I found a very slick trick for quickly generating image
+files from TeX equations.
+The trick was explained in a brilliant answer by
+<a href="https://tex.stackexchange.com/users/4301/peter-grill">Peter Grill</a>
+on StackExchange
+(<a href="https://tex.stackexchange.com/questions/34054/tex-to-image-over-command-line/34058#34058">see here</a>).</p>
+
+<p>The trick is based on a small, simple LaTeX document:</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\ifdefined\formula</span>
+<span class="k">\else</span>
+    <span class="k">\def\formula</span><span class="p">{</span>E = m c<span class="p">^</span>2<span class="p">}</span>
+<span class="k">\fi</span>
+<span class="k">\documentclass</span><span class="na">[border=2pt]</span><span class="p">{</span>standalone<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amsmath<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>varwidth<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+<span class="nt">\begin{varwidth}</span><span class="p">{</span><span class="k">\linewidth</span><span class="p">}</span>
+<span class="p">\[</span><span class="nb"> </span><span class="nv">\formula</span><span class="nb"> </span><span class="p">\]</span>
+<span class="nt">\end{varwidth}</span>
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">standalone</code> class and <code class="language-plaintext highlighter-rouge">varwidth</code> environment ensure the final image will
+not have unnecessary white space around your equation (see
+<a href="https://tex.stackexchange.com/questions/34054/tex-to-image-over-command-line/34058#34058">Peter Grill’s post</a>
+for more details).</p>
+
+<p>I saved the LaTeX code above to <code class="language-plaintext highlighter-rouge">~/texmf/tex/latex/formula.tex</code>
+and then made sure my TeX distribution could ‘see’ it by:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ~/texmf
+<span class="nv">$ </span>mktexlsr <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>Depending on your system and TeX distribution, this might be a bit different.</p>
+
+<p>Next, I added the following shell script, which I named <code class="language-plaintext highlighter-rouge">formula</code>, to my PATH:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span> <span class="o">]</span>
+<span class="k">then
+    </span><span class="nv">TEX_EQUATION</span><span class="o">=</span><span class="s2">"p' = </span><span class="se">\f</span><span class="s2">rac{p}{1-q^2s}"</span>
+<span class="k">else
+    </span><span class="nv">TEX_EQUATION</span><span class="o">=</span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+<span class="k">fi
+
+</span>pdflatex <span class="s2">"</span><span class="se">\d</span><span class="s2">ef</span><span class="se">\f</span><span class="s2">ormula{</span><span class="k">${</span><span class="nv">TEX_EQUATION</span><span class="k">}</span><span class="s2">}</span><span class="se">\i</span><span class="s2">nput{formula.tex}"</span>
+
+convert <span class="nt">-density</span> 300 formula.pdf <span class="nt">-quality</span> 90 formula.png
+</code></pre></div></div>
+
+<p>This could be modified to add some bells and whistles, like arguments to
+control the output format and quality, but I kept it simple.</p>
+
+<p class="notice"><strong>NOTE:</strong> <code class="language-plaintext highlighter-rouge">convert</code> is part of
+<a href="http://www.imagemagick.org/script/index.php">ImageMagick</a>,
+so that is required for this to work.
+If you don’t already have 
+<a href="http://www.imagemagick.org/script/index.php">ImageMagick</a>,
+you should go install it right now, because it’s awesome, as
+I’ve talked about in
+<a href="/imagemagick/">previous posts</a></p>
+
+<p>Now, I can simply type</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>formula <span class="s2">"p(</span><span class="se">\t</span><span class="s2">heta|D) = </span><span class="se">\f</span><span class="s2">rac{p(D|</span><span class="se">\t</span><span class="s2">heta) p(</span><span class="se">\t</span><span class="s2">heta)}{</span><span class="se">\i</span><span class="s2">nt p(D|</span><span class="se">\t</span><span class="s2">heta)p(</span><span class="se">\t</span><span class="s2">heta)</span><span class="se">\,</span><span class="s2">d</span><span class="se">\t</span><span class="s2">heta}"</span>
+</code></pre></div></div>
+
+<p>and get <code class="language-plaintext highlighter-rouge">formula.png</code> in my current working directory that has a nice looking
+rendition of Bayes’ rule.</p>
+
+<figure>
+    <a href="/images/bayes-rule.png"><img src="/images/bayes-rule.png" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                Bayes' rule.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+      <hr />
+      <p class="byline"><strong>Getting image of TeX equation from the command line</strong> was published on <time datetime="2017-06-14T00:00:00-05:00">June 14, 2017</time>.</p>
+      
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=http://phyletica.org/tex-equations-on-cmd-line/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://phyletica.org/tex-equations-on-cmd-line/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://phyletica.org/tex-equations-on-cmd-line/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+
+      
+    </div><!-- /.article-wrap -->
+    <div class="article-author-bottom">
+      
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/gravatar.jpg" class="bio-photo" alt="Jamie Oaks bio photo">
+
+
+  <h3 itemprop="name">Jamie Oaks</h3>
+  <p>Evolutionary biologist.</p>
+  <a href="mailto:joaks@auburn.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/jamoaks" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  <a href="http://github.com/joaks1" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa fa-fw fa-youtube-square"></i> Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>
+  
+  
+  
+  <a href="/people/cv-joaks.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>
+  
+</div>
+
+    </div>
+    
+    <div class="other-articles">
+      <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
+      <ul>
+      
+        <li><a href="/duke-visit/" title="Visiting Duke Center for Genomic and Computational Biology">Visiting Duke Center for Genomic and Computational Biology</a></li>
+      
+        <li><a href="/tanner-ssb-award/" title="Tanner receives SSB GSRA award!">Tanner receives SSB GSRA award!</a></li>
+      
+        <li><a href="/claire-stri-fellowship/" title="Claire receives STRI Fellowship!">Claire receives STRI Fellowship!</a></li>
+      
+      </ul>
+    </div><!-- /.other-articles -->
+    
+    
+      <hr />
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'phyletica';
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    
+  </article>
+</div><!-- /#main -->
+
+<footer>
+<div class="footer-wrap">
+        
+        
+        <div class="center-footer-images">
+            <a rel="au-phylo" href="http://www.auburn.edu/cosam/departments/biology/"><img class="footer-image" alt="Auburn Phylo" src="/images/auburn-phylo-mtan-2014-blue-256.png" /></a>
+            <a rel="aumnh" href="http://aumnh.org/"><img class="footer-image" alt="Auburn MNH" src="/images/aumnh-crop-thumb.png" /></a>
+        </div>
+        <br>
+        <p class="center-box">
+            <span>
+                Auburn-phylo graphic <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>.
+            </span>
+            <br />
+            <span>
+                Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, based on the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.
+            </span>
+            <br />
+            <span>
+                <a href="https://github.com/phyletica/phyletica.github.io" title="phyletica source on GitHub">View on GitHub</a>.
+            </span>
+            <br />
+            <br />
+            <span>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                <br />
+                Unless noted, content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </span>
+        </p>
+</div><!-- /.footer-wrap -->
+</footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/gif.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-66934027-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>
