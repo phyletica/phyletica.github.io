@@ -18,19 +18,8 @@
     github: joaks1
     cv: http://phyletica.github.io/people/cv-joaks.pdf
 
-- title: Postdocs
-  members:
-  - name: Perry (JR) Wood, Jr. 
-    role: Postdoctoral Researcher
-    start-date: 2018
-    bio: >
-        JR is working on testing hypotheses about processes of diversification
-        in Southeast Asian gekkonid lizards using novel methods for estimating
-        patterns of shared divergences.
-    avatar: bio-photo-jr.jpg
-    twitter: perryleewoodjr
-    web: https://perryleewoodjr.com/
-
+# - title: Postdocs
+#   members:
   # - name: You?
   #   role: Postdoctoral Researcher
   #   avatar: avatar-gecko.jpg
@@ -45,34 +34,6 @@
         isolating mechanisms among <i>Anaxyrus</i> toads.
     avatar: bio-photo-kerry.jpg
     twitter: KerryACobb
-
-  - name: Randy Klabacka
-    role: Ph.D. Student
-    start-date: 2016
-    bio: >
-        I am fascinated by the coevolutionary relationship between
-        mitochondrial and nuclear genomes. I am interested in the role sexual
-        reproduction plays in maintaining a healthy mitonuclear marriage, and
-        analyzing the effects of parthenogenesis on mitochondrial dysfunction
-        using physiological methods within a phylogenetic context.
-    avatar: bio-photo-randy.jpg
-    twitter: R_Klabacka
-    cv: http://randyklabacka.com/Klabacka_CV.pdf
-    web: http://randyklabacka.com
-    coadvisor: Tonia Schwartz
-    coadvisor-url: https://www.schwartzlab-ecoevolutionarygenomics.org/
-
-  - name: Tashitso Anamza 
-    role: Ph.D. Student
-    start-date: 2019
-    bio: >
-        From a nomadic region of Amdo. Tashi has an associate degree from Qinghai
-        Normal University, and bachelor's and master's degree from the University
-        of Kansas.
-        She's interested in the mechanisms underlying biogeographic patterns of
-        biodiversity.
-    avatar: bio-photo-tashi.jpg
-    twitter: Oceantso
 
   - name: Claire Tracy
     role: Ph.D. Student
@@ -182,6 +143,59 @@
 
 - title: Former Lab Members
   members:
+  - name: Randy Klabacka
+    role: Ph.D. Student
+    start-date: 2016
+    end-date: 2022
+    current-position: Assistant Professor of Biology at Utah Tech University
+    bio: >
+        I am fascinated by the coevolutionary relationship between
+        mitochondrial and nuclear genomes. I am interested in the role sexual
+        reproduction plays in maintaining a healthy mitonuclear marriage, and
+        analyzing the effects of parthenogenesis on mitochondrial dysfunction
+        using physiological methods within a phylogenetic context.
+    avatar: bio-photo-randy.jpg
+    twitter: R_Klabacka
+    cv: http://randyklabacka.com/Klabacka_CV.pdf
+    web: http://randyklabacka.com
+    coadvisor: Tonia Schwartz
+    coadvisor-url: https://www.schwartzlab-ecoevolutionarygenomics.org/
+
+  - name: Kyle David
+    role: Ph.D. Student
+    start-date: 2017
+    end-date: 2022
+    current-position: Postdoc at the Vanderbilt University
+    bio: >
+        Working on the evolution of genes following duplications.
+    avatar: avatar-sea-star.jpg
+
+  - name: Perry (JR) Wood, Jr. 
+    role: Postdoctoral Researcher
+    start-date: 2018
+    end-date: 2021
+    current-position: Postdoc at the University of Michigan
+    bio: >
+        JR is working on testing hypotheses about processes of diversification
+        in Southeast Asian gekkonid lizards using novel methods for estimating
+        patterns of shared divergences.
+    avatar: bio-photo-jr.jpg
+    twitter: perryleewoodjr
+    web: https://perryleewoodjr.com/
+
+  - name: Tashitso Anamza 
+    role: Ph.D. Student
+    start-date: 2019
+    end-date: 2022
+    bio: >
+        From a nomadic region of Amdo. Tashi has an associate degree from Qinghai
+        Normal University, and bachelor's and master's degree from the University
+        of Kansas.
+        She's interested in the mechanisms underlying biogeographic patterns of
+        biodiversity.
+    avatar: bio-photo-tashi.jpg
+    twitter: Oceantso
+
   - name: Charlotte Benedict
     start-date: 2017
     end-date: 2020
@@ -241,7 +255,7 @@
     role: Postdoctoral Researcher
     start-date: 2018
     end-date: 2018
-    current-position: Postdoctoral Research Fellow at Auburn University Forestry and Wildlife Sciences
+    current-position: Quantitative Ecologist at the U.S.\ Geological Survey
     bio: >
         Brian is a broadly trained ecologist and evolutionary biologist working
         with us on the comparative phylogeography of reptiles and amphibians
