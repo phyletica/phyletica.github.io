@@ -16,7 +16,7 @@ image:
 
 Congratulations to
 [Claire Tracy](https://www.linkedin.com/in/claire-tracy-01a8a2225/)
-for receiving a Shot-Term Fellowship from the
+for receiving a Short-Term Fellowship from the
 [Smithsonian Tropical Research Institute](https://stri.si.edu/).
 This will help support her research into the evolution of
 tolerance to temperature fluctuations in damselfish.
