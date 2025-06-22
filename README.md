@@ -24,7 +24,7 @@ Then activate the `phyletica` environment:
 
 Next, install `bundler` (or update it):
 
-    gem install bundler
+    gem install bundler -v 2.4.22
 
 Next, make sure your are in the `phyletica.github.io` repo, and install
 required ruby gems (including jekyll) via:
