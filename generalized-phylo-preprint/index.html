@@ -1,0 +1,564 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Generalizing Bayesian phylogenetics to model shared divergences &#8211; phyletica</title>
+<meta name="description" content="we developed a Bayesian approach to generalizing the space of tree models to allow for shared and multifurcating divergences">
+<meta name="keywords" content="news, science, publication">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Generalizing Bayesian phylogenetics to model shared divergences">
+
+<meta name="twitter:description" content="we developed a Bayesian approach to generalizing the space of tree models to allow for shared and multifurcating divergences">
+
+<meta name="twitter:site" content="@jamoaks">
+<meta name="twitter:creator" content="@jamoaks">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/phyletica-avatar.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Generalizing Bayesian phylogenetics to model shared divergences">
+
+<meta property="og:description" content="we developed a Bayesian approach to generalizing the space of tree models to allow for shared and multifurcating divergences">
+
+<meta property="og:url" content="http://phyletica.org/generalized-phylo-preprint/">
+<meta property="og:site_name" content="phyletica">
+
+<meta property="og:image" content="http://phyletica.org/images/phyletica-avatar.png">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Generalizing Bayesian phylogenetics to model shared divergences">
+
+<meta itemprop="description" content="we developed a Bayesian approach to generalizing the space of tree models to allow for shared and multifurcating divergences">
+
+
+<meta itemprop="image" content="http://phyletica.org/images/phyletica-avatar.png">
+
+
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="7RL6oMJptXKQ9M8JGuy2wFRfXlScLOKDmiSAQpTOpPQ">
+
+
+
+<link rel="canonical" href="http://phyletica.org/generalized-phylo-preprint/">
+<link href="http://phyletica.org/feed.xml" type="application/atom+xml" rel="alternate" title="phyletica Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=Raleway|Lato|Roboto+Slab:300,400|Roboto:500|PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<!-- Hack font -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack.min.css">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="/">phyletica</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+                    <li><a href="/" >Home</a></li>
+				
+				    
+                    <li><a href="/people/" >People</a></li>
+				
+				    
+                    <li><a href="/research/" >Research</a></li>
+				
+				    
+                    <li><a href="/teaching/" >Teaching</a></li>
+				
+				    
+                    <li><a href="/software/" >Software</a></li>
+				
+				    
+                    <li><a href="/publications/" >Publications</a></li>
+				
+				    
+                    <li><a href="/posts/" >Posts</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "/images/header-bukit-larut-top.jpg"
+    
+  alt="Generalizing Bayesian phylogenetics to model shared divergences feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="http://phyletica.github.io">Jamie Oaks</a></span>
+  
+  </div><!-- /.image-wrap -->
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/gravatar.jpg" class="bio-photo" alt="Jamie Oaks bio photo">
+
+
+  <h3 itemprop="name">Jamie Oaks</h3>
+  <p>Evolutionary biologist.</p>
+  <a href="mailto:joaks@auburn.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/jamoaks" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  <a href="http://github.com/joaks1" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa fa-fw fa-youtube-square"></i> Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>
+  
+  
+  
+  <a href="/people/cv-joaks.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="/generalized-phylo-preprint/" rel="bookmark" title="Generalizing Bayesian phylogenetics to model shared divergences">Generalizing Bayesian phylogenetics to model shared divergences</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>We are excited about some new work out of lab that relaxes an important
+assumption in phylogenetics.
+<a href="https://doi.org/10.1101/2021.07.23.453597">In a new bioRxiv preprint</a>,
+<a href="https://perryleewoodjr.com/">Perry Wood, Jr.</a>,
+<a href="https://cameronsiler.com/">Cam Siler</a>,
+<a href="https://biodiversity.ku.edu/herpetology/people/brown">Rafe Brown</a>,
+and I
+describe how we generalize the space of trees in Bayesian phylogenetics to
+avoid assuming divergences are independent across a phylogeny, and allow us to
+infer shared divergences among multiple clades.
+We have released
+<a href="http://phyletica.org/ecoevolity">a new version of ecoevolity (Version 1.0.0)</a>
+that implements this fully phylogenetic approach to inferring shared divergence
+events across phylogenetic trees.</p>
+
+<h2 id="the-assumption">The assumption</h2>
+
+<p>In phylogenetics, we assume lineages diverge independently (conditional on the
+topology) and only leave two descendant lineages (i.e., bifurcate).
+Put another way, we assume all processes of diversification cause only a single
+lineage to bifurcate, and have no affect on any of the other extant lineages
+across the phylogeny.
+Across the tree of life, there are likely many exceptions to this assumption.
+For example, we can imagine rising sea levels fragmenting an island and
+causing co-distributed species of lizards to diverge at the same time.</p>
+
+<figure>
+    <a href="/images/phycoeval-preprint/slides-bifurcating.gif"><img src="/images/phycoeval-preprint/slides-bifurcating.gif" width="100%" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                Island fragmenetaion causing bouts of shared divergences.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>Instead of lizards on islands, let’s imagine three members of a gene family
+residing along a region of a chromosome that gets duplicated.
+This would create shared divergences across the phylogenetic history of the
+gene family.
+When multiple infected individuals spread a pathogen to others at a social
+gathering, this will create shared divergences in the “transmission tree” of
+the pathogen.
+In fields as diverse as biogeography, genome evolution, and epidemiology, there
+are interesting processes that violate the assumption of independent
+divergences and cause shared divergences.</p>
+
+<p>Back to our insular lizard example, we can also imagine
+the rising sea levels fragmenting the island into more than
+two islands, like in the animation below.
+This will cause multifurcations
+(a lineage diverging into three or more descendants)
+in addition to shared divergences.</p>
+
+<figure>
+    <a href="/images/phycoeval-preprint/slides-multifurcating.gif"><img src="/images/phycoeval-preprint/slides-multifurcating.gif" width="100%" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                Island fragmenetaion causing multifurcating, shared
+                divergences.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>Similarly, in epidemiology, when an infected individual spreads a pathogen to
+two or more others at a social gathering, this will create a multifurcating
+divergence in the transmission tree.</p>
+
+<p>Current phylogenetic methods for inferring rooted trees assume all divergences
+are independent and bifurcating.
+More formally, if we have \(N\) tips, current methods only consider
+trees with \(N-1\) independent, bifurcating divergences.
+When shared or multifurcating divergences were common in the evolutionary
+history of the system we want to study, such tree models are over-parameterized
+as illustrated below.</p>
+
+<figure>
+    <a href="/images/phycoeval-preprint/gecko-trees-flipped-cropped.svg"><img src="/images/phycoeval-preprint/gecko-trees-flipped-cropped.svg" width="100%" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                When shared or multifurcating divergences have occurred, current
+                phylogenetic models are over-parameterized.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>More importantly, by assuming all divergences are independent and bifurcating,
+current phylogenetic methods do not allow us to test for patterns of shared or
+multifurcating divergences predicted by processes of diversification that are
+of interest across fields like biogeography, genome evolution, and
+epidemiology.</p>
+
+<h2 id="our-approach">Our approach</h2>
+
+<p>To relax this assumption, we developed a Bayesian approach to generalizing the
+space of tree models to allow for shared and multifurcating divergences
+<a class="citation" href="#Oaks2021phycoeval">(Oaks <span style="font-style: normal">et al.</span>, 2021)</a>.
+Under our generalized tree distribution,
+trees with \(N - 1\) bifurcating divergences
+are
+only one class of tree models in a greater space of trees
+with anywhere from from 1 to \(N - 1\) potentially shared
+or multifurcating divergences.</p>
+
+<figure>
+    <a href="/images/phycoeval-preprint/four-leaf-labeled-trees-boxed-highlight-shared-grid-cropped.png"><img src="/images/phycoeval-preprint/four-leaf-labeled-trees-boxed-highlight-shared-grid-cropped.png" width="100%" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                The rooted topologies considered by current phylogenetic methods (within
+                box) and the additional tree models considered by phycoeval's generalized
+                tree model.
+                The tree models with nonindependent (shared) divergences are highlighted in
+                orange.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>We developed reversible-jump Markov chain Monte Carlo algorithms to perform
+inference across this generalized space of trees.</p>
+
+<figure>
+    <a href="/images/phycoeval-preprint/phycoeval-rj-cartoon.png"><img src="/images/phycoeval-preprint/phycoeval-rj-cartoon.png" width="100%" /></a>
+</figure>
+
+<p>This allows us to jointly infer relationships, shared and multifurcating
+divergences, and divergence times.</p>
+
+<p>We coupled the generalized tree model with the “SNAPP likelihood”
+<a class="citation" href="#Bryant2012">(Bryant <span style="font-style: normal">et al.</span>, 2012)</a>
+for directly
+calculating the probability of biallelic characters given a population (or
+species) phylogeny, while analytically integrating over all possible gene trees
+under a coalescent model and all possible mutational histories along those gene
+trees under a finite-sites model of character evolution.
+This allows us to tackle biogeographic questions by jointly inferring a species
+tree and shared divergences from genomic data
+<a class="citation" href="#Oaks2021phycoeval">(Oaks <span style="font-style: normal">et al.</span>, 2021)</a>.
+However, the generalized tree distribution and associated algorithms are
+independent of the likelihood function, and so can be used with other data
+types and likelihood models (i.e., lots of room for future work and
+applications!).</p>
+
+<p>Using simulations, we found this approach consistently inferred shared and
+multifurcating divergences with high support with moderately sized data sets.</p>
+
+<figure>
+    <a href="/images/phycoeval-preprint/gecko-generalized-tree-pp-hist-cropped.svg"><img src="/images/phycoeval-preprint/gecko-generalized-tree-pp-hist-cropped.svg" width="100%" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                We simulated 100 data sets on the tree above. The histograms
+                show the posterior probabilities of correctly inferring the
+                shared and multifurcating divergences when analyzing all the
+                data sets under the generalized tree model.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>We applied this new approach to genomic data from two genera of geckos
+co-distributed across the Philippines.
+Fragmentations of the islands caused by interglacial rises in sea level predict
+shared and multifurcating divergences over the last 5 million years.
+Our results show support for this predicted pattern.</p>
+
+<figure>
+    <a href="/images/phycoeval-preprint/gekko-phycoeval-cam-tree.svg"><img src="/images/phycoeval-preprint/gekko-phycoeval-cam-tree.svg" width="100%" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                Shared and multifurcating divergences inferred during the evolutionary history of
+                <i>Gekko</i> lizards across the Philippines.
+                From <a class="citation" href="#Oaks2021phycoeval">(Oaks <span style="font-style: normal">et al.</span>, 2021)</a>.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<figure>
+    <a href="/images/phycoeval-preprint/cyrt-phycoeval-cam-tree.svg"><img src="/images/phycoeval-preprint/cyrt-phycoeval-cam-tree.svg" width="100%" /></a>
+    <figcaption>
+        <p class="figure-caption-box">
+            <span class="center-if-single-line">
+                Shared and multifurcating divergences inferred during the evolutionary history of
+                <i>Cyrtodactylus</i> lizards across the Philippines.
+                From <a class="citation" href="#Oaks2021phycoeval">(Oaks <span style="font-style: normal">et al.</span>, 2021)</a>.
+            </span>
+        </p>
+    </figcaption>
+</figure>
+
+<p>If you want to learn more, here’s a talk I gave at the Evolution Meetings this summer:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1PX5Yz-Vgec" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>And you can read our <a href="https://doi.org/10.1101/2021.07.23.453597">preprint here</a>.</p>
+
+<p>This work was a lot of fun, but we have only scratched the surface with the
+generalized tree distribution.
+If you are interested in this work, please reach out; there’s so much more to
+do!</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><span id="Oaks2021phycoeval">Oaks JR, Wood, Jr. PL, Siler CD, Brown RM. 2021. Generalizing Bayesian phylogenentics to infer shared evolutionary events. <i>bioRxiv</i>. DOI: 10.1101/2021.07.23.453597.</span>
+
+<a href="http://dx.doi.org/10.1101/2021.07.23.453597">Link.</a> 
+
+</li>
+<li><span id="Bryant2012">Bryant D, Bouckaert R, Felsenstein J, Rosenberg NA, Roychoudhury A. 2012. Inferring Species Trees Directly from Biallelic Genetic Markers: Bypassing Gene Trees in a Full Coalescent Analysis. <i>Molecular Biology and Evolution</i> <span style="font-weight: normal">29</span>:1917–1932. DOI: 10.1093/molbev/mss086.</span>
+
+<a href="http://dx.doi.org/10.1093/molbev/mss086">Link.</a> 
+
+</li></ol>
+
+      <hr />
+      <p class="byline"><strong>Generalizing Bayesian phylogenetics to model shared divergences</strong> was published on <time datetime="2021-10-18T00:00:00-05:00">October 18, 2021</time>.</p>
+      
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=http://phyletica.org/generalized-phylo-preprint/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://phyletica.org/generalized-phylo-preprint/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://phyletica.org/generalized-phylo-preprint/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+
+      
+    </div><!-- /.article-wrap -->
+    <div class="article-author-bottom">
+      
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/gravatar.jpg" class="bio-photo" alt="Jamie Oaks bio photo">
+
+
+  <h3 itemprop="name">Jamie Oaks</h3>
+  <p>Evolutionary biologist.</p>
+  <a href="mailto:joaks@auburn.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/jamoaks" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  
+  
+  
+  
+  <a href="http://github.com/joaks1" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa fa-fw fa-youtube-square"></i> Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa fa-fw fa-globe"></i> Interweb</a>
+  
+  
+  
+  <a href="/people/cv-joaks.pdf" class="author-social" target="_blank"><i class="fa fa-fw fa-book"></i> CV</a>
+  
+</div>
+
+    </div>
+    
+    <div class="other-articles">
+      <h4>You might also enjoy <small class="pull-right">(<a href="/posts/">View all posts</a>)</small></h4>
+      <ul>
+      
+        <li><a href="/duke-visit/" title="Visiting Duke Center for Genomic and Computational Biology">Visiting Duke Center for Genomic and Computational Biology</a></li>
+      
+        <li><a href="/tanner-ssb-award/" title="Tanner receives SSB GSRA award!">Tanner receives SSB GSRA award!</a></li>
+      
+        <li><a href="/claire-stri-fellowship/" title="Claire receives STRI Fellowship!">Claire receives STRI Fellowship!</a></li>
+      
+      </ul>
+    </div><!-- /.other-articles -->
+    
+    
+      <hr />
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	var disqus_shortname = 'phyletica';
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    
+  </article>
+</div><!-- /#main -->
+
+<footer>
+<div class="footer-wrap">
+        
+        
+        <div class="center-footer-images">
+            <a rel="au-phylo" href="http://www.auburn.edu/cosam/departments/biology/"><img class="footer-image" alt="Auburn Phylo" src="/images/auburn-phylo-mtan-2014-blue-256.png" /></a>
+            <a rel="aumnh" href="http://aumnh.org/"><img class="footer-image" alt="Auburn MNH" src="/images/aumnh-crop-thumb.png" /></a>
+        </div>
+        <br>
+        <p class="center-box">
+            <span>
+                Auburn-phylo graphic <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>.
+            </span>
+            <br />
+            <span>
+                Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, based on the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.
+            </span>
+            <br />
+            <span>
+                <a href="https://github.com/phyletica/phyletica.github.io" title="phyletica source on GitHub">View on GitHub</a>.
+            </span>
+            <br />
+            <br />
+            <span>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                <br />
+                Unless noted, content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </span>
+        </p>
+</div><!-- /.footer-wrap -->
+</footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/gif.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-66934027-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>

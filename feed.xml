@@ -1,43 +1,907 @@
----
-sitemap: false
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">{{ site.title }}</title>
+<title type="text">phyletica</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="{{ site.url }}{{ site.baseurl }}/feed.xml" />
-<link rel="alternate" type="text/html" href="{{ site.url }}{{ site.baseurl }}" />
-<updated>{{ site.time | date_to_xmlschema }}</updated>
-<id>{{ site.url }}{{ site.baseurl }}/</id>
+<link rel="self" type="application/atom+xml" href="http://phyletica.org/feed.xml" />
+<link rel="alternate" type="text/html" href="http://phyletica.org" />
+<updated>2025-06-22T15:09:24-05:00</updated>
+<id>http://phyletica.org/</id>
 <author>
-  <name>{{ site.owner.name }}</name>
-  <uri>{{ site.url }}{{ site.baseurl }}/</uri>
-  {% if site.owner.email %}<email>{{ site.owner.email }}</email>{% endif %}
+  <name>Jamie Oaks</name>
+  <uri>http://phyletica.org/</uri>
+  <email>phyletica@auburn.edu</email>
 </author>
-{% for post in site.posts limit:20 %}
-{% if post.author %}
-  {% assign author = site.data.authors[post.author] %}
-{% else %}
-  {% assign author = site.owner %}
-{% endif %}
+
+
 <entry>
-  <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
-  <link rel="alternate" type="text/html" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" />
-  <id>{{ site.url }}{{ site.baseurl }}{{ post.id }}</id>
-  {% if post.modified %}<updated>{{ post.modified | to_xmlschema }}T00:00:00-00:00</updated>
-  <published>{{ post.date | date_to_xmlschema }}</published>
-  {% else %}<published>{{ post.date | date_to_xmlschema }}</published>
-  <updated>{{ post.date | date_to_xmlschema }}</updated>{% endif %}
+  <title type="html"><![CDATA[Visiting Duke Center for Genomic and Computational Biology]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/duke-visit/" />
+  <id>http://phyletica.org/duke-visit</id>
+  <published>2022-11-09T00:00:00-06:00</published>
+  <updated>2022-11-09T00:00:00-06:00</updated>
   <author>
-    <name>{{ author.name }}</name>
-    <uri>{{ site.url }}{{ site.baseurl }}</uri>
-    {% if author.email %}<email>{{ author.email }}</email>{% endif %}
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
   </author>
   <content type="html">
-    {{ post.content | xml_escape }}
-    {% include _feed-footer.html %}
+    &lt;p&gt;I just got back to Auburn after a fun visit to the
+&lt;a href=&quot;https://biostat.duke.edu/research/duke-center-genomic-and-computational-biology&quot;&gt;Center for Genomic and Computational Biology&lt;/a&gt;
+at
+&lt;a href=&quot;https://duke.edu/&quot;&gt;Duke University&lt;/a&gt;
+to give a seminar.
+One of the highlights of the visit was spending time with the graduate students
+of the Computational Biology &amp;amp; Bionformatics Program.
+They asked great questions after the seminar and at our lunch together.&lt;/p&gt;
+
+&lt;p&gt;Many thanks to CBB Ph.D. student &lt;a href=&quot;https://www.devangthakkar.com/&quot;&gt;Devang Thakkar&lt;/a&gt;
+for inviting me to speak and organizing my visit.&lt;/p&gt;
+
+&lt;p&gt;Here are the slides from my talk:&lt;/p&gt;
+
+&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/8dwx5Mfs8EdeP1&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
+&lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/jamieoaks7/generalizing-phylogenetics-to-infer-patterns-predicted-by-processes-of-diversification-254039437&quot; title=&quot;Generalizing phylogenetics to infer patterns predicted by processes of diversification&quot; target=&quot;_blank&quot;&gt;Generalizing phylogenetics to infer patterns predicted by processes of diversification&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;//www.slideshare.net/jamieoaks7&quot; target=&quot;_blank&quot;&gt;Jamie Oaks&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/duke-visit/&quot;&gt;Visiting Duke Center for Genomic and Computational Biology&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on November 09, 2022.&lt;/p&gt;
+
   </content>
 </entry>
-{% endfor %}
+
+
+<entry>
+  <title type="html"><![CDATA[Tanner receives SSB GSRA award!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/tanner-ssb-award/" />
+  <id>http://phyletica.org/tanner-ssb-award</id>
+  <published>2022-05-27T00:00:00-05:00</published>
+  <updated>2022-05-27T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-tanner&quot;&gt;Congrats, Tanner!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to
+Ph.D. student
+Tanner Myers
+for receiving the
+&lt;a href=&quot;https://www.systbio.org/graduate-student-research-awards.html&quot;&gt;Graduate Student Research Award&lt;/a&gt;
+from the
+&lt;a href=&quot;https://www.systbio.org/&quot;&gt;Society of Systematic Biologists&lt;/a&gt;
+to study (among other things) if a large chromosomal inversion reduces gene
+flow along a hybrid zone between two lineages of fence lizards.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/tanner-ssb-award/&quot;&gt;Tanner receives SSB GSRA award!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on May 27, 2022.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Claire receives STRI Fellowship!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/claire-stri-fellowship/" />
+  <id>http://phyletica.org/claire-stri-fellowship</id>
+  <published>2022-01-25T00:00:00-06:00</published>
+  <updated>2022-01-25T00:00:00-06:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congratulations-claire&quot;&gt;Congratulations, Claire!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to
+&lt;a href=&quot;https://www.linkedin.com/in/claire-tracy-01a8a2225/&quot;&gt;Claire Tracy&lt;/a&gt;
+for receiving a Short-Term Fellowship from the
+&lt;a href=&quot;https://stri.si.edu/&quot;&gt;Smithsonian Tropical Research Institute&lt;/a&gt;.
+This will help support her research into the evolution of
+tolerance to temperature fluctuations in damselfish.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/claire-stri-fellowship/&quot;&gt;Claire receives STRI Fellowship!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on January 25, 2022.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Generalizing Bayesian phylogenetics to model shared divergences]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/generalized-phylo-preprint/" />
+  <id>http://phyletica.org/generalized-phylo-preprint</id>
+  <published>2021-10-18T00:00:00-05:00</published>
+  <updated>2021-10-18T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;We are excited about some new work out of lab that relaxes an important
+assumption in phylogenetics.
+&lt;a href=&quot;https://doi.org/10.1101/2021.07.23.453597&quot;&gt;In a new bioRxiv preprint&lt;/a&gt;,
+&lt;a href=&quot;https://perryleewoodjr.com/&quot;&gt;Perry Wood, Jr.&lt;/a&gt;,
+&lt;a href=&quot;https://cameronsiler.com/&quot;&gt;Cam Siler&lt;/a&gt;,
+&lt;a href=&quot;https://biodiversity.ku.edu/herpetology/people/brown&quot;&gt;Rafe Brown&lt;/a&gt;,
+and I
+describe how we generalize the space of trees in Bayesian phylogenetics to
+avoid assuming divergences are independent across a phylogeny, and allow us to
+infer shared divergences among multiple clades.
+We have released
+&lt;a href=&quot;http://phyletica.org/ecoevolity&quot;&gt;a new version of ecoevolity (Version 1.0.0)&lt;/a&gt;
+that implements this fully phylogenetic approach to inferring shared divergence
+events across phylogenetic trees.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-assumption&quot;&gt;The assumption&lt;/h2&gt;
+
+&lt;p&gt;In phylogenetics, we assume lineages diverge independently (conditional on the
+topology) and only leave two descendant lineages (i.e., bifurcate).
+Put another way, we assume all processes of diversification cause only a single
+lineage to bifurcate, and have no affect on any of the other extant lineages
+across the phylogeny.
+Across the tree of life, there are likely many exceptions to this assumption.
+For example, we can imagine rising sea levels fragmenting an island and
+causing co-distributed species of lizards to diverge at the same time.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/phycoeval-preprint/slides-bifurcating.gif&quot;&gt;&lt;img src=&quot;/images/phycoeval-preprint/slides-bifurcating.gif&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Island fragmenetaion causing bouts of shared divergences.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Instead of lizards on islands, let’s imagine three members of a gene family
+residing along a region of a chromosome that gets duplicated.
+This would create shared divergences across the phylogenetic history of the
+gene family.
+When multiple infected individuals spread a pathogen to others at a social
+gathering, this will create shared divergences in the “transmission tree” of
+the pathogen.
+In fields as diverse as biogeography, genome evolution, and epidemiology, there
+are interesting processes that violate the assumption of independent
+divergences and cause shared divergences.&lt;/p&gt;
+
+&lt;p&gt;Back to our insular lizard example, we can also imagine
+the rising sea levels fragmenting the island into more than
+two islands, like in the animation below.
+This will cause multifurcations
+(a lineage diverging into three or more descendants)
+in addition to shared divergences.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/phycoeval-preprint/slides-multifurcating.gif&quot;&gt;&lt;img src=&quot;/images/phycoeval-preprint/slides-multifurcating.gif&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Island fragmenetaion causing multifurcating, shared
+                divergences.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Similarly, in epidemiology, when an infected individual spreads a pathogen to
+two or more others at a social gathering, this will create a multifurcating
+divergence in the transmission tree.&lt;/p&gt;
+
+&lt;p&gt;Current phylogenetic methods for inferring rooted trees assume all divergences
+are independent and bifurcating.
+More formally, if we have \(N\) tips, current methods only consider
+trees with \(N-1\) independent, bifurcating divergences.
+When shared or multifurcating divergences were common in the evolutionary
+history of the system we want to study, such tree models are over-parameterized
+as illustrated below.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/phycoeval-preprint/gecko-trees-flipped-cropped.svg&quot;&gt;&lt;img src=&quot;/images/phycoeval-preprint/gecko-trees-flipped-cropped.svg&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                When shared or multifurcating divergences have occurred, current
+                phylogenetic models are over-parameterized.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;More importantly, by assuming all divergences are independent and bifurcating,
+current phylogenetic methods do not allow us to test for patterns of shared or
+multifurcating divergences predicted by processes of diversification that are
+of interest across fields like biogeography, genome evolution, and
+epidemiology.&lt;/p&gt;
+
+&lt;h2 id=&quot;our-approach&quot;&gt;Our approach&lt;/h2&gt;
+
+&lt;p&gt;To relax this assumption, we developed a Bayesian approach to generalizing the
+space of tree models to allow for shared and multifurcating divergences
+&lt;a class=&quot;citation&quot; href=&quot;#Oaks2021phycoeval&quot;&gt;(Oaks &lt;span style=&quot;font-style: normal&quot;&gt;et al.&lt;/span&gt;, 2021)&lt;/a&gt;.
+Under our generalized tree distribution,
+trees with \(N - 1\) bifurcating divergences
+are
+only one class of tree models in a greater space of trees
+with anywhere from from 1 to \(N - 1\) potentially shared
+or multifurcating divergences.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/phycoeval-preprint/four-leaf-labeled-trees-boxed-highlight-shared-grid-cropped.png&quot;&gt;&lt;img src=&quot;/images/phycoeval-preprint/four-leaf-labeled-trees-boxed-highlight-shared-grid-cropped.png&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                The rooted topologies considered by current phylogenetic methods (within
+                box) and the additional tree models considered by phycoeval's generalized
+                tree model.
+                The tree models with nonindependent (shared) divergences are highlighted in
+                orange.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;We developed reversible-jump Markov chain Monte Carlo algorithms to perform
+inference across this generalized space of trees.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/phycoeval-preprint/phycoeval-rj-cartoon.png&quot;&gt;&lt;img src=&quot;/images/phycoeval-preprint/phycoeval-rj-cartoon.png&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This allows us to jointly infer relationships, shared and multifurcating
+divergences, and divergence times.&lt;/p&gt;
+
+&lt;p&gt;We coupled the generalized tree model with the “SNAPP likelihood”
+&lt;a class=&quot;citation&quot; href=&quot;#Bryant2012&quot;&gt;(Bryant &lt;span style=&quot;font-style: normal&quot;&gt;et al.&lt;/span&gt;, 2012)&lt;/a&gt;
+for directly
+calculating the probability of biallelic characters given a population (or
+species) phylogeny, while analytically integrating over all possible gene trees
+under a coalescent model and all possible mutational histories along those gene
+trees under a finite-sites model of character evolution.
+This allows us to tackle biogeographic questions by jointly inferring a species
+tree and shared divergences from genomic data
+&lt;a class=&quot;citation&quot; href=&quot;#Oaks2021phycoeval&quot;&gt;(Oaks &lt;span style=&quot;font-style: normal&quot;&gt;et al.&lt;/span&gt;, 2021)&lt;/a&gt;.
+However, the generalized tree distribution and associated algorithms are
+independent of the likelihood function, and so can be used with other data
+types and likelihood models (i.e., lots of room for future work and
+applications!).&lt;/p&gt;
+
+&lt;p&gt;Using simulations, we found this approach consistently inferred shared and
+multifurcating divergences with high support with moderately sized data sets.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/phycoeval-preprint/gecko-generalized-tree-pp-hist-cropped.svg&quot;&gt;&lt;img src=&quot;/images/phycoeval-preprint/gecko-generalized-tree-pp-hist-cropped.svg&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                We simulated 100 data sets on the tree above. The histograms
+                show the posterior probabilities of correctly inferring the
+                shared and multifurcating divergences when analyzing all the
+                data sets under the generalized tree model.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;We applied this new approach to genomic data from two genera of geckos
+co-distributed across the Philippines.
+Fragmentations of the islands caused by interglacial rises in sea level predict
+shared and multifurcating divergences over the last 5 million years.
+Our results show support for this predicted pattern.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/phycoeval-preprint/gekko-phycoeval-cam-tree.svg&quot;&gt;&lt;img src=&quot;/images/phycoeval-preprint/gekko-phycoeval-cam-tree.svg&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Shared and multifurcating divergences inferred during the evolutionary history of
+                &lt;i&gt;Gekko&lt;/i&gt; lizards across the Philippines.
+                From &lt;a class=&quot;citation&quot; href=&quot;#Oaks2021phycoeval&quot;&gt;(Oaks &lt;span style=&quot;font-style: normal&quot;&gt;et al.&lt;/span&gt;, 2021)&lt;/a&gt;.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;a href=&quot;/images/phycoeval-preprint/cyrt-phycoeval-cam-tree.svg&quot;&gt;&lt;img src=&quot;/images/phycoeval-preprint/cyrt-phycoeval-cam-tree.svg&quot; width=&quot;100%&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Shared and multifurcating divergences inferred during the evolutionary history of
+                &lt;i&gt;Cyrtodactylus&lt;/i&gt; lizards across the Philippines.
+                From &lt;a class=&quot;citation&quot; href=&quot;#Oaks2021phycoeval&quot;&gt;(Oaks &lt;span style=&quot;font-style: normal&quot;&gt;et al.&lt;/span&gt;, 2021)&lt;/a&gt;.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If you want to learn more, here’s a talk I gave at the Evolution Meetings this summer:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1PX5Yz-Vgec&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;And you can read our &lt;a href=&quot;https://doi.org/10.1101/2021.07.23.453597&quot;&gt;preprint here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This work was a lot of fun, but we have only scratched the surface with the
+generalized tree distribution.
+If you are interested in this work, please reach out; there’s so much more to
+do!&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol class=&quot;bibliography&quot;&gt;&lt;li&gt;&lt;span id=&quot;Oaks2021phycoeval&quot;&gt;Oaks JR, Wood, Jr. PL, Siler CD, Brown RM. 2021. Generalizing Bayesian phylogenentics to infer shared evolutionary events. &lt;i&gt;bioRxiv&lt;/i&gt;. DOI: 10.1101/2021.07.23.453597.&lt;/span&gt;
+
+&lt;a href=&quot;http://dx.doi.org/10.1101/2021.07.23.453597&quot;&gt;Link.&lt;/a&gt; 
+
+&lt;/li&gt;
+&lt;li&gt;&lt;span id=&quot;Bryant2012&quot;&gt;Bryant D, Bouckaert R, Felsenstein J, Rosenberg NA, Roychoudhury A. 2012. Inferring Species Trees Directly from Biallelic Genetic Markers: Bypassing Gene Trees in a Full Coalescent Analysis. &lt;i&gt;Molecular Biology and Evolution&lt;/i&gt; &lt;span style=&quot;font-weight: normal&quot;&gt;29&lt;/span&gt;:1917–1932. DOI: 10.1093/molbev/mss086.&lt;/span&gt;
+
+&lt;a href=&quot;http://dx.doi.org/10.1093/molbev/mss086&quot;&gt;Link.&lt;/a&gt; 
+
+&lt;/li&gt;&lt;/ol&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/generalized-phylo-preprint/&quot;&gt;Generalizing Bayesian phylogenetics to model shared divergences&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on October 18, 2021.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Gen-Phy at MIC-Phy]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/mic-phy/" />
+  <id>http://phyletica.org/mic-phy</id>
+  <published>2021-02-26T00:00:00-06:00</published>
+  <updated>2021-02-26T00:00:00-06:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;The 2021 Mathematical, Inferential, and Computational Phylogenomics (MIC-Phy)
+meeting was great. Lots of great
+&lt;a href=&quot;https://mrborges23.github.io/micphy2021/posters&quot;&gt;posters&lt;/a&gt;,
+&lt;a href=&quot;https://mrborges23.github.io/micphy2021/talks&quot;&gt;talks&lt;/a&gt;
+and
+&lt;a href=&quot;https://mrborges23.github.io/micphy2021/workshop&quot;&gt;workshops&lt;/a&gt;.
+I was only bummed about the talks I missed due to the difference in time zones.
+But, luckily, most of the
+&lt;a href=&quot;https://mrborges23.github.io/micphy2021/program&quot;&gt;talks are now up online&lt;/a&gt;,
+so I’m eager to catch up on what I missed.&lt;/p&gt;
+
+&lt;p&gt;I presented some new work by
+&lt;a href=&quot;https://perryleewoodjr.com/&quot;&gt;JR&lt;/a&gt;
+and I,
+where we generalized the space of trees explored during Bayesian phylogenetic
+inference in order to infer shared and multifurcating divergences.
+Based on simulations, the new approach can accurately infer such
+branching patterns from genomic data.
+Equally important, it does not spuriously support such patterns when
+divergences are independent and bifurcating.
+Using this approach, we found evidence for the signature of interglacial rises
+in sea levels fragmenting the Philippine Islands in the phylogenies of two
+genera of geckos.&lt;/p&gt;
+
+&lt;p&gt;You can find our
+&lt;a href=&quot;/slides/mic-phy-2021.pdf&quot;&gt;slides here&lt;/a&gt;
+and the video below.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4xzcrkYyriU&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/mic-phy/&quot;&gt;Gen-Phy at MIC-Phy&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on February 26, 2021.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Holden joining the USGS]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/holden-usgs/" />
+  <id>http://phyletica.org/holden-usgs</id>
+  <published>2020-09-01T00:00:00-05:00</published>
+  <updated>2020-09-01T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;holden-moving-on-to-the-usgs&quot;&gt;Holden moving on to the USGS&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to undergraduate
+Holden Smith
+for accepting a position at the United States Geological Survey.
+Holden will be working as a Hydrologic Technician out of he Lower Mississippi
+Gulf Water Science Center in Tuscaloosa, Alabama.
+He will be collecting important hydrologic data from extremely diverse
+drainages, such as the Tennessee, Alabama, Tombigbee, and Mobile Rivers.
+We will miss him in the lab, but we are glad to know he will be looking out for
+the diverse waterways of the southeast.
+Congrats Holden!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/holden-usgs/&quot;&gt;Holden joining the USGS&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on September 01, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Morgan joins the Phyleticians]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/welcome-morgan/" />
+  <id>http://phyletica.org/welcome-morgan</id>
+  <published>2020-08-23T00:00:00-05:00</published>
+  <updated>2020-08-23T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;welcome-morgan&quot;&gt;Welcome Morgan!&lt;/h2&gt;
+
+&lt;p&gt;The Phyletical Lab is happy to welcome new Ph.D. student,
+&lt;a href=&quot;https://morganmuell.wixsite.com/home&quot;&gt;Morgan Muell&lt;/a&gt;.
+Morgan joins us from the lab of
+&lt;a href=&quot;https://www.jasonleebrown.org/&quot;&gt;Jason Brown&lt;/a&gt;
+at
+&lt;a href=&quot;https://siu.edu/&quot;&gt;Southern Illinois University&lt;/a&gt;,
+where she did her master’s work on the phylogenomics and color pattern
+evolution in poison frogs.
+Morgan will be coadvised by
+&lt;a href=&quot;https://warnerlab.weebly.com/&quot;&gt;Dan Warner&lt;/a&gt;,
+and is interested in taking a comparative approach to the evolution of
+phenotypic plasticity.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/welcome-morgan/&quot;&gt;Morgan joins the Phyleticians&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 23, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Ryan heading to Villanova this Fall]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/ryan-villanova/" />
+  <id>http://phyletica.org/ryan-villanova</id>
+  <published>2020-07-11T00:00:00-05:00</published>
+  <updated>2020-07-11T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;ryan-is-philadelphia-bound&quot;&gt;Ryan is Philadelphia bound&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to
+undergraduate
+Ryan Cook
+for being accepted into the graduate program at
+&lt;a href=&quot;https://www1.villanova.edu/university.html&quot;&gt;Villanova University&lt;/a&gt;.
+Ryan will be working with
+&lt;a href=&quot;https://www1.villanova.edu/villanova/artsci/biology/facstaff.html?mail=aaron.bauer@villanova.edu&amp;amp;xsl=bio&quot;&gt;Aaron Bauer&lt;/a&gt;
+and
+&lt;a href=&quot;http://www87.homepage.villanova.edu/todd.jackman/&quot;&gt;Todd Jackman&lt;/a&gt;
+on the diversification of reptiles and amphibians.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/ryan-villanova/&quot;&gt;Ryan heading to Villanova this Fall&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on July 11, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Paper: Insights from a general, full-likelihood Bayesian approach to inferring shared evolutionary events from genomic data]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/codemog-paper/" />
+  <id>http://phyletica.org/codemog-paper</id>
+  <published>2020-07-04T00:00:00-05:00</published>
+  <updated>2020-07-04T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;While we avoid mass-infection events this 4th of July, here’s a 
+piece of good news out of the Phyletica Lab.
+The work by 
+Nadia L’Bahy (our 2018 Comp Bio REU student from UMass Amherst)
+and Kerry that introduces a new, full-likelihood, Bayesian approach
+to estimating simultaneous changes in effective population sizes
+across populations is now published in the journal
+&lt;a href=&quot;https://onlinelibrary.wiley.com/doi/abs/10.1111/evo.14052&quot;&gt;Evolution&lt;/a&gt;.
+It turns out that, even when you use all the information from genomic data,
+estimating shared demographic events across populations is still super hard.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/codemog-paper/&quot;&gt;Paper: Insights from a general, full-likelihood Bayesian approach to inferring shared evolutionary events from genomic data&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on July 04, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Paper: Rivers of Indochina as potential drivers of diversification in flying lizards]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/draco-paper/" />
+  <id>http://phyletica.org/draco-paper</id>
+  <published>2020-06-10T00:00:00-05:00</published>
+  <updated>2020-06-10T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;&lt;a href=&quot;http://randyklabacka.com/&quot;&gt;Randy’s&lt;/a&gt;
+paper on the diversification of flying lizards across Indochina is now
+&lt;a href=&quot;https://doi.org/10.1016/j.ympev.2020.106861&quot;&gt;published in Molecular Phylogenetics and Evolution&lt;/a&gt;.
+Randy found that a model of diversification demarcated by the major rivers of
+Indochina best explained variation in sequence data from across the
+distribution of the &lt;em&gt;Draco maculatus&lt;/em&gt; species complex.
+Randy did a ton of work to compare the marginal likelihoods of a large number
+of diversification models to reach this conclusion.
+Congrats Randy!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/draco-paper/&quot;&gt;Paper: Rivers of Indochina as potential drivers of diversification in flying lizards&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on June 10, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Randy gets AGA EECG award!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/randy-aga-award/" />
+  <id>http://phyletica.org/randy-aga-award</id>
+  <published>2020-03-15T00:00:00-05:00</published>
+  <updated>2020-03-15T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-randy&quot;&gt;Congrats Randy!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to
+&lt;a href=&quot;http://randyklabacka.com/&quot;&gt;Randy Klabacka&lt;/a&gt;
+for being awarded $8,000 from the
+&lt;a href=&quot;https://www.theaga.org/eecg-awards.php&quot;&gt;American Genetics Association&lt;/a&gt;
+to study the genomic and bioenergetic costs of asexuality
+in whiptail lizards.
+We are interested in whether a non-recombining nuclear genome can adequately
+coevolve with the mitochondria.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/randy-aga-award/&quot;&gt;Randy gets AGA EECG award!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on March 15, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Paper: The why, when, and how of computing in biology classrooms]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/comp-bio-ed/" />
+  <id>http://phyletica.org/comp-bio-ed</id>
+  <published>2020-03-05T00:00:00-06:00</published>
+  <updated>2020-03-05T00:00:00-06:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;We have published an
+&lt;a href=&quot;https://f1000research.com/articles/8-1854/v2&quot;&gt;opinion article about the ins-and-outs of
+teaching computational biology&lt;/a&gt;
+in
+&lt;a href=&quot;https://f1000research.com/&quot;&gt;F1000 Research&lt;/a&gt;.
+This work was born from a fantastic
+&lt;a href=&quot;https://www.ievobio.org/&quot;&gt;iEvoBio&lt;/a&gt; Meeting in Providence,
+Rhode Island last Summer.
+The meeting was organized by
+&lt;a href=&quot;https://paleantology.com/the-wright-lab/&quot;&gt;April Wright&lt;/a&gt;
+and focused on “enabling the next generation of computational biologists”.
+The paper was a lot of fun to work on, thanks to great collaborators
+&lt;a href=&quot;https://paleantology.com/the-wright-lab/&quot;&gt;April Wright&lt;/a&gt;,
+&lt;a href=&quot;https://schwartzlaburi.github.io/&quot;&gt;Rachel Schwartz&lt;/a&gt;,
+&lt;a href=&quot;https://www.catherinenewman.org/&quot;&gt;Catherine Newman&lt;/a&gt;,
+and
+&lt;a href=&quot;https://www.canterbury.ac.nz/science/schools-and-departments/biological-sciences/contact-us/academic-staff/sarah-flanagan.html&quot;&gt;Sarah Flanagan&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/comp-bio-ed/&quot;&gt;Paper: The why, when, and how of computing in biology classrooms&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on March 05, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Paper: Comparative phylogeography of West African amphibians and reptiles]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/west-african-phylogeography/" />
+  <id>http://phyletica.org/west-african-phylogeography</id>
+  <published>2020-02-20T00:00:00-06:00</published>
+  <updated>2020-02-20T00:00:00-06:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Recent work in collaboration with
+&lt;a href=&quot;http://faculty.washington.edu/leache/wordpress/&quot;&gt;Adam Leache&lt;/a&gt;,
+&lt;a href=&quot;https://csir-forig.org.gh/senior-members-profiles/309-caleb-ofori-boateng-phd&quot;&gt;Caleb Ofori-Boateng&lt;/a&gt;,
+and
+&lt;a href=&quot;https://fujitalab.com/&quot;&gt;Matt Fujita&lt;/a&gt;
+is out in
+&lt;a href=&quot;https://onlinelibrary.wiley.com/doi/abs/10.1111/evo.13941&quot;&gt;Evolution&lt;/a&gt;
+on the comparative phylogeography of a diverse set of reptiles and amphibians
+from West Africa.
+We used computational methods developed in the Phyletica Lab to infer the
+temporal distribution of divergences among 20 species across the Dahomey Gap.
+We found a lot of variation in divergence times, suggesting that species
+responded differently to past aridification across West Africa.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/west-african-phylogeography/&quot;&gt;Paper: Comparative phylogeography of West African amphibians and reptiles&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on February 20, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Charlotte gets Hyman Scholarship!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/charlotte-hyman-award/" />
+  <id>http://phyletica.org/charlotte-hyman-award</id>
+  <published>2020-02-17T00:00:00-06:00</published>
+  <updated>2020-02-17T00:00:00-06:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-charlotte-again&quot;&gt;Congrats Charlotte (again)!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to
+undergraduate
+Charlotte Benedict
+for being awarded the
+&lt;a href=&quot;https://sicb.burkclients.com/grants/hyman/&quot;&gt;Libbie H. Hyman Memorial Scholarship&lt;/a&gt;
+from the Societiy for Integrative and Comparative Biology.
+This award provides Charlotte $3,000 to participate in the Marine
+Invertebrate Zoology course at the University of Washington Friday Harbor Lab.
+It’s been a good week for Charlotte!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/charlotte-hyman-award/&quot;&gt;Charlotte gets Hyman Scholarship!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on February 17, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Charlotte gets graduate fellowship!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/charlotte-osu-fellowship/" />
+  <id>http://phyletica.org/charlotte-osu-fellowship</id>
+  <published>2020-02-15T00:00:00-06:00</published>
+  <updated>2020-02-15T00:00:00-06:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-charlotte&quot;&gt;Congrats Charlotte!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to
+undergraduate
+Charlotte Benedict
+for being awarded a
+&lt;a href=&quot;https://gradsch.osu.edu/pursuing-your-degree/graduate-fellows/university-fellowship&quot;&gt;University Fellowship from the Ohio State University&lt;/a&gt;.
+Charlotte will begin her graduate work at the OSU in the lab of
+&lt;a href=&quot;https://www.facebook.com/OSU-Lab-of-Marine-Invertebrate-Diversity-169688986441907/&quot;&gt;Meg Daly&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/charlotte-osu-fellowship/&quot;&gt;Charlotte gets graduate fellowship!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on February 15, 2020.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Randy gets the Henri Seibert Award!]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/randy-seibert-award/" />
+  <id>http://phyletica.org/randy-seibert-award</id>
+  <published>2019-08-20T00:00:00-05:00</published>
+  <updated>2019-08-20T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-to-randy&quot;&gt;Congrats to Randy!&lt;/h2&gt;
+
+&lt;p&gt;Congratulations to Randy Klabacka for
+&lt;a href=&quot;https://www.auburn.edu/cosam/news/articles/2019/08/auburn_student_honored_with_research_award_on_reptile_study.htm&quot;&gt;winning the prestigious Henri Seibert Award&lt;/a&gt;
+at the
+&lt;a href=&quot;https://conferences.k-state.edu/jmih/&quot;&gt;Joint Meeting of Ichthyologists and Herpetologists&lt;/a&gt;.
+This award from the
+&lt;a href=&quot;https://ssarherps.org/&quot;&gt;Society for the Study of Amphibians and Reptiles&lt;/a&gt;
+recognizes the student with the best talk in one of four research categories.
+Randy was awarded the best talk in Evolution/Systematics for his presentation
+on “Riverine barriers as potential drivers of biodiversification in the &lt;em&gt;Draco
+maculatus&lt;/em&gt; species complex of Indochina.”
+This project started out as a relatively simple exploration into this species
+complex of gliding lizards.
+However, Randy has done a great job transforming this work
+into an in-depth comparison of
+a large number of biogeographic models to determine the best explanation for
+the current geographic distribution of this group’s genetic diversity across
+Indochina.
+Auburn University published
+&lt;a href=&quot;https://www.auburn.edu/cosam/news/articles/2019/08/auburn_student_honored_with_research_award_on_reptile_study.htm&quot;&gt;a nice story&lt;/a&gt;
+about Randy’s accomplishment.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/randy-seibert-award/&quot;&gt;Randy gets the Henri Seibert Award!&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 20, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Claire and Tanner awarded AU fellowships]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/au-fellows/" />
+  <id>http://phyletica.org/au-fellows</id>
+  <published>2019-08-19T00:00:00-05:00</published>
+  <updated>2019-08-19T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;congrats-to-claire-and-tanner&quot;&gt;Congrats to Claire and Tanner!&lt;/h2&gt;
+
+&lt;p&gt;New Phyletica Lab members, Claire Tracy and Tanner Myers, were awarded the
+&lt;a href=&quot;http://graduate.auburn.edu/au-presidential-graduate-research-fellowships/&quot;&gt;Auburn University Presidential Graduate Research Fellowship&lt;/a&gt;,
+which includes three years of funding for their dissertation work.
+Claire was also awarded the Allsup Fellowship for her first year at AU.
+Congratulations, Claire and Tanner!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/au-fellows/&quot;&gt;Claire and Tanner awarded AU fellowships&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 19, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[The Phyletica Lab welcomes 4 new PhD students]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/new-grad-students/" />
+  <id>http://phyletica.org/new-grad-students</id>
+  <published>2019-08-15T00:00:00-05:00</published>
+  <updated>2019-08-15T00:00:00-05:00</updated>
+  <author>
+    <name>Phyletica</name>
+    <uri>http://phyletica.org</uri>
+    <email>phyletica@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;welcome-tashitso-claire-matt-and-tanner&quot;&gt;Welcome Tashitso, Claire, Matt, and Tanner!&lt;/h2&gt;
+
+&lt;p&gt;The Phyletica lab is welcoming four new Ph.D. students this week.
+Tashitso Anamza joins us from Tibet, where she is from;
+she also spent time in Lawrence, Kansas earning her bachelor’s and master’s
+degrees from the University of Kansas.
+Claire Tracy and Matt Buehler are joining us from
+&lt;a href=&quot;https://www1.villanova.edu&quot;&gt;Villanova University&lt;/a&gt;
+where they are
+finishing up their master’s work in
+&lt;a href=&quot;https://www1.villanova.edu/villanova/artsci/biology.html&quot;&gt;Biology&lt;/a&gt;.
+Tanner Myers comes to us after finishing his B.Sc. at the University of Kansas
+while working in the Herpetology Division of the
+&lt;a href=&quot;https://biodiversity.ku.edu/&quot;&gt;KU Biodiversity Institute&lt;/a&gt;.
+Welcome, new phyleticians!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/new-grad-students/&quot;&gt;The Phyletica Lab welcomes 4 new PhD students&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on August 15, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Phyleticians in Providence for Evolution 2019]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/evolution-recap/" />
+  <id>http://phyletica.org/evolution-recap</id>
+  <published>2019-07-01T00:00:00-05:00</published>
+  <updated>2019-07-01T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Charlotte Benedict, Kerry Cobb, and I had a great time at
+&lt;a href=&quot;https://www.evolutionmeetings.org/evolution-2019---providence.html&quot;&gt;Evolution 2019&lt;/a&gt;
+in Providence, RI.
+Charlotte presented a great poster on the independent evolution of clownfish
+symbiosis among sea anemones.
+Kerry gave a poster about our work showing the difficulty of estimating
+simultaneous demographic changes among populations
+(see
+&lt;a href=&quot;/codemog-preprint/&quot;&gt;post here&lt;/a&gt;
+and
+&lt;a href=&quot;https://www.biorxiv.org/content/10.1101/679878v1&quot;&gt;preprint here&lt;/a&gt;).
+I talked about our
+&lt;a href=&quot;https://onlinelibrary.wiley.com/doi/full/10.1111/evo.13754&quot;&gt;recent paper&lt;/a&gt;
+on the comparative biogeography of Philippine geckos.
+The slides from my talk are available for
+&lt;a href=&quot;/slides/evol2019.pdf&quot;&gt;download here&lt;/a&gt;
+and can be viewed via 
+&lt;a href=&quot;https://www.slideshare.net/jamieoaks7/full-bayesian-comparative-biogeography-of-philippine-geckos-challenges-predictions-of-climatedriven-vicariant-speciation&quot;&gt;SlideShare&lt;/a&gt;
+here:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;iframe src=&quot;//www.slideshare.net/slideshow/embed_code/key/LPkpqnD9GjO2IA&quot; width=&quot;595&quot; height=&quot;485&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                &lt;strong&gt; &lt;a href=&quot;//www.slideshare.net/jamieoaks7/full-bayesian-comparative-biogeography-of-philippine-geckos-challenges-predictions-of-climatedriven-vicariant-speciation&quot; title=&quot;Full Bayesian comparative biogeography of Philippine geckos challenges predictions of climate-driven vicariant speciation&quot; target=&quot;_blank&quot;&gt;Full Bayesian comparative biogeography of Philippine geckos challenges predictions of climate-driven vicariant speciation&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;https://www.slideshare.net/jamieoaks7&quot; target=&quot;_blank&quot;&gt;Jamie Oaks&lt;/a&gt;&lt;/strong&gt;
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The recording of my talk is also
+&lt;a href=&quot;https://www.youtube.com/watch?v=gULtPGdAQME&quot;&gt;up on YouTube&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/gULtPGdAQME&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+    &lt;figcaption&gt;
+        &lt;p class=&quot;figure-caption-box&quot;&gt;
+            &lt;span class=&quot;center-if-single-line&quot;&gt;
+                Recording of Jamie's talk about the comparative biogeography of Philippine gekkonids.
+            &lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Kerry and I also attended the
+&lt;a href=&quot;https://ievobio2019.github.io/2019-iEvoBio/index.html&quot;&gt;iEvoBio Conference&lt;/a&gt;
+the day after evolution, for
+which I was a member of a panel on computational biology education.
+The slides from my iEvoBio presentation can be
+&lt;a href=&quot;/slides/ievobio-2019&quot;&gt;viewed here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We enjoyed our time in Providence and learned a ton from all the amazing talks
+and posters we attended.
+A huge thanks to the
+&lt;a href=&quot;https://www.amnat.org/home.html&quot;&gt;ASN&lt;/a&gt;,
+&lt;a href=&quot;https://www.systbio.org/&quot;&gt;SSB&lt;/a&gt;,
+&lt;a href=&quot;https://www.evolutionsociety.org/&quot;&gt;SSE&lt;/a&gt;,
+and all the conference organizers for a wonderful event.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/evolution-recap/&quot;&gt;Phyleticians in Providence for Evolution 2019&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on July 01, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Preprint: Insights from a general, full-likelihood Bayesian approach to inferring shared evolutionary events from genomic data]]></title>
+  <link rel="alternate" type="text/html" href="http://phyletica.org/codemog-preprint/" />
+  <id>http://phyletica.org/codemog-preprint</id>
+  <published>2019-06-22T00:00:00-05:00</published>
+  <updated>2019-06-22T00:00:00-05:00</updated>
+  <author>
+    <name>Jamie Oaks</name>
+    <uri>http://phyletica.org</uri>
+    <email>joaks@auburn.edu</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;A
+&lt;a href=&quot;https://www.biorxiv.org/content/10.1101/679878v1&quot;&gt;new preprint&lt;/a&gt;
+out of the lab demostrates the difficulties in estimating simultaneous changes
+in effective population sizes across taxa.
+REU Nadia L’Bahy (our 2018 Comp Bio REU student from UMass Amherst) and Kerry
+Cobb contributed to this work.
+Feedback is welcome!&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://phyletica.org/codemog-preprint/&quot;&gt;Preprint: Insights from a general, full-likelihood Bayesian approach to inferring shared evolutionary events from genomic data&lt;/a&gt; was originally published by Jamie Oaks at &lt;a href=&quot;http://phyletica.org&quot;&gt;phyletica&lt;/a&gt; on June 22, 2019.&lt;/p&gt;
+
+  </content>
+</entry>
+
 </feed>
