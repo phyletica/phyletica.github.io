@@ -12,11 +12,6 @@ image:
 
 <figure>
     <a href="/images/auburn-phylo-mtan-2014-orange-512.png"><img width="60%" src="/images/auburn-phylo-mtan-2014-orange-512.png"></a>
-    <p class="figure-caption-box">
-        <span class="center-if-single-line">
-            <a rel="mtan" href="https://sites.google.com/site/mtyourmind/">&copy; 2014 Milton Tan</a>
-        </span>
-    </p>
 </figure>
 
 <!---

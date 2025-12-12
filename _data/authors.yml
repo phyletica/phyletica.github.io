@@ -11,10 +11,9 @@ phyletica: &PHYLETICA
     name: Phyletica 
     bio: "Exploring biodiversification."
     avatar: phyletica-avatar.png
-    twitter: jamoaks
-    google:
-        plus: JamieOaks
     github: phyletica
+    bluesky: jamieoaks.bsky.social
+    youtube: UCPPWy11zYqq-9lE_CQ0qPrw
     institution-url: http://www.auburn.edu 
     institution: Auburn
     department-url: http://www.auburn.edu/biology
@@ -26,12 +25,13 @@ jamie_oaks:
     <<: *DEFAULT
     name: Jamie Oaks
     bio: "Evolutionary biologist."
-    avatar: gravatar.jpg
+    avatar: bio-photo-jamie-4.jpg
     email: joaks@auburn.edu
-    twitter: jamoaks
-    google:
-        plus: JamieOaks
     github: joaks1
+    bluesky: jamieoaks.bsky.social
+    orcid: 0000-0002-3757-3836
+    youtube: UCPPWy11zYqq-9lE_CQ0qPrw
+    googlescholar: lz3wj6AAAAAJ
     cv: cv-joaks.pdf
 
 auburn_phylo_orange:

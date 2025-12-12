@@ -10,11 +10,12 @@
         Interested in developing phylogenetic methods and applying them to data
         from natural populations to test hypotheses about processes of
         diversification.
-    avatar: gravatar.jpg
-    twitter: jamoaks
+    avatar: bio-photo-jamie-4.jpg
+    # twitter: jamoaks
+    bluesky: jamieoaks.bsky.social
+    orcid: 0000-0002-3757-3836
     youtube: UCPPWy11zYqq-9lE_CQ0qPrw
-    google:
-        plus: JamieOaks
+    googlescholar: lz3wj6AAAAAJ
     github: joaks1
     cv: http://phyletica.github.io/people/cv-joaks.pdf
 
@@ -26,23 +27,47 @@
 
 - title: Graduate Students
   members:
-  - name: Kerry Cobb
-    role: Ph.D. Student
-    start-date: 2016
+  - name: João Fentanes Machado
+    role: Visiting MSc Student
+    start-date: 2025
     bio: >
-        Interested in the phylogenetics, speciation genomics, and reproductive
-        isolating mechanisms among <i>Anaxyrus</i> toads.
-    avatar: bio-photo-kerry.jpg
-    twitter: KerryACobb
+        Visiting from
+        [Isabel Bonatelli's](https://scholar.google.com/citations?user=q4Kdr-4AAAAJ&hl=pt-BR)
+        Lab at the Universidade Federal de São Paulo to take an integrative
+        approach to assess the biogeographic importance of South American
+        rivers.
+    avatar: avatar-cyrt.jpg
+    linkedin: joaofentanesmachado
 
-  - name: Claire Tracy
+  - name: Brianna Drake
     role: Ph.D. Student
-    start-date: 2019
+    start-date: 2025
     bio: >
-        Interested in the interplay between speciation and adaptation, and the
-        convergent evolution of adaptive traits in response to environmental
-        factors.
-    avatar: bio-photo-claire.jpg
+        Interested in the evolutionary and ecological processes driving
+        Plethodontid salamander diversification.
+    avatar: bio-photo-brianna.jpg
+    linkedin: brianna-drake-54aba8186
+
+  - name: Alicia Krause 
+    role: Ph.D. Student
+    start-date: 2025
+    bio: >
+        Interested in population genomics and systematics of freshwater
+        invertebrates to better develop conservation efforts.
+    avatar: bio-photo-alicia.jpg
+    researchgate: Alicia-Krause-5
+
+  - name: Liz Strasko
+    role: Ph.D. Student
+    start-date: 2025
+    bio: >
+        My research evaluates Pleuroceridae snails in Alabama using
+        phylogenetics, systematics, and population genomics to inform
+        conservation measures.
+    avatar: bio-photo-liz.jpg
+    orcid: 0000-0003-4103-8454
+    researchgate: Elizabeth-Strasko
+    googlescholar: 3OseVDYAAAAJ
 
   - name: Matt Buehler
     role: Ph.D. Student
@@ -58,15 +83,45 @@
         krait (<i>Laticauda colubrina</i>).
     avatar: bio-photo-buehler.jpg
 
-  - name: Tanner Myers 
-    role: Ph.D. Student
-    start-date: 2019
+  - name: Elanah Schmitz
+    role: MS Non-Thesis Student
+    start-date: 2025
     bio: >
-        Interested in the processes that drive speciation, using reptiles and
-        amphibians as a model.
-    avatar: bio-photo-tanner.jpg
+        Interested in conservation work in government, non-profit, or industry sectors.
+    avatar: avatar-gecko.jpg
 
+  # - name: You?
+  #   role: Graduate Student
+  #   avatar: avatar-cyrt.jpg
+
+- title: Undergraduate Researchers
+  members:
+  - name: Natalie Winters 
+    start-date: 2025
+    role: Undergraduate Researcher
+    bio: >
+        Working on conservation genomics.
+    avatar: avatar-ahaetulla.jpg
+
+
+- title: Honorary Members
+  members:
+  - name: Amalie Eden
+    role: Boss
+    bio: >
+        The mastermind.
+    avatar: aeo-avatar.jpg
+  - name: Luna
+    role: Lab canid (RIP)
+    bio: >
+        Woof.
+    avatar: luna2-avatar.jpg
+
+
+- title: Former Lab Members
+  members:
   - name: Morgan Muell
+    current-position: Postdoc at the University of Texas at Austin
     role: Ph.D. Student
     start-date: 2020
     bio: >
@@ -92,57 +147,54 @@
     coadvisor: Dan Warner
     coadvisor-url: https://warnerlab.weebly.com/
 
-  # - name: You?
-  #   role: Graduate Student
-  #   avatar: avatar-cyrt.jpg
+  - name: Claire Tracy
+    current-position: Biology Instructor, Wallace Community College
+    role: Ph.D. Student
+    start-date: 2019
+    end-date: 2025
+    bio: >
+        Interested in the interplay between speciation and adaptation, and the
+        convergent evolution of adaptive traits in response to environmental
+        factors.
+    avatar: bio-photo-claire.jpg
 
-- title: Undergraduate Researchers
-  members:
-  - name: Hailey Whitaker 
-    start-date: 2020
+  - name: Tanner Myers 
+    current-position: Postdoc at the University of Puerto Rico at Rio Piedras
+    role: Ph.D. Student
+    start-date: 2019
+    end-date: 2025
+    bio: >
+        Interested in the processes that drive speciation, using reptiles and
+        amphibians as a model.
+    avatar: bio-photo-tanner.jpg
+
+  - name: Rebecca Meyer
+    start-date: 2024
+    end-date: 2024
     role: Undergraduate Researcher
     bio: >
-        Working on computational genomics and toad speciation.
-    avatar: avatar-hailey.jpg
-
-  - name: Noah Yawn
-    start-date: 2020
-    role: Undergraduate Researcher
-    bio: >
-        Working on plant diversification and conservation.
+        Working on phylogenetics.
     avatar: avatar-kalophrynus.jpg
 
-  - name: Mary Wells
+  - name: Kerry Cobb
+    current-position: Computational Biologist at University of Connecticut Institute for Systems Genomics
+    role: Ph.D. Student
+    start-date: 2016
+    end-date: 2023
+    bio: >
+        Interested in the phylogenetics, speciation genomics, and reproductive
+        isolating mechanisms among <i>Anaxyrus</i> toads.
+    avatar: bio-photo-kerry.jpg
+    twitter: KerryACobb
+
+  - name: Laura Lewis 
     start-date: 2020
+    end-date: 2023
     role: Undergraduate Researcher
     bio: >
-        Working on simulation-based assessments of phylogenetic methods.
-    avatar: avatar-mary.jpg
+        Working on conservation genetics.
+    avatar: avatar-kalophrynus.jpg
 
-  - name: Jacob Landram
-    start-date: 2020
-    role: Undergraduate Researcher
-    bio: >
-        Working on indigo snake conservation genomics.
-    avatar: avatar-jacob.jpg
-
-
-- title: Honorary Members
-  members:
-  - name: Amalie Eden
-    role: Boss
-    bio: >
-        The mastermind.
-    avatar: aeo-avatar.jpg
-  - name: Luna
-    role: Lab canid
-    bio: >
-        Woof.
-    avatar: luna2-avatar.jpg
-
-
-- title: Former Lab Members
-  members:
   - name: Randy Klabacka
     role: Ph.D. Student
     start-date: 2016
@@ -165,7 +217,7 @@
     role: Ph.D. Student
     start-date: 2017
     end-date: 2022
-    current-position: Postdoc at the Vanderbilt University
+    current-position: Postdoc at Vanderbilt University
     bio: >
         Working on the evolution of genes following duplications.
     avatar: avatar-sea-star.jpg
@@ -182,6 +234,38 @@
     avatar: bio-photo-jr.jpg
     twitter: perryleewoodjr
     web: https://perryleewoodjr.com/
+
+  - name: Hailey Whitaker 
+    start-date: 2020
+    end-date: 2022
+    role: Undergraduate Researcher
+    bio: >
+        Working on computational genomics and toad speciation.
+    avatar: avatar-hailey.jpg
+
+  - name: Noah Yawn
+    start-date: 2020
+    end-date: 2022
+    role: Undergraduate Researcher
+    bio: >
+        Working on plant diversification and conservation.
+    avatar: avatar-kalophrynus.jpg
+
+  - name: Mary Wells
+    start-date: 2020
+    end-date: 2021
+    role: Undergraduate Researcher
+    bio: >
+        Working on simulation-based assessments of phylogenetic methods.
+    avatar: avatar-mary.jpg
+
+  - name: Jacob Landram
+    start-date: 2020
+    end-date: 2021
+    role: Undergraduate Researcher
+    bio: >
+        Working on indigo snake conservation genomics.
+    avatar: avatar-jacob.jpg
 
   - name: Tashitso Anamza 
     role: Ph.D. Student
