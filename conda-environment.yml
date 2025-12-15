@@ -3,5 +3,5 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - ruby=2.7.2
+  - ruby=2.4.1
   - gxx_linux-64
