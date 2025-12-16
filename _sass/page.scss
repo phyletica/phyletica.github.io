@@ -409,7 +409,7 @@ $button-size: 1.5rem;
 .member-social,
 .author-social {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   @include font-rem(14);
   color: $black;
   &:visited {
@@ -428,9 +428,9 @@ $button-size: 1.5rem;
 
 .member-social {
   display: inline-block;
-  .fa {
+  .my-fa { // control spacing around lab member links under their bio
 		margin-right: 2px;
-		margin-left: 10px;
+		margin-left: 8px;
         margin-top: 2px;
         margin-bottom: 5px;
 	}
@@ -465,7 +465,7 @@ $button-size: 1.5rem;
 			margin-bottom: 20px;
 		}
 		.author-social {
-			margin-bottom: 5px;
+			margin-bottom: 7px;
 		}
 	}
 	@media #{$large} {
@@ -544,7 +544,7 @@ $button-size: 1.5rem;
 	p {
 		font-size: 100%;
 		margin-top: 1px;
-		margin-bottom: 2px;
+		margin-bottom: 4px; // margin below bio summary (member.bio)
 	}
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -752,6 +752,8 @@ $button-size: 1.5rem;
   (rss, $rss-color),
   (tumblr, $tumblr-color),
   (twitter, $twitter-color),
+  (twitter-x, $twitter-x-color),
+  (bluesky, $bluesky-color),
   (vimeo, $vimeo-color),
   (youtube, $youtube-color);
   @each $socialnetwork, $color in $social {
@@ -763,7 +765,7 @@ $button-size: 1.5rem;
 	  display: block;
 	  padding: 8px 20px;
 	  text-decoration: none !important;
-	  text-transform: uppercase;
+	  // text-transform: uppercase;
 	  @include font-rem(14);
 	  font-family: $heading-font;
 	  font-weight: 700;

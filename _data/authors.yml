@@ -9,7 +9,7 @@ default: &DEFAULT
 phyletica: &PHYLETICA
     <<: *DEFAULT
     name: Phyletica 
-    bio: "Exploring biodiversification."
+    bio: "Exploring biodiversification"
     avatar: phyletica-avatar.png
     github: phyletica
     bluesky: jamieoaks.bsky.social
@@ -24,7 +24,7 @@ phyletica: &PHYLETICA
 jamie_oaks:
     <<: *DEFAULT
     name: Jamie Oaks
-    bio: "Evolutionary biologist."
+    bio: "Evolutionary biologist"
     avatar: bio-photo-jamie-4.jpg
     email: joaks@auburn.edu
     github: joaks1
