@@ -1,4 +1,4 @@
-# Authors
+# Lab members
 
 - title:
   members:
@@ -36,7 +36,7 @@
         Lab at the Universidade Federal de São Paulo to take an integrative
         approach to assess the biogeographic importance of South American
         rivers.
-    avatar: avatar-cyrt.jpg
+    avatar: bio-photo-joao.jpg
     linkedin: joaofentanesmachado
 
   - name: Brianna Drake
@@ -88,7 +88,7 @@
     start-date: 2025
     bio: >
         Interested in conservation work in government, non-profit, or industry sectors.
-    avatar: avatar-gecko.jpg
+    avatar: avatar-cyrt.jpg
 
   # - name: You?
   #   role: Graduate Student
@@ -106,17 +106,22 @@
 
 - title: Honorary Members
   members:
-  - name: Amalie Eden
-    role: Boss
-    bio: >
-        The mastermind.
-    avatar: aeo-avatar.jpg
-  - name: Luna
-    role: Lab canid (RIP)
+  # - name: Amalie Eden
+  #   role: Boss
+  #   bio: >
+  #       The mastermind.
+  #   avatar: aeo-avatar.jpg
+  - name: Lexi
+    role: Lab canid
     bio: >
         Woof.
-    avatar: luna2-avatar.jpg
+    avatar: lexi-avatar.jpg
 
+  - name: Luna
+    role: Dearly departed lab canid
+    bio: >
+        Rest in peace.
+    avatar: luna2-avatar.jpg
 
 - title: Former Lab Members
   members:
