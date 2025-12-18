@@ -39,11 +39,11 @@ from the [University of Kansas][6] working with [Rafe Brown][7] and [Mark
 Holder][8].
 -->
 
-The Phyletica Lab is broadly interested in understanding how and why there are
-so many species on our planet.
+The Phyletica Lab is broadly interested in understanding the processes
+responsible for the biodiversity of our planet.
 To approach this question, we explore patterns of variation within and among
-populations of organisms to infer evolutionary history and test models of
-diversification.
+populations of organisms to learn about evolutionary history and test models of
+how species diversify.
 This entails developing phylogenetic models, implementing them as computational
 methods, and ultimately applying these methods to molecular data collected from
 natural populations.
@@ -52,7 +52,7 @@ work with systems ranging from viruses to plants.
 
 On this site, you can find more information about our ongoing [research][9],
 [teaching][10], and [software development][11], as well as read our [blog][12]
-where we post along the way. Thanks for visiting.
+where we (occasionally) post along the way. Thanks for visiting.
 
  [1]: {{ site.baseurl }}/
  [2]: http://www.nsf.gov/awardsearch/showAward?AWD_ID=1308885&HistoricalAwards=false
