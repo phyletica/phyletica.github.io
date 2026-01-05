@@ -657,7 +657,7 @@ The syntax is '{ key1 : value1, key2 : value2 }'
 
 ### Sets
 -   A set is like a dictionary without values
--   Useful for keeping track unique values (for example)
+-   Useful for keeping track of unique values (for example)
 -   We'll skip them for now
 
 
