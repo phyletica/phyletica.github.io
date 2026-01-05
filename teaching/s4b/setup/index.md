@@ -14,18 +14,23 @@ image:
 Because our ultimate goal is for you to continue using computational skills
 beyond this course, we are not going to force you to use a ``pre-cooked''
 computer environment in the form of a container or virtual machine.
+Nor will we use a web-based learning platform that doesn't allow you to easily
+*apply* what you are learning.
 Rather, we are going to help you to establish an environment in which you are
-comfortable working.
+comfortable learning and applying the skills you're developing.
+
 The tools you will need installed on your computer for this class are:
 
--   Unix-like shell (e.g., Bash)
+-   Unix-like shell (e.g., Bash or Zsh)
+-   Conda package manager
 -   Git
--   Python (Version 3)
 -   A text editor
 
 Below we provide some resources and recommendations for installing these tools
-on Windows, MacOSX, and Linux.
-However, you are certainly free to explore other configurations.
+on Windows, Mac OSX, and Linux.
+However, you are certainly free to explore other configurations, as long as you
+have a unix-like shell with access to `conda` and `git`,
+and a text editor
 
 
 ## Unix-like shell
@@ -50,20 +55,21 @@ and a text editor below:
 
 #### Windows Subsystem for Linux (WSL)
 
-If you are using Windows 10, you have the option of installing a Linux
-subsystem.
+If you are using Windows 10 or greater, you have the option of installing a
+Linux subsystem.
 If you go this route, I recommend you install the Ubuntu distribution of Linux.
 Here are links to instructions from Ubuntu and Microsoft:
 
--   [Instructions from Ubuntu](https://ubuntu.com/wsl).
--   [Instructions from Microsoft](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+-   [Instructions from Ubuntu](https://documentation.ubuntu.com/wsl/latest/howto/install-ubuntu-wsl2/).
+-   [Instructions from Microsoft](https://learn.microsoft.com/en-us/windows/wsl/install).
+
 
 #### Linux virtual machine
 
 Using
 [VirtualBox](https://www.virtualbox.org/)
 you can install a Linux virtual machine for free.
-[Click here for instructions on how to do so](https://itsfoss.com/install-linux-in-virtualbox/).
+[Click here for instructions from Ubuntu to install VirtualBox and Ubuntu](https://itsfoss.com/install-linux-in-virtualbox/).
 If you choose this route, I recommend you install the most recent version of
 [Ubuntu Desktop](https://ubuntu.com/download/desktop).
 
@@ -128,25 +134,16 @@ get Git by typing the following at the command line:
 sudo apt-get install git
 ~~~
  
+## Conda package manager
 
-## Python
-
-For this class, I recommend you install Version 3 of Python via
-[Anaconda](https://www.anaconda.com/products/individual)
-or its smaller cousin,
-[miniconda](https://docs.conda.io/en/latest/miniconda.html).
-
-[Anaconda](https://www.anaconda.com/products/individual)
-installs Python and a bunch of popular Python packages,
-many of which you will probably never use.
-[Miniconda](https://docs.conda.io/en/latest/miniconda.html) is the same as
-Anaconda, but without all the extra packages (and it's easy to install the
-packages you do need).
-
-Either is fine, but I recommend 
-[Miniconda](https://docs.conda.io/en/latest/miniconda.html),
-because it will install much faster and take up less disk space.
-
+There are several flavors of conda package management and associated channels:
+Conda-forge, Miniforge, Anaconda, Miniconda, Micromamba...
+If you already have one of these installed and are comfortable using it, you
+can probably skip this section and continue using the conda management system
+you already have for this course.
+Below, I provide instructions for installing Miniforge.
+In my opinion, this is the best option in terms of open licensing and avoiding
+bloat (not installing a bunch of stuff you'll never use).
 
 ### Windows
 
@@ -155,14 +152,12 @@ environment and **follow the instructions for Linux below**.
 
 If you installed [Git for Windows](https://gitforwindows.org/),.
 [follow these instructions from the Software Carpentries](https://carpentries.github.io/workshop-template/#python)
-to install Anaconda or miniconda.
-The most important part of these instructions is to make sure to check `Add
-Anaconda to my PATH environment variable` during the install;
-this will make Python "visible" to Git BASH.
-**NOTE:** The instructions on the Software Carpentries website are for
-Anaconda, but should also work for miniconda.
+to install Miniforge.
+The most important part of these instructions is to make sure to check "Add
+Miniforge3 to my PATH environment variable";
+this will make Miniforge tools "visible" to Git BASH.
 
-After miniconda is installed, I highly recommend that you install the
+After Miniforge is installed, I highly recommend that you install the
 ``conda-bash-completion`` package that allows you to use tab completion when
 typing conda commands. You can do so by typing the following at the Git BASH
 command line:
@@ -171,20 +166,71 @@ command line:
 conda install -c conda-forge conda-bash-completion
 ~~~
 
-### Mac
+### Linux, Mac OSX, or WSL
 
-[Go here](https://docs.conda.io/en/latest/miniconda.html)
-and download the
-MacOSX installer for Python 3.
+#### Make sure you have curl or wget
 
-If you download `Miniconda3 MacOSX 64-bit pkg`, then double click the download
-and install it like other software (you can accept all the default setting
-during the installation).
+We will be using either `curl` or `wget` to download the script for installing
+Miniforge,
+so first, we need to check if either of these is installed.
+Open your shell terminal (`Terminal` application) and check to see if you have
+`curl`:
 
-If you download `Miniconda3 MacOSX 64-bit bash`,
-then follow along with the Linux instructions to install it below; the
-only difference is that the first command will be
-`bash Miniconda3-latest-MacOSX-x86_64.sh`.
+~~~ bash
+which curl
+~~~
+
+If this produces a line of text that looks something like `/usr/local/bin/curl`
+(any text like this), you have `curl` installed.
+If you see no output, you don't have `curl`.
+
+You can check for `wget` in the same way:
+
+~~~ bash
+which wget
+~~~
+
+Again, any text output like `usr/local/bin/wget` indicates `wget` is installed;
+no output indicates it is not installed.
+
+*You only need one of them to be installed*.
+If neither is installed,
+
+-   If you're using Mac OSX, install XCode via the app store; this will install
+    `curl`.
+-   If you're using Linux (either directly or via WSL), use your package manager
+    to install them. For Ubuntu (or other Debian-based Linux distributions),
+    you can do this via:
+
+    ~~~ bash
+    sudo apt-get install curl wget
+    ~~~
+
+#### Install Miniforge
+
+Use `curl` or `wget` to download the Miniforge installation script.
+Open your shell terminal (`Terminal` application), and use one of the following
+commands depending on whether `curl` or `wget` is installed (if both are
+installed, you can flip a coin):
+
+~~~ bash
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+~~~
+
+OR
+
+~~~ bash
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+~~~
+
+These are long commands, so you probably want to copy and paste these into your
+command line.
+
+Now, run the script you downloaded with this command:
+
+~~~ bash
+bash Miniforge3-$(uname)-$(uname -m).sh
+~~~
 
 Either way, after it's installed, I highly recommend that you install the
 ``conda-bash-completion`` package that allows you to use tab completion when
@@ -195,55 +241,44 @@ line (i.e., `Terminal`):
 conda install -c conda-forge conda-bash-completion
 ~~~
 
-### Linux
-
-Download the [miniconda](https://docs.conda.io/en/latest/miniconda.html)
-installation script with the following command:
-
-    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-
-After this command finishes, you should be able to type:
-
-    ls
-
-and see `Miniconda3-latest-Linux-x86_64.sh` listed.
-This is a shell script that will install miniconda.
-To install it, run:
-
-    bash Miniconda3-latest-Linux-x86_64.sh
 
 You should see a prompt that looks something like:
 
-    Welcome to Miniconda3 4.8.2
-    
     In order to continue the installation process, please review the license
     agreement.
     Please, press ENTER to continue
     >>> 
 
-Hit enter, then scroll down using the space bar or enter key until
-you see the following prompt:
+Hit enter, then you should see the following prompt:
 
     Do you accept the license terms? [yes|no]
-    [no] >>> 
+    >>> 
 
-Type "yes" and hit enter. Then, you will be prompted to choose the lcoation of
+Type "yes" to accept the term and hit enter. Then, you will be prompted to choose the location of
 the installation:
 
-    Miniconda3 will now be installed into this location:
-    /home/jamie/miniconda3
+    Miniforge3 will now be installed into this location:
+    /arc/homes/jro0014/miniforge3
     
       - Press ENTER to confirm the location
       - Press CTRL-C to abort the installation
       - Or specify a different location below
     
-    [/home/jamie/miniconda3] >>> 
+    [/arc/homes/jro0014/miniforge3] >>> 
 
 Simply hit enter to accept the default install location.
 After a while (and lots of output), you should see the following prompt:
 
-    Do you wish the installer to initialize Miniconda3
-    by running conda init? [yes|no]
+    Do you wish to update your shell profile to automatically initialize conda?
+    This will activate conda on startup and change the command prompt when activated.
+    If you'd prefer that conda's base environment not be activated on startup,
+       run the following command when conda is activated:
+    
+    conda config --set auto_activate_base false
+    
+    Note: You can undo this later by running `conda init --reverse $SHELL`
+    
+    Proceed with initialization? [yes|no]
     [no] >>> 
 
 Type "yes" and hit enter. This will add some code to your `.bashrc` file
@@ -251,14 +286,24 @@ that will make using `conda` simpler.
 
 If all goes well, you should see:
 
-    Thank you for installing Miniconda3!
+    Thank you for installing Miniforge3!
 
 at the bottom of the output.
 
 Next, close your terminal window and open a new one.
-Then, update `conda` by running:
+Then, update your conda configuration to not auto activate a conda environment
+every time you open an new terminal window:
 
-    conda update conda
+~~~ bash
+conda config --set auto_activate false
+~~~
+
+Close your terminal window again and open a new one.
+Next, update `conda` by running:
+
+~~~ bash
+conda update conda
+~~~
 
 If there are updates available for `conda` you will be prompted with:
 
@@ -269,8 +314,37 @@ Type "y" (for yes) and hit enter to finish the update.
 Lastly, I highly recommend that you install the `conda-bash-completion`
 package that allows you to use tab completion when typing conda commands:
 
-    conda install -c conda-forge conda-bash-completion
+~~~ bash
+conda install -c conda-forge conda-bash-completion
+~~~
 
+#### Create a conda environment for this class
+
+Let's create a conda environment we will all use during some of our in-class
+demonstrations and exercises.
+First, use `git` to clone a repository I created containing a YAML-formatted
+file that specifies a conda environment:
+
+~~~ bash
+git clone https://github.com/joaks1/biol-7180-conda-env.git
+~~~
+
+Then, move into the downloaded directory and use `mamba` to create the
+environment.
+Note, `mamba` and `conda` are interchangeable in the command below, but `mamba`
+is faster:
+
+~~~ bash
+cd biol-7180-conda-env
+mamba env create -f conda-env.yml
+~~~
+
+You don't need to do this now, but when we want to use the conda environment,
+we use the following command:
+
+~~~ bash
+conda activate biol-7180
+~~~
 
 ## Text editor
 
@@ -282,18 +356,10 @@ However, some people prefer a text editor with a graphical user interface (GUI)
 and some extra bells and whistles.
 Text editors with a lot of bells and whistles are often called
 an integrative design environment (IDE).
-Here are some popular and free options for text editors/IDEs, in no particular
-order:
+If you prefer a GUI text editor over `nano` and `vim`, I recommend Visual
+Studio Code:
 
--   [Atom](https://atom.io/)
 -   [Visual Studio Code](https://code.visualstudio.com/)
--   [Bluefish](http://bluefish.openoffice.nl/index.html)
--   [jEdit](http://www.jedit.org/)
-
-Python-specific IDEs
-
--   [PyCharm](https://www.jetbrains.com/pycharm/)
--   [Jupyter Notebooks](https://jupyter.org/)
 
 ### Windows
 
