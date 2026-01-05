@@ -27,8 +27,10 @@ remote computer, proving that you have the corresponding private key.
 This entire authentication riddle game takes place automatically, and you are
 freed from the burden of entering a username and password.
 
-Below is a short video and instructions on how to create and use
-SSH keys.
+Below is a short, optional video with instructions on how to create and use SSH
+keys.
+The instructions below are complete (and more up-to-date than the video), so
+the video is not required.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M9rc286eJII" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -50,10 +52,11 @@ If you don't see these listed (or the `.ssh` directory does not exist),
 you need to create a pair of SSH keys.
 To do this, we will use `ssh-keygen`.
 When you enter this on the command line, it will prompt you with some options;
-simply hit enter for each prompt to accept the default (note, if you already
-have a pair of SSH keys, skip this step):
+simply hit enter for each prompt to accept the default.
+Change "your_email@example.com" to your email.
+Note, if you already have a pair of SSH keys, skip this step:
 
-    ssh-keygen
+    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     
 Now, when you:
 
@@ -74,8 +77,9 @@ You should see the files `id_rsa` and `id_rsa.pub` listed.
 
 Log in to your [GitHub](https://github.com/) account, and go to the "Settings"
 for your account
-(there should be a drop down near the top right corner of the
-[GitHub](https://github.com/) page, with a "Settings" option).
+(there should be a drop down when you click on your user icon near the top
+right corner of the [GitHub](https://github.com/) page, with a "Settings"
+option).
 Along the left side of your settings page, there should be an "SSH and GPG
 keys" link; click on this.
 
@@ -102,13 +106,16 @@ Then hit "Add SSH Key."
 
 ## Setting up passwordless SSH login with any server
 
+Note: this section is not necessary for our class, but describes another useful
+application of SSH keys in which you might be interested.
+
 Do you access a remote computer, such as a computer cluster, using `ssh`
 by entering a command like:
 
     ssh YOUR-USERNAME@REMOTE.COMPUTER.ADDRESS
 
-For example, I often log in to AU's Hopper computer cluster by using
-`ssh jro0014@hopper.auburn.edu`.
+For example, I often log in to AU's Easley computer cluster by using
+`ssh jro0014@easley.auburn.edu`.
 If you answered "No," then you can skip this section. But, if your
 answer was "Yes," you can use your SSH keys to make logging in with `ssh`
 easier and more secure.

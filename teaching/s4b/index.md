@@ -16,7 +16,11 @@ skills that will allow them to approach biological questions in new ways.
 
 ## Topics
 
-### [Topic 1: Getting set up]({{ site.baseurl }}/teaching/s4b/setup)
+### Topic 1: Getting set up for the course
+
+-   [Setting up your computer]({{ site.baseurl }}/teaching/s4b/setup)
+-   [Setting up SSH keys for your GitHub account]({{ site.baseurl }}/teaching/s4b/ssh-keys)
+
 
 ### Topic 2: Intro to Bash
 
@@ -83,13 +87,6 @@ skills that will allow them to approach biological questions in new ways.
 -   No exercise
 
 ### Topic 11: Classes in Python
-
-
-## Extras
-
-### Extra Topic 1: SSH Keys
-
--   [Notes and video here]({{ site.baseurl }}/teaching/s4b/ssh-keys)
 
 
 ## Acknowledgments
