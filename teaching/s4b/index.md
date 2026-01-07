@@ -20,6 +20,7 @@ skills that will allow them to approach biological questions in new ways.
 
 -   [Setting up your computer]({{ site.baseurl }}/teaching/s4b/setup)
 -   [Setting up SSH keys for your GitHub account]({{ site.baseurl }}/teaching/s4b/ssh-keys)
+-   [Course intro slides]({{ site.baseurl }}/slides/s4b/intro)
 
 
 ### Topic 2: Intro to Bash
