@@ -55,7 +55,7 @@ git config --global github.user "joaks1"
 $ git config --global core.editor "nano -w"
 ```
 
-[Lots of other options](http://swcarpentry.github.io/git-novice/02-setup/)
+[Lots of other options](https://swcarpentry.github.io/git-novice/02-setup.html)
 
 
 Allow git to use pretty colors when it tells you stuff
