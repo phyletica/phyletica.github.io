@@ -43,7 +43,7 @@ skills that will allow them to approach biological questions in new ways.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SN0--hLR6qM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
--   [Exercise](https://github.com/joaks1/au-bootcamp-git-intro)
+-   [Exercise](https://github.com/joaks1/git-intro-exercise)
 
 ### Topic 4: Intro to Python
 
