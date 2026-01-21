@@ -809,6 +809,7 @@ $ git status
 Now, as Clyde, we need to manually resolve this conflict
 
 Open `dummy.txt` and you'll see
+
 ```
 <<<<<<< HEAD
 Well hello again, dummy
@@ -817,7 +818,9 @@ Well, hello again dummy
 >>>>>>> 1dce26cdd2bc94c447c8f2dad98389f62b3315a4
 I'm no dummy
 ```
+
 `git` has flagged the conflict with the
+
 ```
 <<<<<<<
 your content
@@ -829,12 +832,14 @@ notation
 
 
 Edit `dummy.txt` to
+
 ```
 Well, hello again, dummy
 I'm no dummy
 ```
 
 `add`, `commit`, and `push` your changes
+
 ```
 $ git status
 $ git add dummy.txt
