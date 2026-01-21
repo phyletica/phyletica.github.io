@@ -102,9 +102,9 @@ Check the status of your new repo
 
 ```
 $ git status
-On branch master
+On branch main
 
-Initial commit
+No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
 ```
@@ -126,16 +126,16 @@ Let's check what git thinks
 
 ```
 $ git status
-On branch master
+On branch main
 
-Initial commit
+No commits yet
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-
 	dummy.txt
 
 nothing added to commit but untracked files present (use "git add" to track)
+
 ```
 
 
@@ -147,14 +147,14 @@ $ git add dummy.txt
 What does git see?
 ```
 $ git status
-On branch master
+On branch main
 
-Initial commit
+No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
-
 	new file:   dummy.txt
+
 ```
 
 
@@ -184,7 +184,7 @@ All tests passing.
 
 # Please enter the commit message for your changes. Lines starting
 # with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
+# On branch main
 #
 # Initial commit
 #
@@ -198,7 +198,7 @@ All tests passing.
 
 After running `commit` you should get output that looks something like
 ```
-[master (root-commit) 10b18f5] Adding dummy.txt file.
+[main (root-commit) 776bd06] Adding file dummy.txt
  1 file changed, 3 insertions(+)
  create mode 100644 dummy.txt
 ```
@@ -206,20 +206,21 @@ After running `commit` you should get output that looks something like
 
 ```
 $ git status
-# On branch master
-nothing to commit, working directory clean
+# On branch main
+nothing to commit, working tree clean
 ```
 
 <p class="fragment fade-up">
-Your working directory matches the current snapshot (commit), and nothing is staged
+Your working directory (tree) matches the current snapshot (commit), and
+nothing is staged
 </p>
 
 
 ```
 $ git log
-commit 61b8cd8e00a5bdf52cdfee66029c8fbde5c84f3b
-Author: Jamie Oaks <jro0014@auburn.edu>
-Date:   Thu Jun 8 09:06:35 2017 -0500
+commit 776bd063b165bb2a330f518ab036e4321b70e971 (HEAD -> main)
+Author: Jamie R. Oaks <joaks1@gmail.com>
+Date:   Wed Jan 21 10:28:25 2026 -0600
 
     Adding dummy.txt
     
@@ -251,13 +252,12 @@ $ echo "This is yet another line" >> dummy.txt
 
 ```
 $ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   dummy.txt
-#
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   dummy.txt
+
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
@@ -265,7 +265,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ```
 $ git diff
 diff --git a/dummy.txt b/dummy.txt
-index 5987551..67e03ef 100644
+index 9eefdbb..435f5e0 100644
 --- a/dummy.txt
 +++ b/dummy.txt
 @@ -1,3 +1,4 @@
@@ -295,12 +295,11 @@ The git database tracks <b>content</b>, not <b>files</b> per se
 
 ```
 $ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   dummy.txt
-#
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   dummy.txt
+
 ```
 
 
@@ -311,7 +310,7 @@ $ git diff
 ```
 $ git diff --staged
 diff --git a/dummy.txt b/dummy.txt
-index 5987551..67e03ef 100644
+index 9eefdbb..435f5e0 100644
 --- a/dummy.txt
 +++ b/dummy.txt
 @@ -1,3 +1,4 @@
@@ -329,7 +328,7 @@ Let's commit our staged content to the database
 ```
 $ git commit
 [WRITE YOUR COMMIT MESSAGE AND SAVE AND EXIT]
-[master bfd1e58] Updating dummy.txt
+[main 8a5d316] Adding another line to dummy.txt
  1 file changed, 1 insertion(+)
 ```
 
@@ -369,10 +368,10 @@ $ git log
 
 ```
 $ git branch
-* master
+* main
 ```
 <p class="fragment fade-up">
-We have a single branch called master 
+We have a single branch called main
 </p>
 
 
@@ -388,7 +387,7 @@ $ git branch concise
 $ git branch
   concise
   cosmetic
-* master
+* main
   programs
 ```
 
@@ -402,7 +401,7 @@ $ git checkout cosmetic
 $ git branch
   concise
 * cosmetic
-  master
+  main
   programs
 ```
 
@@ -544,7 +543,7 @@ $ git commit -m "Removing unnecessary verbiage"
 ## Merging our changes
 
 ```
-$ git checkout master
+$ git checkout main
 $ git merge cosmetic
 ```
 
@@ -603,7 +602,7 @@ What happened?
 Back to the future:
 
 ```
-$ git checkout master
+$ git checkout main
 ```
 
 
@@ -644,14 +643,15 @@ $ git status
 ```
 
 
-Let's *push* our snapshot of the master branch to the remote repo called origin
+Let's *push* our snapshot of the main branch to the remote repo called origin
 ```
-$ git push origin master
-Counting objects: 3, done.
-Writing objects: 100% (3/3), 241 bytes | 0 bytes/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To /home/aubjro/git-intro/local-demo/../remote-demo/
- * [new branch]      master -> master
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 243 bytes | 243.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To /home/jamie/git-intro/bonnie/../remote-repo
+ * [new branch]      main -> main
 ```
 
 ```
@@ -661,13 +661,13 @@ $ git push <REMOTE-ALIAS> <BRANCH-NAME>
 
 ```
 $ git branch -a
-* master
-  remotes/origin/master
+* main
+  remotes/origin/main
 ```
 
 
 ```
-$ git pull origin master
+$ git pull origin main
 ```
 
 ```
@@ -676,20 +676,20 @@ $ git pull <REMOTE-ALIAS> <BRANCH-NAME>
 
 <p class="fragment fade-up">
 What this does is <b>fetch</b> any new commits to the 'remote' branch
-'origin/master' and then <b>merge</b> those new commits into the 'local' branch
-'master'
+'origin/main' and then <b>merge</b> those new commits into the 'local' branch
+'main'
 </p>
 
 
 The same as
 ```
-$ git fetch origin master
-$ git merge origin/master
+$ git fetch origin main
+$ git merge origin/main
 ```
 
 This is longer, but sometimes it's nice to
 ```
-$ git diff origin/master
+$ git diff origin/main
 ```
 before merging!
 
@@ -713,7 +713,7 @@ $ cat dummy.txt
 $ echo "I'm no dummy" >> dummy.txt
 $ git add dummy.txt
 $ git commit -m "Adding line to dummy.txt"
-$ git push origin master
+$ git push origin main
 ```
 
 
@@ -721,7 +721,7 @@ Now, let's go back to being Bonnie
 ```
 $ cd ../../bonnie/remote-repo
 $ cat dummy.txt
-$ git pull origin master
+$ git pull origin main
 $ cat dummy.txt
 ```
 
@@ -741,7 +741,7 @@ Well, hello again dummy
 ```
 $ git add dummy.txt
 $ git commit -m "Adding comma to dummy.txt"
-$ git push origin master
+$ git push origin main
 ```
 
 
@@ -765,13 +765,13 @@ Clyde tries to push his changes
 ```
 $ git add dummy.txt
 $ git commit -m "Adding comma to dummy.txt"
-$ git push origin master
+$ git push origin main
 ```
 
 But,
 ```
 To /home/jamie/git-intro/clyde/../remote-repo/
- ! [rejected]        master -> master (fetch first)
+ ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to '/home/jamie/git-intro/clyde/../remote-repo/'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
@@ -785,15 +785,16 @@ Clyde needs to `pull` down Bonnie's changes first!
 
 Let's `pull` down Bonnie's changes
 ```
-git pull origin master
+git pull origin main
 ```
 ```
-remote: Counting objects: 3, done.
-remote: Total 3 (delta 0), reused 0 (delta 0)
-Unpacking objects: 100% (3/3), done.
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 268 bytes | 268.00 KiB/s, done.
 From /home/jamie/git-intro/clyde/../remote-repo
- * branch            master     -> FETCH_HEAD
-   afe295d..ad99087  master     -> origin/master
+ * branch            main       -> FETCH_HEAD
+   3607c77..1dce26c  main       -> origin/main
 Auto-merging dummy.txt
 CONFLICT (content): Merge conflict in dummy.txt
 Automatic merge failed; fix conflicts and then commit the result.
@@ -813,7 +814,7 @@ Open `dummy.txt` and you'll see
 Well hello again, dummy
 =======
 Well, hello again dummy
->>>>>>> ad99087c06afffc6ab161a749e2b3ca16c092348
+>>>>>>> 1dce26cdd2bc94c447c8f2dad98389f62b3315a4
 I'm no dummy
 ```
 `git` has flagged the conflict with the
@@ -839,7 +840,7 @@ $ git status
 $ git add dummy.txt
 $ git status
 $ git commit -m "Resolving comma conflict"
-$ git push origin master
+$ git push origin main
 ```
 
 
@@ -847,7 +848,7 @@ Now, let's go back to being Bonnie
 ```
 $ cd ../../bonnie/remote-repo
 $ cat dummy.txt
-$ git pull origin master
+$ git pull origin main
 $ cat dummy.txt
 ```
 
