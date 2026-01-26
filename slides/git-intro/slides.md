@@ -871,11 +871,34 @@ Push often
 Always pull (or fetch and merge) before pushing
 
 
+## Basic Workflow
+
+-   Pull often (e.g., `git pull origin main`)
+-   Edit files
+-   Review your changes
+    -   `git status`
+    -   `git diff`
+-   Stage your changes (`git add ...`)
+-   Review staged changes
+    -   `git status`
+    -   `git diff --staged`
+-   Commit your changes (`git commit`) with an informative message
+-   Push your changes (e.g., `git push origin main`)
+
+
 
 # Exercise
 
-
 <https://github.com/joaks1/git-intro-exercise>
+
+
+## Tips
+
+-   Objective is learning git, not so much Bash scripting
+-   Avoid crowding around one laptop
+    -   Contribute ideas to the script via git
+-   Everyone on your team should contribute to the script
+    -   Comments in the script count!
 
 
 
