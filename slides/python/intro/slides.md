@@ -51,7 +51,7 @@ print("Hello World!")
 --- 
 
 Before we do anything else, we want to configure our text editor to insert 4
-spaces when why press the "tab" key
+spaces when we press the "tab" key
 
 ---
 
@@ -69,6 +69,183 @@ set tabstop=4 shiftwidth=4 expandtab
 
 For other editors, this option should be relatively easy to find (Google it if
 you can't find it)
+
+
+***
+
+# Let's play!
+
+---
+
+```bash
+$ python3
+```
+<ul>
+	<li class="fragment fade-up">
+        You are now "inside" the Python interpreter
+    </li>
+	<li class="fragment fade-up">
+        You normally interact with the interpreter via scripts,
+        but it can be useful to play around in here
+    </li>
+</ul>
+
+
+***
+
+# Let me out!
+
+---
+
+```python
+>>> quit()
+```
+
+***
+
+# Our first Python script
+
+<div style="text-align: center;">
+    (and comparison to Bash)
+</div>
+
+---
+
+Remember when we put
+
+```bash
+echo "Hello, World!"
+
+for x in 1 2 3 4; do echo $x; done
+```
+
+in a file called `my_bash_script.sh`, and ran it on the command line with
+
+```
+$ bash my_bash_script.sh
+```
+
+Let's do the equivalent with Python
+
+---
+
+Open your python interpreter
+
+```bash
+$ python3
+```
+
+and try
+
+```python
+>>> print("Hello, World!")
+>>> for x in [1, 2, 3, 4]:
+...     print(x)
+```
+
+Notice there's no `do` / `done` syntax; how does Python know when the `for` loop starts / ends?
+
+---
+
+Let's put this in a script
+
+Create a file named `my_script.sh` and open it with your preferred text editor, then type
+
+```python
+print("Hello, World!")
+
+for x in [1, 2, 3, 4]:
+    print(x)
+```
+
+Double check that space before `print` is 4 spaces!
+
+---
+
+Run our script `my_script.py` with python on the command line:
+
+```bash
+$ python3 my_script.py
+```
+
+---
+
+Now, let's make our script executable
+
+First, open `my_script.py` with your text editor and add a "shebang" / "hashbang" line:
+
+```python
+#!/usr/bin/env python3
+
+print("Hello, World!")
+
+for x in [1, 2, 3, 4]:
+    print(x)
+```
+
+What is `/usr/bin/env`?!
+
+It's similar to `which`, but executes the file it finds in PATH
+
+---
+
+Try `env` on the command line:
+
+```bash
+$ which env 
+$ which python3
+$ env python3
+```
+
+---
+
+Try running `my_script.py` now that it has a shebang line
+
+```bash
+$ ./my_script.py
+```
+
+It doesn't work!
+
+We need to update the file's permission settings
+
+---
+
+Use `chmod` to update the file's permission settings and make it executable
+
+```bash
+$ chmod +x my_script.py
+```
+
+Now, it should run:
+
+```bash
+$ ./my_script.py
+```
+
+What is happening when we do this??
+
+---
+
+What actually happens in the background is:
+
+```bash
+$ /usr/bin/env python3 my_script.py
+```
+
+The `/usr/bin/env python3` part is taken from the shebang line
+
+---
+
+The shebang line + executable file setting is a convenience
+
+We can always be explicit:
+
+```bash
+$ python3 my_script.py
+```
+
+The shebang line is ignored when we do this
 
 
 ***
@@ -213,36 +390,6 @@ Objects whose value can change are <b>mutable</b>
 
 ***
 
-# Let's play!
-
----
-
-```bash
-$ python3
-```
-<ul>
-	<li class="fragment fade-up">
-        You are now "inside" the Python interpreter
-    </li>
-	<li class="fragment fade-up">
-        You normally interact with the interpreter via scripts,
-        but it can be useful to play around in here
-    </li>
-</ul>
-
-
-***
-
-# Let me out!
-
----
-
-```python
->>> quit()
-```
-
-***
-
 
 # Integers & Floats
 
@@ -251,10 +398,35 @@ $ python3
 ```python
 >>> 2+3
 >>> 2 + 3
+```
+
+Think about what Python is doing here
+
+1.  Creating an object of type int and value 2
+2.  Creating an object of type int and value 3
+3.  Performing the `+` operation on both objects
+4.  Creating a 3rd object of type int and value 5
+
+---
+
+```python
 >>> 2 + 3.0
+```
+
+What is Python doing now?
+
+---
+
+```python
 >>> 3.0 * 10 + 7
 >>> 3.0 * (10 + 7)
 ```
+
+Python uses expected order of operations
+
+Can override them with parentheses
+
+(think about what Python is doing behind the scenes)
 
 
 ***
@@ -267,6 +439,13 @@ $ python3
 >>> "Hello, world!"
 >>> "Hello, 'world'!"
 >>> 'Hello, "world"!'
+```
+
+Single and double quotes are interchangeable (unlike Bash!)
+
+---
+
+```python
 >>> """Hello
 ... cruel
 ... "world"
@@ -276,6 +455,8 @@ $ python3
 ... 'world'
 ... '''
 ```
+
+Triple quotes allow strings with multiple lines
 
 
 ***
@@ -290,6 +471,18 @@ $ python3
 >>> type("hello")
 >>> type(True)
 ```
+
+`type` is a function that "asks" Python the type of an object
+
+---
+
+```python
+>>> type(2)
+>>> a = 2
+>>> type(a)
+```
+
+We can also give a variable to `type`
 
 
 ***
@@ -308,13 +501,15 @@ $ python3
 >>> float("2") + 3
 ```
 
+Think about what Python is doing for each line
+
 ---
 
 ```python
 >>> 2 / 3
->>> 10 // 3  # floor division
->>> 10 % 3   # modulo
->>> 2 ** 3  # base ** exponent
+>>> 10 // 3  # floor division (get quotient)
+>>> 10 % 3   # modulo (get remainder)
+>>> 2 ** 3   # base ** exponent
 ```
 
 
