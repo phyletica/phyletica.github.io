@@ -51,6 +51,10 @@ skills that will allow them to approach biological questions in new ways.
 -   Exercise:
     -   Exercise 1 of [Python translation project](https://github.com/joaks1/python-translation-project)
 
+### Topic 4.5: Rendering markdown-formatted text on GitHub
+
+-   [Demo of rendering markdown on GitHub]({{ site.baseurl }}/teaching/s4b/markdown)
+
 ### Topic 5: Scripting best practices
 
 -   [Exercise](https://github.com/joaks1/python-script-best-practice)
@@ -88,6 +92,9 @@ skills that will allow them to approach biological questions in new ways.
 -   No exercise
 
 ### Topic 11: Classes in Python
+
+
+## Resources
 
 
 ## Acknowledgments
