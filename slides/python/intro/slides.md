@@ -458,6 +458,18 @@ Single and double quotes are interchangeable (unlike Bash!)
 
 Triple quotes allow strings with multiple lines
 
+---
+
+f-strings are a useful feature
+
+```python
+>>> result = 6.7
+>>> s = f"Your result is {result}!"
+>>> print(s)
+```
+
+It allows you to easily incorporate variables into a string
+
 
 ***
 
