@@ -515,6 +515,11 @@ We can also give a variable to `type`
 
 Think about what Python is doing for each line
 
+<p class="fragment fade-up">
+<code>str()</code>, <code>int()</code>, & <code>float()</code> are examples of
+useful functions for converting an object to a different type
+</p>
+
 ---
 
 ```python
@@ -537,6 +542,18 @@ A useful example is <code>print</code>
 >>> print("any", "number of", "arguments", 1, 2, 3.0, sep="--")
 >>> print("any", "number of", "arguments", 1, 2, 3.0, sep = "--", end = "\n\n\n")
 ```
+
+<p class="fragment fade-up">
+Arguments without <code>=</code> are <b>positional arguments</b> (order matters)
+</p>
+
+<p class="fragment fade-up">
+Arguments with <code>=</code> are <b>keyword arguments</b> (order doesn't matter**)
+</p>
+
+<p class="fragment fade-up">
+**Keyword args can't come before positional args
+</p>
 
 
 ***
@@ -568,6 +585,14 @@ Examples of string methods
 >>> a.count("h")
 ```
 
+<p class="fragment fade-up">
+You can use <code>help(type(a))</code> to see all methods available for a type/class
+</p>
+
+<p class="fragment fade-up">
+Note, only need <code>type</code> inside <code>help</code> for a string
+</p>
+
 ---
 
 More examples using a list
@@ -575,6 +600,7 @@ More examples using a list
 >>> a_list = [4, 9, 1]
 >>> a_list
 >>> type(a_list)
+>>> help(a_list)
 ```
 ```python
 >>> a_list.sort()
@@ -582,8 +608,23 @@ More examples using a list
 >>> a_list.reverse()
 >>> a_list
 ```
+
 <p class="fragment fade-up">
-This is an example of object-oriented programming
+Why does the string method <code>upper</code> return a new string,
+but the list method <code>sort</code> changes the list directly?
+</p>
+
+---
+
+```python
+>>> a = "blah"
+>>> a.count("h")
+>>> a_list = [4, 9, 1]
+>>> a_list.sort()
+```
+
+<p class="fragment fade-up">
+These are examples of object-oriented programming
 </p>
 <p class="fragment fade-up">
 Can you think of some advantages of this?
@@ -597,12 +638,11 @@ Can you think of some advantages of this?
 ---
 
 ```python
->>> radius = 2
->>> radius = 1.5 * 4
+>>> radius = 4
 >>> circum = 2 * radius * 3.14
 >>> print(radius)
 >>> print(circum)
->>> radius = 4
+>>> radius = 8
 >>> print(radius)
 >>> print(circum)
 ```
@@ -647,7 +687,44 @@ can access with a variable name
 
 ***
 
+# Using modules 
+
+---
+
+Moments ago, we did:
+
+```python
+>>> radius = 4
+>>> circum = 2 * radius * 3.14
+```
+
+We can do better!
+
+```python
+>>> import math
+>>> radius = 4
+>>> circum = 2 * radius * math.pi
+```
+
+`math` is a Python module
+
+We can import it and use it's functions, values, types, etc.
+
+
+***
+
 # Collections
+
+---
+
+## Overview:
+
+-   Sequences
+    -   Strings
+    -   Lists
+    -   Tuples
+-   Dictionaries
+-   Sets
 
 ---
 
@@ -870,19 +947,17 @@ The syntax is '{ key1 : value1, key2 : value2 }'
 
 ***
 
-# Scripts
+# Flow control
 
 ---
 
-An important difference from BASH is the best practice for the shebang line
-```python
-#! /usr/bin/env python3
-```
+## Overview:
 
-
-***
-
-# Flow control
+-   Conditionals
+    -   `if` statement
+-   Loops
+    -   `while` loop
+    -   `for` loop
 
 ---
 
