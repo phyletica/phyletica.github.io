@@ -586,11 +586,11 @@ Examples of string methods
 ```
 
 <p class="fragment fade-up">
-You can use <code>help(type(a))</code> to see all methods available for a type/class
+You can use <code>dir(a)</code> and <code>help(type(a))</code> to see methods available for a type/class
 </p>
 
 <p class="fragment fade-up">
-Note, only need <code>type</code> inside <code>help</code> for a string
+Note, you only need <code>type</code> inside <code>help</code> for a string
 </p>
 
 ---
