@@ -149,7 +149,7 @@ Notice there's no `do` / `done` syntax; how does Python know when the `for` loop
 
 Let's put this in a script
 
-Create a file named `my_script.sh` and open it with your preferred text editor, then type
+Create a file named `my_script.py` and open it with your preferred text editor, then type
 
 ```python
 print("Hello, World!")
