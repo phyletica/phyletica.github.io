@@ -1065,12 +1065,12 @@ Works for sequences and other iterables
 >>> for element in x:
 ...     print(element)
 ... 
->>> for el in range(5):
-...     print(x)
+>>> for element in range(5):
+...     print(element)
 ... 
 >>> total = 0
->>> for el in range(5):
-...     total += el
+>>> for element in range(5):
+...     total += element
 ... 
 print(total)
 ```
@@ -1155,6 +1155,114 @@ We can provide default values for parameters
 
 
 ***
+
+# Script, Modules, and Docstrings, oh my
+
+---
+
+Let's put our `calc_square_prism_volume` function in a script called
+`volume.py`
+
+<pre><code data-line-numbers>#!/usr/bin/env python3
+
+import sys
+
+def calc_square_prism_volume(square_length, height = 2.0):
+    volume = (square_length ** 2) * height
+    return volume
+
+length = int(sys.argv[1])
+height = int(sys.argv[2])
+volume = calc_square_prism_volume(length, height)
+print(volume)
+</code></pre>
+
+Run it on the command line:
+
+```bash
+$ python3 volume.py 2 5
+```
+
+---
+
+We can easily make the script a module!
+
+<pre><code data-line-numbers="9-13">#!/usr/bin/env python3
+
+import sys
+
+def calc_square_prism_volume(square_length, height = 2.0):
+    volume = (square_length ** 2) * height
+    return volume
+
+if __name__ == "__main__":
+    length = int(sys.argv[1])
+    height = int(sys.argv[2])
+    volume = calc_square_prism_volume(length, height)
+    print(volume)
+</code></pre>
+
+---
+
+Because of the `if __name__ == "__main__"` statement, we can now import
+our code as a module
+
+```bash
+$ python3
+```
+
+```python
+>>> import volume
+>>> type(volume)
+>>> help(volume)
+```
+
+Our help documentation isn't very good; let's fix that!
+
+---
+
+Add two strings in key places:
+
+<pre><code data-line-numbers="3,8-11">#!/usr/bin/env python3
+
+"Functions for calculating the volume of objects."
+
+import sys
+
+def calc_square_prism_volume(square_length, height = 2.0):
+    """
+    Calculate the volume of a square prism with length
+    `square_length` and height `height`.
+    """
+    volume = (square_length ** 2) * height
+    return volume
+
+if __name__ == "__main__":
+    length = int(sys.argv[1])
+    height = int(sys.argv[2])
+    volume = calc_square_prism_volume(length, height)
+    print(volume)
+</code></pre>
+
+---
+
+Now try
+
+```bash
+$ python3
+```
+
+```python
+>>> import volume
+>>> help(volume)
+```
+
+The strings we added show up as documentation!
+
+These are called **docstrings**
+
+***
+
 
 # Acknowledgments
 
