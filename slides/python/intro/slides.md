@@ -1156,7 +1156,7 @@ We can provide default values for parameters
 
 ***
 
-# Script, Modules, and Docstrings, oh my
+# Scripts, Modules, and Docstrings, oh my
 
 ---
 
