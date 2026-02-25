@@ -94,7 +94,18 @@ skills that will allow them to approach biological questions in new ways.
 ### Topic 11: Classes in Python
 
 
+## Tips & Tricks
+
+-   [Using `importlib.reload` to tinker with code you're editing in a file]({{ site.baseurl }}/teaching/s4b/reload)
+
+
 ## Resources
+
+### Markdown resources
+
+-   [Jamie's markdown notes](https://github.com/joaks1/markdown-notes)
+-   [Basics of GitHub-flavored markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+-   [Full spec for GitHub-flavored markdown](https://github.github.com/gfm/)
 
 
 ## Acknowledgments
