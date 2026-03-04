@@ -63,7 +63,6 @@ skills that will allow them to approach biological questions in new ways.
 ### Topic 6: Regular expressions
 
 -   Resources:
-    -   See Canvas for Randy's notes
     -   [Jamie's regex notes](https://github.com/joaks1/python-regex-notes)
     -   [Python docs](https://docs.python.org/3/howto/regex.html)
 
