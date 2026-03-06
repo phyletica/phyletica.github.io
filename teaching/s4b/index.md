@@ -93,6 +93,16 @@ skills that will allow them to approach biological questions in new ways.
 ### Topic 11: Classes in Python
 
 
+## Info about the class project
+
+[See here for guidelines for the class project]({{ site.baseurl }}/teaching/s4b/project)
+
+
+## Info about the code-review assignment
+
+[See here for guidelines for the code-review assignment]({{ site.baseurl }}/teaching/s4b/project)
+
+
 ## Tips & Tricks
 
 -   [Using `importlib.reload` to tinker with code you're editing in a file]({{ site.baseurl }}/teaching/s4b/reload)
