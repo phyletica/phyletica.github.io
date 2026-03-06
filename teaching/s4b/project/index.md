@@ -9,6 +9,8 @@ image:
   creditlink: http://phyletica.github.io
 ---
 
+{% include _toc.html %}
+
 
 # Overview
 
@@ -41,8 +43,43 @@ follows:
 | Component | Percent of grade |
 | --------- | ---------------- |
 | Code (including internal documentation) | 40% |
-| External documentation | 30% |
+| External documentation (e.g., README, tutorial) | 30% |
 | Presentation | 30% |
+
+
+## Criteria for grading the code
+
+-   Is the code easy to obtain and run?
+-   Does the code follow the best practices we learn in class?
+-   Has the team member made significant contributions to the code?
+
+## Criteria for grading the external documentation
+
+-   Does the documentation summarize the goals of the project, how they
+    developed code to achieve those goals, and how the code works?
+-   Does the documentation explain how to obtain and use the code?
+-   Is there a tutorial that provides enough information for others to
+    reproduce the project's analyses?
+
+## Presentation
+
+The length and format of the presentation will vary among semesters,
+based on the size of the class and the number of groups.
+However, the evaluation criteria will remain the same:
+
+-   Does the team introduce the goals of their project, and how they used
+    scripting to meet those goals?
+-   Do they walk through how to obtain, install, and run the code, and provide
+    enough information for others to do this successfully?
+-   Do they walk through an example of how to use their code, and provide
+    enough information for others to do this successfully?
+
+### Is a full reproduction of the project necessary during the presentation?
+
+No. If your project analyses take too long during a short tutorial,
+your tutorial does not need to involve a full reproduction of the analyses.
+However, try to use a "toy example" (e.g., using a small data set), so you can
+still demonstrate how others could reproduce your analyses.
 
 
 # Scripting languages
@@ -53,12 +90,16 @@ class to whatever language you use for the project.
 All the best practices we learn in *Scripting for Biologists* using Python are
 transferable to other scripting languages.
 
-Some examples of those best practices include keeping your code modular so that
-it is easier to understand and more reusable, making your code expressive
-(e.g., using informative variable names), and writing good documentation within
-your code.
+Some examples of best practices we will learn and are transferable to any
+scripting language include:
+
+-   Making your code modular so that it is easier to understand and reuse 
+-   Making your code expressive (e.g., using descriptive names for variables,
+    functions, and classes)
+-   Writing good documentation within your code (e.g., docstrings in Python)
+
 Most languages don't have docstrings like Python, but they do have standard
-ways of documenting your modules and functions.
+ways of documenting modules and functions.
 For example,
 [this section of a Bash style guide about comments](https://google.github.io/styleguide/shellguide.html#comments)
 shows how to follow best practices for documenting Bash code (i.e., the
@@ -75,7 +116,8 @@ from biology-themed games to large genomic pipelines.
 
 ## Pipelines are popular
 
-Pipelines for genomic data are probably the most common student project.
+Pipelines for processing and analyzing genomic data are probably the most
+common student project.
 Here are some things to keep in mind if you want to do a pipeline project:
 
 -   A set of simple shell scripts that run the steps of a pipeline is not
@@ -83,7 +125,7 @@ Here are some things to keep in mind if you want to do a pipeline project:
     (e.g., a set of simple shell scripts for submitting steps of a pipeline to
     the queueing system of an HPC cluster is not enough for a scripting
     project).
-    A collection of short shell scripts will now allow you to apply the skills
+    A collection of short shell scripts will not allow you to apply the skills
     and best practices you are learning in class.
 
 -   What can you do to make your pipeline an appropriate class project?
@@ -97,15 +139,15 @@ Here are some things to keep in mind if you want to do a pipeline project:
 
         -   E.g., one common weakness of large genomic pipelines is that we
             often "fly blind" by running a bunch of steps on our data without
-            knowing if our data along the way remains biologically meaningful.
+            knowing if, along the way, our data remain biologically meaningful.
             Are there some critical check points in the pipeline, where a
             script that summarizes the state of the data could be informative?
 
     -   It's fine if your project ends up being one or a few "helper" scripts
         that augment a larger pipeline.
 
--   Try to make your scripts flexible/general, so you and others can reuse them
-    in the future for other, similar pipelines.
+-   Try to make your scripts flexible and general, so you and others can reuse
+    them in the future for other, similar pipelines.
 
 
 # Logistics
@@ -134,11 +176,12 @@ proposal via Canvas.
 
 ## Use the same repo to develop your project
 
-To develop your project, your team will use the same repo you used to submit
+To develop your project, your team will use the same repo in which you wrote
 your proposal.
-There is no need to keep your proposal, but, you might find it useful as a
-starting point for the external documentation and tutorial for your project.
-Your original proposal will be preserved in the git history of your repo.
+There is no need to keep your proposal in your `README.md` file;
+your original proposal will be preserved in the git history of your repo.
+However, you might find that your proposal is a useful starting point for the
+external documentation and tutorial for your project.
 
 
 ## Use Git early and often!

@@ -11,6 +11,9 @@ image:
 
 {% include _toc.html %}
 
+
+# The goal
+
 As a scientist, you will be asked to peer-review research manuscripts and
 associated code to assess the quality and reproducibility of the research and
 the authors' interpretations of the results.
@@ -22,8 +25,8 @@ their data.
 
 # Getting in the mindset for your code review
 
-Imagine  the editor of a journal has asked you to review the article, but they
-want you to focus your review on the associated code.
+Imagine an editor of a journal has asked you to review the article, but she
+wants you to focus your review on the associated code.
 As a reviewer, your goal is to provide a constructive critique of the authors'
 code to help them improve it.
 
@@ -75,8 +78,8 @@ That said, this is not a hard requirement.
 
 # Use your inexperience to your advantage!
 
-Many of you are new to coding and might not feel like you have the experience
-to provide meaningful feedback on code written by more experienced programmers.
+Many of you are new to coding and might feel you lack the experience to provide
+meaningful feedback on code written by more experienced programmers.
 That is not true!
 Most of the people that use the authors' code are just like you!
 Anything you find difficult or confusing about obtaining, installing, using, or
@@ -90,8 +93,8 @@ accessible to scientists like you?
 No.
 You do not need to read or understand every line of code for a code review.
 Instead, you can sample different parts of the code to get a sense of whether
-the authors are using the best practices you are learning in class, or can
-improve their code.
+the authors are using the best practices you are learning in class, and, if
+not, what can they do to improve their code.
 
 
 # Structuring your review
@@ -110,10 +113,10 @@ improve their code.
     However, given the paper you're reviewing is already published, you don't
     need to do this.
 
-2.  Next, highlight the most important, high-level feedback you have to help
-    improve the authors code.
+2.  Next, highlight your most important, high-level suggestions to help improve
+    the authors' code.
     This section should focus on broader feedback in reference to the overall
-    code base.
+    code base and documentation.
     You can number or bullet this section, if you wish.
 
 3.  Next, you can focus on more specific, lower-level feedback.
@@ -127,6 +130,7 @@ Note, all of the items below might not be relevant for the specific code base
 you are reviewing.
 
 -   How easy was it for you to obtain, install, and run the code?
+
     -   If you ran into road blocks, what were they, and what could the authors
         do differently to make their code easier to use?
 
@@ -160,7 +164,7 @@ and code you would like to review (ideally with links to the paper and code
 base).
 Once you have this committed to your repo.
 Push your repo to GitHub (you can make your GitHub repo private or public),
-add me (joaks1) as a collaborator to th repo on GitHub,
+add me (joaks1) as a collaborator to the repo on GitHub,
 and submit the URL of your GitHub repo via Canvas.
 
 
@@ -170,6 +174,9 @@ To write your review, use the same repo and `README.md` you used to submit your
 proposal.
 There is no need to keep your proposal, you can overwrite it.
 It will be preserved in the git history of your repo.
+
+
+## Use Git early and often!
 
 Git is your friend; use it early and often.
 Commit your progress on your review often and push it to your remote copy of
