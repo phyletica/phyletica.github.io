@@ -130,21 +130,15 @@ Note, all of the items below might not be relevant for the specific code base
 you are reviewing.
 
 -   How easy was it for you to obtain, install, and run the code?
-
     -   If you ran into road blocks, what were they, and what could the authors
         do differently to make their code easier to use?
-
 -   Do the authors provide good documentation, both inside and outside (e.g.,
     README files) of their code?
-
 -   Do the authors provide information about how to reproduce the results in
     their paper?
-
 -   Do the authors provide or specify a way to create a computational
     environment with all the requirements in place for their code to work?
-
 -   Do the authors provide examples/tutorials for how to use their software?
-
 -   Is the code modular. I.e., is it broken up into into functions and/or class
     methods? Long sections of code is often a sign of poor coding practices.
 

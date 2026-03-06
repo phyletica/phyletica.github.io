@@ -41,7 +41,7 @@ More specifically, the break down of your grade for the project will be as
 follows:
 
 | Component | Percent of grade |
-| --------- | ---------------- |
+|:----------|:-----------------|
 | Code (including internal documentation) | 40% |
 | External documentation (e.g., README, tutorial) | 30% |
 | Presentation | 30% |
@@ -127,25 +127,19 @@ Here are some things to keep in mind if you want to do a pipeline project:
     project).
     A collection of short shell scripts will not allow you to apply the skills
     and best practices you are learning in class.
-
 -   What can you do to make your pipeline an appropriate class project?
-    
     -   Look for opportunities where scripts can make your pipeline more
         automated, reproducible, and generalizable (more reusable).
-
     -   Look for opportunities where scripts can be useful for preprocessing
         input files, summarizing the content of intermediate files, or
         postprocessing output files.
-
         -   E.g., one common weakness of large genomic pipelines is that we
             often "fly blind" by running a bunch of steps on our data without
             knowing if, along the way, our data remain biologically meaningful.
             Are there some critical check points in the pipeline, where a
             script that summarizes the state of the data could be informative?
-
     -   It's fine if your project ends up being one or a few "helper" scripts
         that augment a larger pipeline.
-
 -   Try to make your scripts flexible and general, so you and others can reuse
     them in the future for other, similar pipelines.
 
