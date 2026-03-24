@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Creating SSH keys for remote authentication
-excerpt: "."
+title: Guidance on text editors
+excerpt: "Find a text editor you enjoy"
 author: phyletica
 image:
   feature: header-misty-mangroves.jpg
@@ -12,8 +12,7 @@ image:
 {% include _toc.html %}
 
 
-In important part of coding is setting up a text editor in which you enjoy to
-work.
+An important part of coding is setting up a text editor you enjoy working in.
 There are many options of text editors, and each of them have many
 configuration options.
 While this might seem overwhelming, having many options ensures that you can

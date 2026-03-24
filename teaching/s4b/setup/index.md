@@ -384,7 +384,7 @@ and some extra bells and whistles.
 Text editors with a lot of bells and whistles are often called
 an integrative design environment (IDE).
 If you prefer a GUI text editor over `nano` and `vim`, I recommend Visual
-Studio Code:
+Studio Code (VS Code):
 
 -   [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -394,5 +394,16 @@ If you are using Git for Windows (Git BASH), you already have `nano` available
 in Git BASH.
 If you want to install a fancier text editor, you will do so within Windows.
 
-If you installed a Linux subsystem or virtual machine and want to install a
-text editor, you will want to do so *within* the Linux environment.
+If you are using Windows Subsystem for Linux (WSL), depending on the text
+editor, you might need to install it within Windows or within the Linux
+subsystem.
+For VS Code, you will want to install it within Windows.
+
+If you installed a Linux virtual machine and want to install a text editor, you
+will want to do so *within* the Linux virtual machine.
+
+## 5.2 More guidance about text editors
+
+Here is a
+[link to some additional guidance about text editors]({{ site.baseurl }}/teaching/s4b/editor).
+

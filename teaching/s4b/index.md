@@ -105,6 +105,7 @@ skills that will allow them to approach biological questions in new ways.
 
 ## Tips & Tricks
 
+-   [Some guidance on text editors]({{ site.baseurl }}/teaching/s4b/editor)
 -   [Using `importlib.reload` to tinker with code you're editing in a file]({{ site.baseurl }}/teaching/s4b/reload)
 
 
