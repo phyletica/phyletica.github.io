@@ -74,6 +74,11 @@ skills that will allow them to approach biological questions in new ways.
 -   Notes and exercise:
     -   [python-file-io](https://github.com/joaks1/python-file-io)
 
+### Topic 7.5: Using conda for reproducible research
+
+-   Notes:
+    -   [Reproducible research with conda]({{ site.baseurl }}/teaching/s4b/conda)
+
 ### Topic 8: Debugging
 
 -   Notes and exercise:
