@@ -152,6 +152,11 @@ Once conda finishes creating the new environment, we can activate it with the co
 
     conda activate gecko-project
 
+When you are done working on your project, you can deactivate the environment
+with this conda command:
+
+    conda deactivate
+
 ### How to run analyses in the environment from a shell script
 
 We might want to run analyses for our project using a shell (e.g., Bash)
