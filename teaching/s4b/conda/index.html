@@ -1,0 +1,604 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Reproducible research with conda &#8211; phyletica</title>
+<meta name="description" content="Using conda to make your work more reproducible">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Reproducible research with conda">
+
+<meta name="twitter:description" content="Using conda to make your work more reproducible">
+
+<meta name="twitter:site" content="@jamoaks">
+
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reproducible research with conda">
+
+<meta property="og:description" content="Using conda to make your work more reproducible">
+
+<meta property="og:url" content="http://phyletica.org/teaching/s4b/conda/">
+<meta property="og:site_name" content="phyletica">
+
+<meta property="og:image" content="http://phyletica.org/images/default-thumb.png">
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Reproducible research with conda">
+
+<meta itemprop="description" content="Using conda to make your work more reproducible">
+
+
+<meta itemprop="image" content="http://phyletica.org/images/default-thumb.png">
+
+
+
+<!-- Webmaster Tools verfication -->
+<meta name="google-site-verification" content="7RL6oMJptXKQ9M8JGuy2wFRfXlScLOKDmiSAQpTOpPQ">
+
+
+
+<link rel="canonical" href="http://phyletica.org/teaching/s4b/conda/">
+<link href="http://phyletica.org/feed.xml" type="application/atom+xml" rel="alternate" title="phyletica Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=Raleway|Lato|Roboto+Slab:300,400|Roboto:500|PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+
+<!-- Hack font -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/2.015/css/hack.min.css">
+
+</head>
+
+<body class="page">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="/">phyletica</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+                    <li><a href="/" >Home</a></li>
+				
+				    
+                    <li><a href="/people/" >People</a></li>
+				
+				    
+                    <li><a href="/research/" >Research</a></li>
+				
+				    
+                    <li><a href="/teaching/" >Teaching</a></li>
+				
+				    
+                    <li><a href="/software/" >Software</a></li>
+				
+				    
+                    <li><a href="/publications/" >Publications</a></li>
+				
+				    
+                    <li><a href="/posts/" >Posts</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "/images/header-misty-mangroves.jpg"
+    
+  alt="Reproducible research with conda feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="http://phyletica.github.io">Jamie Oaks</a></span>
+  
+  </div><!-- /.image-wrap -->
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/phyletica-avatar.png" class="bio-photo" alt="Phyletica bio photo">
+
+
+  <h3 itemprop="name">Phyletica</h3>
+  <p>Exploring biodiversification</p>
+  <a href="mailto:phyletica@auburn.edu" class="author-social" target="_blank"><i class="fa-solid fa-envelope fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Email</a>
+  <a href="http://github.com/phyletica" class="author-social" target="_blank"><i class="fa-brands fa-github fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Github</a>
+  
+  
+  
+  <a href="http://bsky.app/profile/jamieoaks.bsky.social" class="author-social" target="_blank"><i class="fa-brands fa-bluesky fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Bluesky</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa-brands fa-youtube fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa-solid fa-earth-americas fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Interweb</a>
+  <a href="http://www.auburn.edu" class="author-social" target="_blank"><i class="fa-solid fa-paw fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Auburn</a>
+  <a href="http://www.auburn.edu/biology" class="author-social" target="_blank"><i class="fa-solid fa-building-columns fa-lg fa-fw" aria-hidden="true"></i>&nbsp; AU Biology</a>
+  <a href="http://www.aumnh.org" class="author-social" target="_blank"><i class="fa-solid fa-frog fa-lg fa-fw" aria-hidden="true"></i>&nbsp; AU Museum</a>
+  
+  
+</div>
+
+  </div>
+  <article class="page">
+    <h1>Reproducible research with conda</h1>
+    <div class="article-wrap">
+      <section id="table-of-contents" class="toc">
+  <header>
+    <h3><i class="fa fa-book"></i> Contents</h3>
+  </header>
+<div id="drawer">
+<ul id="markdown-toc">
+  <li><a href="#the-spectrum-of-reproducible-practices" id="markdown-toc-the-spectrum-of-reproducible-practices">The spectrum of reproducible practices</a>    <ul>
+      <li><a href="#a-quick-aside" id="markdown-toc-a-quick-aside">A quick aside</a></li>
+    </ul>
+  </li>
+  <li><a href="#what-is-conda" id="markdown-toc-what-is-conda">What is conda?</a></li>
+  <li><a href="#why-conda" id="markdown-toc-why-conda">Why conda?</a></li>
+  <li><a href="#which-conda" id="markdown-toc-which-conda">Which conda?</a></li>
+  <li><a href="#how-to-use-conda-well-for-a-project" id="markdown-toc-how-to-use-conda-well-for-a-project">How to use conda well for a project?</a>    <ul>
+      <li><a href="#starting-a-new-project" id="markdown-toc-starting-a-new-project">Starting a new project</a>        <ul>
+          <li><a href="#using-conda-to-create-the-environment-for-the-new-project" id="markdown-toc-using-conda-to-create-the-environment-for-the-new-project">Using conda to create the environment for the new project</a></li>
+          <li><a href="#how-to-run-analyses-in-the-environment-from-a-shell-script" id="markdown-toc-how-to-run-analyses-in-the-environment-from-a-shell-script">How to run analyses in the environment from a shell script</a></li>
+        </ul>
+      </li>
+      <li><a href="#how-to-update-your-projects-conda-environment" id="markdown-toc-how-to-update-your-projects-conda-environment">How to update your project’s conda environment?</a></li>
+      <li><a href="#preserving-a-more-precise-version-of-your-projects-environment" id="markdown-toc-preserving-a-more-precise-version-of-your-projects-environment">Preserving a more precise version of your project’s environment</a></li>
+    </ul>
+  </li>
+  <li><a href="#additional-resources" id="markdown-toc-additional-resources">Additional resources</a></li>
+</ul>
+
+  </div>
+</section>
+<!-- /#table-of-contents -->
+
+<p>As scientists, we should strive to make our computational work as
+repeatable as possible.</p>
+
+<h1 id="the-spectrum-of-reproducible-practices">The spectrum of reproducible practices</h1>
+
+<p>There is a broad spectrum of practices for making our work more reproducible.
+At one extreme,
+we can simply provide of the list of tools and packages we installed to get our
+code and analyses to work.
+While this is better than nothing, we should strive to do better than this.
+At the other extreme,
+we can use a tool like
+<a href="https://www.docker.com/">Docker</a>,
+<a href="https://docs.sylabs.io/guides/3.5/user-guide/introduction.html">Singularity</a>,
+or
+<a href="https://podman.io/">Podman</a>
+to bundle a full, project-specific computing environment (code, system tools,
+libraries, settings) into a container,
+and use that container to perform all the analyses for our project.
+This is wonderful, but is likely overkill for many projects.
+Below, I describe how to use conda environments to get as close to the
+container end of this spectrum as possible, but without investing a lot effort
+or resources.</p>
+
+<h2 id="a-quick-aside">A quick aside</h2>
+
+<p>In terms of reproducibility,
+I am focusing <strong><em>only</em></strong> on how to manage the computing environment for a
+project.
+You should also version-control your computational work using a tool
+like
+<a href="https://git-scm.com/">Git</a>!
+I am ignoring that here, because the focus is on conda, but it’s super
+important.</p>
+
+<h1 id="what-is-conda">What is conda?</h1>
+
+<p>Conda is an open-source, cross-platform software package (and environment)
+management system.</p>
+
+<h1 id="why-conda">Why conda?</h1>
+
+<p>There are many software package managers available;
+for example,
+Python has
+<a href="https://pypi.org/project/pip/">pip</a>,
+<a href="https://python-poetry.org/">Poetry</a>,
+and
+<a href="https://docs.astral.sh/uv/">uv</a>,
+and R has
+<a href="https://rstudio.github.io/renv/articles/renv.html">renv</a>.
+So, why use conda?</p>
+
+<p>For me, the main advantage of conda is that it is language-agnostic.
+I use conda to manage Python, R, ruby, java, and C/C++ dependencies;
+even system tools like Git and C/C++ compilers!
+This allows you to get close to container-level reproducibility with less
+effort.</p>
+
+<h1 id="which-conda">Which conda?</h1>
+
+<p>Conda is distributed with a number of different package management systems.
+If you’re new to conda, I recommend installing
+<a href="https://conda-forge.org/download/">Miniforge</a>.
+I provide
+<a href="/teaching/s4b/setup/#4-conda-package-manager">instructions for installing Miniforge here</a>.</p>
+
+<h1 id="how-to-use-conda-well-for-a-project">How to use conda well for a project?</h1>
+
+<p>Below, I layout my general workflow for using conda throughout the lifespan of
+a research project.
+This is not the only way to use conda, and probably not the “best”,
+but after many years of trial and error, I think it’s a pretty good approach to
+make your projects more reproducible.</p>
+
+<h2 id="starting-a-new-project">Starting a new project</h2>
+
+<p>When starting a new project, the first thing I do (after creating the project
+git repository) is create a YAML-formatted file that specifies how to create
+a computing environment for the project using Conda.
+You can name this file whatever you want, but Conda’s default name for such
+an environment file is <code class="language-plaintext highlighter-rouge">environment.yml</code>.</p>
+
+<p>Here’s an example of what this <code class="language-plaintext highlighter-rouge">environment.yml</code> might look like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: gecko-project
+channels:
+  - conda-forge
+dependencies:
+  - git=2.53.0
+  - cxx-compiler=1.11.0
+  - cmake=4.2.3
+  - python&gt;=3.8
+  - r-base
+  - r-ggplot2
+  - quarto
+  - iqtree
+  - pyyaml
+  - scipy
+  - numpy
+  - matplotlib
+  - seaborn
+  - munkres&gt;=1.1.1
+  - scikit-learn
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">name:</code> specifies what we want to call the conda environment for this project.
+Under <code class="language-plaintext highlighter-rouge">dependencies:</code>, we list all of the packages we want to install in
+this project’s conda environment.
+The <code class="language-plaintext highlighter-rouge">channels:</code> section tells conda where we want to look for those packages.</p>
+
+<p><strong>Best practices when creating the initial environment.yml</strong>:</p>
+
+<ul>
+  <li>Try to include all the packages you will need for this project</li>
+  <li>Try not to include extra stuff you won’t need</li>
+  <li>Try to be specific about version numbers</li>
+  <li>Version control the <code class="language-plaintext highlighter-rouge">environment.yml</code> file (e.g., using git) as part of
+your project</li>
+</ul>
+
+<p><strong>BUT</strong>, 
+the project hasn’t started yet, so you might not know all the packages you’ll
+need and what version numbers.
+<strong>That is OK!</strong>
+Below, we’ll learn how to update our conda environment along the way and
+capture all the version numbers once our environment has “fully matured.”</p>
+
+<h3 id="using-conda-to-create-the-environment-for-the-new-project">Using conda to create the environment for the new project</h3>
+
+<p>Once you’ve created your <code class="language-plaintext highlighter-rouge">environment.yml</code> file, you can use conda to create
+the environment with the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda env create --file environment.yml
+</code></pre></div></div>
+
+<p>Once conda finishes creating the new environment, we can activate it with the command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda activate gecko-project
+</code></pre></div></div>
+
+<p>When you are done working on your project, you can deactivate the environment
+with this conda command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda deactivate
+</code></pre></div></div>
+
+<h3 id="how-to-run-analyses-in-the-environment-from-a-shell-script">How to run analyses in the environment from a shell script</h3>
+
+<p>We might want to run analyses for our project using a shell (e.g., Bash)
+script, so that we can submit the analysis as a job on an HPC computing
+cluster.
+When we do this, the <code class="language-plaintext highlighter-rouge">gecko-project</code> environment won’t be active when the shell
+script is being run.
+The best way around this problem is to use the <code class="language-plaintext highlighter-rouge">conda run</code> command in your
+shell script.</p>
+
+<p>For example,
+let’s say I want to run an analysis using the <code class="language-plaintext highlighter-rouge">iqtree</code> program that I installed
+in my <code class="language-plaintext highlighter-rouge">gecko-project</code> conda environment.
+If I was working directly on the command line, I would first activate the
+project’s conda environment
+using <code class="language-plaintext highlighter-rouge">conda activate gecko-project</code> and then run iqtree using a command like
+<code class="language-plaintext highlighter-rouge">iqtree -s gecko-dna-sequences.txt</code>.
+However, if I want to run iqtree from within a shell script, I would use the
+following command within the shell script:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda run -n gecko-project iqtree -s gecko-dna-sequences.txt
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">conda run -n gecko-project</code> part of this command will ensure that the rest
+of the command (<code class="language-plaintext highlighter-rouge">iqtree -s gecko-dna-sequences.txt</code>) gets executed within the
+<code class="language-plaintext highlighter-rouge">gecko-project</code> conda environment.</p>
+
+<h2 id="how-to-update-your-projects-conda-environment">How to update your project’s conda environment?</h2>
+
+<p>Midway through working on our project, we realize we need a tool that is not
+part of project’s conda environment.
+We can easily fix that.
+Using the <code class="language-plaintext highlighter-rouge">gecko-project</code> environment specified above as an example, let’s say
+we realize that we want to use pytorch in our project,
+and we no longer need quarto.
+First, we add pytorch to, and remove quarto from, our <code class="language-plaintext highlighter-rouge">environment.yml</code> (make
+sure you version-control these updates with git!):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name: gecko-project
+channels:
+  - conda-forge
+dependencies:
+  - git=2.53.0
+  - cxx-compiler=1.11.0
+  - cmake=4.2.3
+  - python&gt;=3.8
+  - r-base
+  - r-ggplot2
+  - iqtree
+  - pyyaml
+  - scipy
+  - numpy
+  - matplotlib
+  - seaborn
+  - munkres&gt;=1.1.1
+  - scikit-learn
+  - pytorch
+</code></pre></div></div>
+
+<p>Second, we use the following command to have conda update the <code class="language-plaintext highlighter-rouge">gecko-project</code>
+environment:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda env update --name gecko-project --file environment.yml --prune
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">--prune</code> option tells conda to remove any packages that are no longer
+required from the project’s environment.
+If you make a bunch of changes to your conda environment, it might be easier to
+simply rebuild the project’s conda environment from scratch:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda env create --name gecko-project --file environment.yml --force
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">--force</code> option tells conda to remove the existing <code class="language-plaintext highlighter-rouge">gecko-project</code>
+environment before creating it anew.</p>
+
+<h2 id="preserving-a-more-precise-version-of-your-projects-environment">Preserving a more precise version of your project’s environment</h2>
+
+<p>As your project and its conda environment start to mature, you can record a
+more precise version of your project’s conda environment
+using the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda env export --name gecko-project --no-builds | grep -v "^prefix:" &gt; precise-environment.yml
+</code></pre></div></div>
+
+<p>You can do this periodically throughout the lifespan of the project.
+You should version-control the <code class="language-plaintext highlighter-rouge">precise-environment.yml</code> (you can name it
+whatever you want) file with git.
+In the documentation for your project, you should explain the purpose
+of both YAML-formatted environment files (<code class="language-plaintext highlighter-rouge">environment.yml</code> and
+<code class="language-plaintext highlighter-rouge">precise-environment.yml</code> in our example above).
+You can describe how <code class="language-plaintext highlighter-rouge">environment.yml</code> was used to create the project’s
+conda environment,
+and <code class="language-plaintext highlighter-rouge">precise-environment.yml</code> is a detailed snapshot of the full environment.</p>
+
+<p>Someone trying to reproduce your work should create the project environment
+from the fully detailed <code class="language-plaintext highlighter-rouge">precise-environment.yml</code> file.</p>
+
+<h1 id="additional-resources">Additional resources</h1>
+
+<p>For writing out how I use conda,
+I found these two resources from
+<a href="https://carpentries-incubator.org/">The Carpentries Incubator</a>
+useful:</p>
+
+<ul>
+  <li><a href="https://rse.shef.ac.uk/conda-environments-for-effective-and-reproducible-research/04-sharing-environments/index.html">Sharing conda environments</a></li>
+  <li><a href="https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/02-working-with-environments/index.html">Working with conda environments</a></li>
+</ul>
+
+      
+        <hr />
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://bsky.app/intent/compose?text=http://phyletica.org/teaching/s4b/conda/" class="bluesky" title="Share on Bluesky"><i class="fa-brands fa-bluesky"></i><span> Bluesky</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://phyletica.org/teaching/s4b/conda/" class="facebook" title="Share on Facebook"><i class="fa-brands fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+    <a href="https://twitter.com/intent/tweet?text=http://phyletica.org/teaching/s4b/conda/" class="twitter-x" title="Share on Twitter"><i class="fa-brands fa-x-twitter"></i><span> Twitter</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+
+      
+    </div><!-- /.article-wrap -->
+    <div class="article-author-bottom">
+      
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="/images/phyletica-avatar.png" class="bio-photo" alt="Phyletica bio photo">
+
+
+  <h3 itemprop="name">Phyletica</h3>
+  <p>Exploring biodiversification</p>
+  <a href="mailto:phyletica@auburn.edu" class="author-social" target="_blank"><i class="fa-solid fa-envelope fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Email</a>
+  <a href="http://github.com/phyletica" class="author-social" target="_blank"><i class="fa-brands fa-github fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Github</a>
+  
+  
+  
+  <a href="http://bsky.app/profile/jamieoaks.bsky.social" class="author-social" target="_blank"><i class="fa-brands fa-bluesky fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Bluesky</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <a href="https://youtube.com/channel/UCPPWy11zYqq-9lE_CQ0qPrw" class="author-social" target="_blank"><i class="fa-brands fa-youtube fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Youtube</a>
+  
+  
+  
+  <a href="http://phyletica.github.io" class="author-social" target="_blank"><i class="fa-solid fa-earth-americas fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Interweb</a>
+  <a href="http://www.auburn.edu" class="author-social" target="_blank"><i class="fa-solid fa-paw fa-lg fa-fw" aria-hidden="true"></i>&nbsp; Auburn</a>
+  <a href="http://www.auburn.edu/biology" class="author-social" target="_blank"><i class="fa-solid fa-building-columns fa-lg fa-fw" aria-hidden="true"></i>&nbsp; AU Biology</a>
+  <a href="http://www.aumnh.org" class="author-social" target="_blank"><i class="fa-solid fa-frog fa-lg fa-fw" aria-hidden="true"></i>&nbsp; AU Museum</a>
+  
+  
+</div>
+
+    </div>
+    
+  </article>
+</div><!-- /#index -->
+
+<footer>
+<div class="footer-wrap">
+        
+        
+        <div class="center-footer-images">
+            <a rel="au-phylo" href="http://www.auburn.edu/cosam/departments/biology/"><img class="footer-image" alt="Auburn Phylo" src="/images/auburn-phylo-mtan-2014-blue-256.png" /></a>
+            <a rel="aumnh" href="http://aumnh.org/"><img class="footer-image" alt="Auburn MNH" src="/images/aumnh-crop-thumb.png" /></a>
+        </div>
+        <br>
+        <p class="center-box">
+            <span>
+                Auburn-phylo graphic <a rel="mtan" href="https://miltontan.github.io/">&copy; 2014 Milton Tan</a>.
+            </span>
+            <br />
+            <span>
+                Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, based on the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.
+            </span>
+            <br />
+            <span>
+                <a href="https://github.com/phyletica/phyletica.github.io" title="phyletica source on GitHub">View on GitHub</a>.
+            </span>
+            <br />
+            <br />
+            <span>
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                <br />
+                Unless noted, content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+            </span>
+        </p>
+</div><!-- /.footer-wrap -->
+</footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="/assets/js/scripts.min.js"></script>
+<script src="/assets/js/gif.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl =
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-66934027-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body>
+</html>
