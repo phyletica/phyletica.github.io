@@ -2,7 +2,8 @@
 
 Jamie Oaks
 
-[@jamoaks](https://twitter.com/jamoaks) | [phyletica.org](http://phyletica.org) | GitHub: [joaks1](https://github.com/joaks1)
+<!-- [@jamoaks](https://twitter.com/jamoaks) | [phyletica.org](http://phyletica.org) | GitHub: [joaks1](https://github.com/joaks1) -->
+[phyletica.org](http://phyletica.org) | GitHub: [joaks1](https://github.com/joaks1)
 
 <a href="http://phyletica.org/slides/git-intro"><img src="../images/qr-code-git-intro.png" alt="QR Code" style="border:5px solid black;max-height: 150px;" /></a>
 
@@ -12,13 +13,13 @@ Jamie Oaks
 <http://www.phdcomics.com>
 
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/ddB3Ym1ynsNqhc?startSlide=111" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/chacon/git-101-presentation" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/chacon">Scott Chacon</a></strong> </div>
+<a href="https://www.slideshare.net/slideshow/git-101-presentation/3208240"><img src="images/git-tiers.png" alt="Three tiers seen by Git" style="max-height: 500px;" /></a><div style="margin-bottom:5px"><strong><a href="https://www.slideshare.net/slideshow/git-101-presentation/3208240" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a></strong> from <strong><a href="https://www.slideshare.net/chacon" target="_blank">Scott Chacon</a></strong></div>
 
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/ddB3Ym1ynsNqhc?startSlide=343" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/chacon/git-101-presentation" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/chacon">Scott Chacon</a></strong> </div>
+<a href="https://www.slideshare.net/slideshow/git-101-presentation/3208240"><img src="images/git-diff.png" alt="git diff shows difference between your working files and the staging area" style="max-height: 500px;" /></a><div style="margin-bottom:5px"><strong><a href="https://www.slideshare.net/slideshow/git-101-presentation/3208240" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a></strong> from <strong><a href="https://www.slideshare.net/chacon" target="_blank">Scott Chacon</a></strong></div>
 
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/ddB3Ym1ynsNqhc?startSlide=346" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/chacon/git-101-presentation" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/chacon">Scott Chacon</a></strong> </div>
+<a href="https://www.slideshare.net/slideshow/git-101-presentation/3208240"><img src="images/git-diff-cached.png" alt="git diff --cached shows difference between the staging area and the database" style="max-height: 500px;" /></a><div style="margin-bottom:5px"><strong><a href="https://www.slideshare.net/slideshow/git-101-presentation/3208240" title="Git 101 Presentation" target="_blank">Git 101 Presentation</a></strong> from <strong><a href="https://www.slideshare.net/chacon" target="_blank">Scott Chacon</a></strong></div>
 
 
 
@@ -26,8 +27,8 @@ Jamie Oaks
 
 
 ```
-$ git config --global user.name "Jamie R. Oaks"
-$ git config --global user.email "joaks1@gmail.com"
+$ git config --global user.name "Augusta A. King"
+$ git config --global user.email "motherofcoding@gmail.com"
 ```
 
 
@@ -47,9 +48,19 @@ $ git config --help
 If you have a GitHub account, tell git your username:
 
 ```
-git config --global github.user "joaks1"
+$ git config --global github.user "ada1815"
 ```
 
+
+Tell git how to behave when you `git pull` remote data:
+
+```
+$ git config --global pull.rebase false
+$ git config --global pull.ff true
+```
+
+
+If you're not familiar with vim, have git use a different text editor!
 
 ```
 $ git config --global core.editor "nano -w"

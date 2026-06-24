@@ -156,8 +156,15 @@ don't already have one.
 Once you have a GitHub account, follow
 [these instructions for setting up SSH keys for your account]({{ site.baseurl }}/teaching/s4b/ssh-keys).
 
+
+# 4. Configure Git
+
+Now that you have installed Git and created your GitHub account,
+please follow
+[these instructions to configure Git]({{ site.baseurl }}/teaching/s4b/configure-git).
+
  
-# 4. Conda package manager
+# 5. Conda package manager
 
 Conda is a free and open-source package and environment manager that supports
 many coding languages, including Python and R.
@@ -173,7 +180,7 @@ In my opinion, this is the best option in terms of open licensing and avoiding
 bloat (not installing a bunch of stuff you'll never use).
 
 
-## 4.1. Windows
+## 5.1. Windows
 
 If you installed the Linux subsystem or virtual machine, boot your Linux
 environment and **follow the instructions for Linux below**.
@@ -191,9 +198,9 @@ and
 [create a conda environment for this class](#44-create-a-conda-environment-for-this-class).
 
 
-## 4.2. Linux, Mac OSX, or WSL
+## 5.2. Linux, Mac OSX, or WSL
 
-### 4.2.1 Make sure you have curl or wget
+### 5.2.1 Make sure you have curl or wget
 
 We will be using either `curl` or `wget` to download the script for installing
 Miniforge,
@@ -231,7 +238,7 @@ If neither is installed,
     sudo apt-get install curl wget
     ~~~
 
-### 4.2.2. Install Miniforge
+### 5.2.2. Install Miniforge
 
 Use `curl` or `wget` to download the Miniforge installation script.
 Open your shell terminal (`Terminal` application), and use one of the following
@@ -312,7 +319,7 @@ and
 [create a conda environment for this class](#44-create-a-conda-environment-for-this-class).
 
 
-## 4.3. Configure your conda installation
+## 6. Configure your conda installation
 
 Open a **new terminal window** and update your conda configuration to not auto
 activate a conda environment every time you open an new terminal window:
@@ -342,7 +349,7 @@ conda install -c conda-forge conda-bash-completion
 ~~~
 
 
-## 4.4. Create a conda environment for this class
+## 7. Create a conda environment for this class
 
 Let's create a conda environment we will all use during some of our in-class
 demonstrations and exercises.
@@ -371,7 +378,7 @@ conda activate biol-7180
 ~~~
 
 
-# 5. Text editor
+# 8. Text editor
 
 For this class, you will need a plain ("raw") text editor.
 
@@ -388,7 +395,7 @@ Studio Code (VS Code):
 
 -   [Visual Studio Code](https://code.visualstudio.com/)
 
-## 5.1. Windows
+## 8.1. Windows
 
 If you are using Git for Windows (Git BASH), you already have `nano` available
 in Git BASH.
@@ -402,7 +409,7 @@ For VS Code, you will want to install it within Windows.
 If you installed a Linux virtual machine and want to install a text editor, you
 will want to do so *within* the Linux virtual machine.
 
-## 5.2 More guidance about text editors
+## 8.2 More guidance about text editors
 
 Here is a
 [link to some additional guidance about text editors]({{ site.baseurl }}/teaching/s4b/editor).

@@ -20,6 +20,10 @@ skills that will allow them to approach biological questions in new ways.
 
 -   [Setting up your computer]({{ site.baseurl }}/teaching/s4b/setup)
 -   [Setting up SSH keys for your GitHub account]({{ site.baseurl }}/teaching/s4b/ssh-keys)
+-   [Configure Git]({{ site.baseurl }}/teaching/s4b/configure-git)
+    -   This is covered in the
+        [Intro to Git slides]({{ site.baseurl }}/slides/git-intro)
+        too, but you can get it out of the way now
 -   [Course intro slides]({{ site.baseurl }}/slides/s4b/intro)
 
 
